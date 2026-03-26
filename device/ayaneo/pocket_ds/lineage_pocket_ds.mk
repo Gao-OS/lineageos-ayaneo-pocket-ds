@@ -8,14 +8,17 @@ $(call inherit-product, device/ayaneo/pocket_ds/device.mk)
 # Inherit vendor blobs
 $(call inherit-product, vendor/ayaneo/pocket_ds/pocket_ds-vendor.mk)
 
-# Inherit LineageOS common config
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit LineageOS common config — tablet (no cellular/telephony)
+$(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
 PRODUCT_NAME := lineage_pocket_ds
 PRODUCT_DEVICE := pocket_ds
 PRODUCT_BRAND := Ayaneo
 PRODUCT_MODEL := Pocket DS
 PRODUCT_MANUFACTURER := Ayaneo
+
+# Form factor: handheld gaming tablet (no cellular modem for voice/SMS)
+PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_GMS_CLIENTID_BASE := android-ayaneo
 
