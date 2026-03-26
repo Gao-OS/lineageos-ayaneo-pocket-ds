@@ -4,6 +4,17 @@
 # SoC
 ro.hardware.chipname=sm8750
 
+# First API level — matches Android 13 stock firmware
+ro.product.first_api_level=33
+
+# Dalvik heap tuning — SM8750 targets 12–16 GB RAM devices
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=6m
+dalvik.vm.heapmaxfree=16m
+
 # Display
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true

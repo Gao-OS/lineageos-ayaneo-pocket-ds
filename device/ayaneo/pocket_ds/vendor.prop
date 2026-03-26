@@ -4,7 +4,14 @@
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
-ro.opengles.version=196610
+ro.opengles.version=196610 # OpenGL ES 3.2
+
+# Adreno UBWC compression — enable for framebuffer and gralloc
+vendor.gralloc.enable_fb_ubwc=1
+vendor.gralloc.gfx_ubwc_disable=0
+
+# QTI AOSP compatibility — required for Qualcomm AIDL HALs to initialize
+ro.vendor.qti.va_aosp.support=1
 
 # Bluetooth
 # SM8750 (Snapdragon 8 Elite, codename "sun") — verify from stock:
