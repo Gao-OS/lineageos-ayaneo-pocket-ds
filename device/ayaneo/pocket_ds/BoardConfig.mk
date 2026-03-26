@@ -28,6 +28,12 @@ TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/$(BOARD_KERNEL_IMAGE_NAME)
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
+# TODO: Extract actual offsets from stock boot.img header:
+#   scripts/unpack-boot.sh stock-firmware/ufs/boot.img
+#   Then set BOARD_KERNEL_OFFSET and BOARD_RAMDISK_OFFSET if non-standard.
+# Qualcomm GKI 2.0 defaults (0x8000 / 0x1000000) are typically correct.
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET := 0x01000000
 
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
@@ -154,6 +160,10 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# OTA kernel requirements — disable during bringup (prebuilt kernel lacks
+# kernel version manifest); re-enable after source-built kernel is in use.
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # TODO: Verify the following from actual firmware dumps:
 # - Exact kernel command line arguments

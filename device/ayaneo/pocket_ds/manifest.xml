@@ -13,7 +13,8 @@
         <fqname>IModule/default</fqname>
         <fqname>IModule/r_submix</fqname>
         <fqname>IModule/usb</fqname>
-        <fqname>IModule/stub</fqname>
+        <!-- NOTE: IModule/stub is AOSP test-only, not a QTI instance. Remove after
+             verifying actual instances from: adb shell cat /vendor/etc/vintf/manifest.xml -->
     </hal>
     <hal format="aidl">
         <name>android.hardware.audio.effect</name>
@@ -21,7 +22,10 @@
         <fqname>IFactory/default</fqname>
     </hal>
 
-    <!-- Graphics -->
+    <!-- Graphics — SM8750 uses Composer3 (AIDL) and AIDL gralloc allocator v2.
+         device.mk builds android.hardware.graphics.mapper@4.0-impl-qti-display
+         (HIDL mapper 4.0). Android 14 supports HIDL mapper@4.0 alongside AIDL
+         allocator v2 as a transitional "multi-generation gralloc" path. -->
     <hal format="aidl">
         <name>android.hardware.graphics.composer3</name>
         <version>1</version>
@@ -39,14 +43,12 @@
         <version>1</version>
         <fqname>IBluetoothHci/default</fqname>
     </hal>
-    <hal format="hidl">
+    <!-- Bluetooth Audio — SM8750 uses AIDL (HIDL 2.1 was deprecated in Android 14).
+         Version 2 matches QTI "sun" platform. Verify against stock manifest. -->
+    <hal format="aidl">
         <name>android.hardware.bluetooth.audio</name>
-        <transport>hwbinder</transport>
-        <version>2.1</version>
-        <interface>
-            <name>IBluetoothAudioProvidersFactory</name>
-            <instance>default</instance>
-        </interface>
+        <version>2</version>
+        <fqname>IBluetoothAudioProviderFactory/default</fqname>
     </hal>
 
     <!-- DRM -->

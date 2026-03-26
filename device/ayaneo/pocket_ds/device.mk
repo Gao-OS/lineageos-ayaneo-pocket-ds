@@ -61,3 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # Dynamic partitions — build system control (board-level config is in BoardConfig.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Virtual A/B (confirmed by lpdump: virtual_ab_device flag set)
+# Required for OTA update engine to include snapshot merge service (snapuserd)
+PRODUCT_VIRTUAL_AB_OTA := true
