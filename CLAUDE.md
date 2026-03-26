@@ -17,9 +17,101 @@ This is non-negotiable. No "vanilla" build target exists.
 - Hypervisor: Qualcomm hypvm (vm-bootsys partitions, vm-persist)
 - Partitions: Dynamic super (sparse, 8 chunks), GPT across 6 LUNs
 - Verified Boot: AVB 2.0 (vbmeta.img, vbmeta_system.img)
-- Kernel: GKI 2.0 likely (separate boot.img + vendor_boot.img)
+- Kernel: GKI 2.0 confirmed (init_boot.img present in stock firmware)
 - Modem: NON-HLOS.bin (~260MB), BTFM.bin, dspso.bin
 - Form factor: Dual-screen handheld, integrated gamepad
+
+## Stock Firmware
+
+**File:** `stock-firmware/AR11_FlatBuild_TurboX_C8550_xx.xx_LA1.0.D.user.20251012.065902.zip`
+**Build date:** 2025-10-12 | **Android:** 13 (flat/user build)
+
+### Flash Tools (zip root)
+| File | Purpose |
+|------|---------|
+| `QSaharaServer` | EDL Sahara protocol host binary |
+| `fh_loader` | EDL Firehose loader |
+| `turbox_flat_flash.sh` | Full-device flash script |
+| `Turbox_download_config_flat.xml` | fh_loader flash configuration |
+
+### UFS Partition Images (`ufs/`)
+
+**GPT tables — 6 LUNs (0–5)**
+- `gpt_main{0-5}.bin` / `gpt_backup{0-5}.bin`
+
+**Boot chain**
+| File | Role |
+|------|------|
+| `xbl_s.melf` | XBL (primary bootloader) |
+| `xbl_s_devprg_ns.melf` | XBL dev programmer (EDL) |
+| `XblRamdump.elf` | XBL ramdump |
+| `xbl_config.elf` | XBL configuration |
+| `shrm.elf` | SHRM firmware |
+| `uefi.elf` | UEFI (2.8 MB) |
+| `uefi_sec.mbn` | UEFI secure |
+| `abl.elf` | Android Bootloader (ABL) |
+| `cpucp.elf` | CPU control processor |
+
+**TrustZone / Security**
+| File | Role |
+|------|------|
+| `tz.mbn` | TrustZone (3.9 MB) |
+| `hypvm.mbn` | Qualcomm Hypervisor (1.6 MB) |
+| `devcfg.mbn` | Device config |
+| `aop_devcfg.mbn` | AOP device config |
+| `keymint.mbn` | KeyMint (400 KB) |
+| `featenabler.mbn` | Feature enabler |
+| `storsec.mbn` | Storage security |
+| `multi_image.mbn` / `multi_image_qti.mbn` | Multi-image signing |
+
+**Kernel / Boot images**
+| File | Size | Notes |
+|------|------|-------|
+| `boot.img` | 96 MB | GKI kernel + ramdisk |
+| `init_boot.img` | 8 MB | Confirms **GKI 2.0** |
+| `vendor_boot.img` | 96 MB | Vendor ramdisk + modules |
+| `recovery.img` | 100 MB | Recovery partition |
+| `dtbo.img` | 12 MB | Device Tree Blob Overlay |
+| `vmlinux` | 464 MB | Uncompressed kernel ELF |
+
+**Dynamic super (8 sparse chunks)**
+- `super_1.img` through `super_8.img`
+- Must concat all chunks then unsparse before analysis
+
+**Verified Boot**
+- `vbmeta.img` (8 KB) — AVB root
+- `vbmeta_system.img` (4 KB) — AVB system chain
+
+**Modem / Wireless**
+| File | Size | Role |
+|------|------|------|
+| `NON-HLOS.bin` | 260 MB | Modem firmware (ADSP) |
+| `BTFM.bin` | 1.2 MB | Bluetooth + FM |
+| `dspso.bin` | 64 MB | DSP firmware |
+
+**Hypervisor partitions (do NOT overwrite)**
+- `vm-bootsys_1.img` through `vm-bootsys_9.img`
+- `vm-persist_1.img`
+
+**Other partitions**
+| File | Notes |
+|------|-------|
+| `persist.img` | 32 MB — calibration data, never overwrite |
+| `metadata_{1-5}.img` | Dynamic partition metadata |
+| `userdata_{1-10}.img` | Userdata (formatted) |
+| `dummy_frp.bin` | Factory Reset Protection placeholder |
+| `logfs_ufs_8mb.bin` | Log filesystem |
+| `zeros_5sectors.bin` | Padding / GPT alignment |
+
+**UEFI / firmware volumes**
+- `tools.fv` (384 KB) — UEFI tools firmware volume
+- `imagefv.elf` — UEFI image firmware volume
+- `qupv3fw.elf` — QUP v3 peripheral firmware
+
+**Flash program/patch XMLs** (for fh_loader)
+- `rawprogram{0-5}.xml` — sparse program scripts per LUN
+- `rawprogram_unsparse{0,4}.xml` — unsparse program scripts
+- `patch{0-5}.xml` — patch scripts per LUN
 
 ## Stock Firmware Partition Map
 Derived from gpt_main*.bin and rawprogram*.xml files.
@@ -34,7 +126,7 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 - Verified Boot: AVB 2.0, vbmeta must be disabled or re-signed
 
 ## Kernel Strategy
-- Stock kernel is GKI 2.0 (verify from boot.img header)
+- Stock kernel is GKI 2.0 (confirmed by init_boot.img in stock firmware)
 - Start with prebuilt kernel extracted from stock boot.img
 - KernelSU as GKI kernel module (not patched into source)
 - vendor_boot.img contains vendor ramdisk + vendor kernel modules
