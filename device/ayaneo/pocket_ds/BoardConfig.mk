@@ -6,21 +6,19 @@
 
 DEVICE_PATH := device/ayaneo/pocket_ds
 
-# Architecture
+# Platform (SM8750 "sun")
+TARGET_BOARD_PLATFORM := sun
+
+# Architecture (SM8750 uses Qualcomm Oryon cores)
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv9-a
+TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := kryo
-
-TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
-TARGET_2ND_CPU_ABI := armeabi-v7a
-TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := oryon
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := pocket_ds
+TARGET_BOOTLOADER_BOARD_NAME := sun
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
@@ -28,8 +26,14 @@ TARGET_KERNEL_SOURCE := kernel/ayaneo/sm8750
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/$(BOARD_KERNEL_IMAGE_NAME)
 
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+
+# Init boot (GKI 2.0)
+BOARD_INIT_BOOT_HEADER_VERSION := 4
 
 # Kernel command line from stock vendor_boot.img
 # boot.img cmdline is empty; vendor_boot carries the actual args
