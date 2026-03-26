@@ -36,6 +36,8 @@
     # Compression / archive tools (used by patch-kernelsu.sh and unpack-boot.sh)
     cpio
     lz4
+    lzop
+    xz
     zstd
 
     # XML parsing (for rawprogram XML)
