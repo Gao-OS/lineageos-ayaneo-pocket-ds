@@ -1,0 +1,3 @@
+add_lunch_combo lineage_pocket_ds-userdebug
+add_lunch_combo lineage_pocket_ds-user
+add_lunch_combo lineage_pocket_ds-eng
