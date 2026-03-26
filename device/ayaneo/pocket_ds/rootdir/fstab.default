@@ -19,5 +19,8 @@ odm                                             /odm           ext4    ro,barrie
 
 /dev/block/bootdevice/by-name/misc              /misc          emmc    defaults                                         defaults
 
-# TODO: Verify cache and persist partition entries if present on this device
-# TODO: Add firmware partition mounts if needed for modem/bluetooth
+# Persist — Qualcomm NV/modem calibration data (32 MB, NEVER format)
+/dev/block/bootdevice/by-name/persist          /mnt/vendor/persist  ext4    noatime,nosuid,nodev  wait,check
+
+# Logfs — diagnostic log filesystem (8 MB, optional mount)
+# /dev/block/bootdevice/by-name/logfs         /mnt/vendor/logfs    ext4    noatime,nosuid,nodev  wait,check,nofail
