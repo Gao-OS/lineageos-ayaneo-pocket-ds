@@ -1,5 +1,5 @@
 # Stock firmware dumps
-stock-firmware/ufs/
+stock-firmware/
 
 # Android build artifacts
 *.img
@@ -19,6 +19,7 @@ __pycache__/
 # Nix/devenv
 .devenv/
 .devenv.flake.nix
+.devenv.*
 
 # direnv
 .direnv/
