@@ -9,13 +9,14 @@ DEVICE_PATH := device/ayaneo/pocket_ds
 # Platform (SM8750 "sun")
 TARGET_BOARD_PLATFORM := sun
 
-# Architecture — SM8750 Oryon implements ARMv9.2-A; arm64-only (no 32-bit support on this SoC)
+# Architecture — SM8750 Oryon is arm64-only (no 32-bit support on this SoC)
+# Use armv8-2a: LineageOS 21 (Android 14) build system doesn't support armv9-a variant
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv9-a
+TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := oryon
+TARGET_CPU_VARIANT_RUNTIME := kryo785
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sun
