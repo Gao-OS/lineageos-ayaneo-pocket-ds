@@ -36,5 +36,10 @@ PRODUCT_SOONG_NAMESPACES += \
     device/ayaneo/pocket_ds \
     packages/gsmlg-apps
 
+# Keylayout — integrated gamepad
+# NOTE: filename must match the HID device name; rename after first boot.
+PRODUCT_COPY_FILES += \
+    device/ayaneo/pocket_ds/keylayout/Ayaneo_Pocket_DS_Gamepad.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Ayaneo_Pocket_DS_Gamepad.kl
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/ayaneo/pocket_ds/overlay

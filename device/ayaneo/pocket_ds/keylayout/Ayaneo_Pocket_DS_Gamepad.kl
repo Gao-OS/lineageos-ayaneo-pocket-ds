@@ -1,0 +1,54 @@
+# Keylayout for Ayaneo Pocket DS integrated gamepad
+#
+# IMPORTANT: This filename must match the HID device name reported by the kernel.
+# To find the actual device name after first boot:
+#   adb shell cat /proc/bus/input/devices | grep -A5 "gamepad\|Gamepad\|AYANEO\|Ayaneo"
+#
+# The kernel device name (N: Name=...) becomes the .kl filename with spaces
+# replaced by underscores.
+#
+# Android also searches for Vendor_XXXX_Product_YYYY.kl — create one of those
+# once you have the USB VID/PID from:
+#   adb shell cat /proc/bus/input/devices | grep -A8 "gamepad\|Gamepad"
+#
+# Standard XInput-style HID gamepad layout (Linux event codes → Android key names)
+
+# ── Face buttons ──────────────────────────────────────────────────────────────
+key 304   BUTTON_A        # BTN_SOUTH / BTN_A  (South / ×)
+key 305   BUTTON_B        # BTN_EAST  / BTN_B  (East  / ○)
+key 307   BUTTON_X        # BTN_NORTH / BTN_Y  (North / △ — note: Linux swaps X/Y labels vs XInput)
+key 308   BUTTON_Y        # BTN_WEST  / BTN_X  (West  / □)
+
+# ── Shoulder buttons ──────────────────────────────────────────────────────────
+key 310   BUTTON_L1       # BTN_TL  (Left Bumper / LB / L1)
+key 311   BUTTON_R1       # BTN_TR  (Right Bumper / RB / R1)
+
+# ── Trigger buttons (digital, if controller sends them) ───────────────────────
+key 312   BUTTON_L2       # BTN_TL2 (Left Trigger digital / L2)
+key 313   BUTTON_R2       # BTN_TR2 (Right Trigger digital / R2)
+
+# ── Menu buttons ──────────────────────────────────────────────────────────────
+key 314   BUTTON_SELECT   # BTN_SELECT / BTN_BACK (View / Back / Select / -)
+key 315   BUTTON_START    # BTN_START  (Menu / Start / +)
+key 316   BUTTON_MODE     # BTN_MODE   (Guide / Home / Ayaneo button)
+
+# ── Thumbstick clicks ─────────────────────────────────────────────────────────
+key 317   BUTTON_THUMBL   # BTN_THUMBL (L3 / Left stick click)
+key 318   BUTTON_THUMBR   # BTN_THUMBR (R3 / Right stick click)
+
+# ── Analog axes ───────────────────────────────────────────────────────────────
+# Left analog stick
+axis 0x00  X              # ABS_X  → AXIS_X  (left stick horizontal)
+axis 0x01  Y              # ABS_Y  → AXIS_Y  (left stick vertical, positive = down)
+
+# Right analog stick
+axis 0x03  RX             # ABS_RX → AXIS_RX (right stick horizontal)
+axis 0x04  RY             # ABS_RY → AXIS_RY (right stick vertical, positive = down)
+
+# Analog triggers (0 = released, max = fully pressed)
+axis 0x02  LTRIGGER       # ABS_Z  → AXIS_LTRIGGER (left trigger analog)
+axis 0x05  RTRIGGER       # ABS_RZ → AXIS_RTRIGGER (right trigger analog)
+
+# D-pad hat switch
+axis 0x10  HAT_X          # ABS_HAT0X → AXIS_HAT_X  (D-pad horizontal: -1=left, 0=center, 1=right)
+axis 0x11  HAT_Y          # ABS_HAT0Y → AXIS_HAT_Y  (D-pad vertical: -1=up, 0=center, 1=down)
