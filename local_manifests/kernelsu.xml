@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github"
-          fetch="https://github.com/" />
-
   <!-- KernelSU source (for building GKI module) -->
+  <!-- Uses the existing 'github' remote from LineageOS main manifest -->
   <project name="tiann/KernelSU"
            path="external/kernelsu"
            remote="github"

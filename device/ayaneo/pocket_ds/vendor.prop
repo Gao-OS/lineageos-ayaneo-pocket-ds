@@ -4,7 +4,8 @@
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
-ro.opengles.version=196610 # OpenGL ES 3.2
+# OpenGL ES 3.2
+ro.opengles.version=196610
 
 # Adreno UBWC compression — enable for framebuffer and gralloc
 vendor.gralloc.enable_fb_ubwc=1
