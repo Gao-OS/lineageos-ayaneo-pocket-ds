@@ -131,12 +131,12 @@ resolve_source() {
     local rel_path=""
 
     case "$entry" in
-        system/*)     partition="$SYSTEM_DIR";     rel_path="$entry" ;;
-        vendor/*)     partition="$VENDOR_DIR";     rel_path="$entry" ;;
-        product/*)    partition="$PRODUCT_DIR";    rel_path="$entry" ;;
-        system_ext/*) partition="$SYSTEM_EXT_DIR"; rel_path="$entry" ;;
-        odm/*)        partition="$ODM_DIR";        rel_path="$entry" ;;
-        *)            partition="$SYSTEM_DIR";     rel_path="system/${entry}" ;;
+        system/*)     partition="$SYSTEM_DIR";     rel_path="${entry#system/}" ;;
+        vendor/*)     partition="$VENDOR_DIR";     rel_path="${entry#vendor/}" ;;
+        product/*)    partition="$PRODUCT_DIR";    rel_path="${entry#product/}" ;;
+        system_ext/*) partition="$SYSTEM_EXT_DIR"; rel_path="${entry#system_ext/}" ;;
+        odm/*)        partition="$ODM_DIR";        rel_path="${entry#odm/}" ;;
+        *)            partition="$SYSTEM_DIR";     rel_path="${entry}" ;;
     esac
 
     echo "${partition}/${rel_path}"
@@ -239,10 +239,13 @@ HEADER
             entry="${ALL_FILES[$i]}"
             # Target path: strip partition prefix for the install location
             src_path="vendor/ayaneo/pocket_ds/proprietary/${entry}"
+            partition="${entry%%/*}"
+            # Android build uses uppercase TARGET_COPY_OUT_* variables
+            partition_upper="$(echo "$partition" | tr '[:lower:]' '[:upper:]')"
             if [[ $i -eq $last_idx ]]; then
-                echo "    ${src_path}:\$(TARGET_COPY_OUT_${entry%%/*})/${entry#*/}"
+                echo "    ${src_path}:\$(TARGET_COPY_OUT_${partition_upper})/${entry#*/}"
             else
-                echo "    ${src_path}:\$(TARGET_COPY_OUT_${entry%%/*})/${entry#*/} \\"
+                echo "    ${src_path}:\$(TARGET_COPY_OUT_${partition_upper})/${entry#*/} \\"
             fi
         done
     fi

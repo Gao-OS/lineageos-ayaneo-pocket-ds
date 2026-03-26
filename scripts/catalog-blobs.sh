@@ -213,10 +213,11 @@ echo -e "${CYAN}Generating${RESET} ${OUTPUT_FILE}"
 HEADER
 
     # Sort sections and write
-    for category in $(echo "${!SECTION_FILES[@]}" | tr ' ' '\n' | sort); do
+    for category in $(printf '%s\n' "${!SECTION_FILES[@]}" | sort); do
+        [[ -z "$category" ]] && continue
         echo ""
         echo "# ${category}"
-        echo "${SECTION_FILES[$category]}" | sort -u | while IFS= read -r line; do
+        echo "${SECTION_FILES[$category]:-}" | sort -u | while IFS= read -r line; do
             [[ -n "$line" ]] && echo "$line"
         done
     done

@@ -95,29 +95,96 @@ RAW_IMG="${OUTPUT_DIR}/super_combined.img"
 PARTITIONS_DIR="${OUTPUT_DIR}/partitions"
 MOUNT_DIR="${OUTPUT_DIR}/mnt"
 
-# ── Step 1: Concatenate Split Images ──────────────────────────────────────
-if [[ -f "$SPARSE_IMG" ]]; then
-    echo -e "${YELLOW}Skipping:${RESET} ${SPARSE_IMG} already exists (idempotent)."
-else
-    echo -e "${CYAN}[1/3]${RESET} Concatenating super_1.img … super_8.img → super_combined_sparse.img"
-    cat "${FIRMWARE_DIR}"/super_{1..8}.img > "${SPARSE_IMG}"
-    echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${SPARSE_IMG}" | cut -f1)"
-fi
+# ── Step 1: Reconstruct Super Image ──────────────────────────────────────
+# The super partition is split into 8 chunks placed at specific sector offsets
+# on the UFS disk (4096-byte sectors). We must parse rawprogram_unsparse0.xml
+# to determine the correct offsets, or fall back to naive concatenation.
 
-# ── Step 2: Sparse → Raw (or detect already-raw) ────────────────────────
+RAWPROGRAM="${FIRMWARE_DIR}/rawprogram_unsparse0.xml"
+
 if [[ -f "$RAW_IMG" ]]; then
     echo -e "${YELLOW}Skipping:${RESET} ${RAW_IMG} already exists (idempotent)."
+elif [[ -f "$RAWPROGRAM" ]]; then
+    echo -e "${CYAN}[1/2]${RESET} Reconstructing super image from rawprogram sector offsets"
+
+    # Parse super chunk entries from rawprogram XML
+    # Each <program> entry with label="super" has start_sector and num_partition_sectors
+    SUPER_START=""
+    declare -a CHUNK_SECTORS=()
+    declare -a CHUNK_COUNTS=()
+    declare -a CHUNK_FILES=()
+
+    while IFS= read -r line; do
+        if echo "$line" | grep -q 'label="super"' && echo "$line" | grep -q 'filename="super_'; then
+            sector=$(echo "$line" | sed -n 's/.*start_sector="\([0-9]*\)".*/\1/p')
+            count=$(echo "$line" | sed -n 's/.*num_partition_sectors="\([0-9]*\)".*/\1/p')
+            fname=$(echo "$line" | sed -n 's/.*filename="\([^"]*\)".*/\1/p')
+            if [[ -z "$SUPER_START" ]]; then
+                SUPER_START="$sector"
+            fi
+            CHUNK_SECTORS+=("$sector")
+            CHUNK_COUNTS+=("$count")
+            CHUNK_FILES+=("$fname")
+        fi
+    done < "$RAWPROGRAM"
+
+    if [[ -z "$SUPER_START" || ${#CHUNK_FILES[@]} -eq 0 ]]; then
+        echo -e "${RED}Error:${RESET} Could not parse super chunk layout from ${RAWPROGRAM}" >&2
+        exit 1
+    fi
+
+    # Determine super partition total size from LP metadata (sector 0 of super)
+    # First chunk gives us the LP header; read geometry at offset 4096
+    LP_MAGIC="$(xxd -s 4096 -l 4 -p "${FIRMWARE_DIR}/${CHUNK_FILES[0]}" 2>/dev/null || true)"
+    if [[ "$LP_MAGIC" == "67446c61" ]]; then
+        # Read LP geometry block size at offset 4096+4 (4 bytes LE)
+        SUPER_SIZE_HEX="$(xxd -s 4100 -l 4 -e "${FIRMWARE_DIR}/${CHUNK_FILES[0]}" 2>/dev/null | awk '{print $2}' || true)"
+    fi
+
+    # Calculate total size from last chunk end if LP metadata read fails
+    last_idx=$(( ${#CHUNK_SECTORS[@]} - 1 ))
+    last_end=$(( CHUNK_SECTORS[last_idx] + CHUNK_COUNTS[last_idx] - SUPER_START ))
+    FALLBACK_SIZE=$(( last_end * 4096 ))
+
+    # Use lpdump to get actual super size if available
+    SUPER_SIZE=""
+    if command -v lpdump &>/dev/null; then
+        SUPER_SIZE=$(lpdump "${FIRMWARE_DIR}/${CHUNK_FILES[0]}" 2>/dev/null | grep -o 'block_device.*size: [0-9]*' | grep -o '[0-9]*$' || true)
+    fi
+    # Fall back to standard 6 GiB or computed size
+    if [[ -z "$SUPER_SIZE" ]]; then
+        # Round up to nearest GiB boundary (common for super partitions)
+        SUPER_SIZE=$(( ((FALLBACK_SIZE + 1073741823) / 1073741824) * 1073741824 ))
+    fi
+
+    echo -e "  Super start sector: ${SUPER_START} (4096-byte sectors)"
+    echo -e "  Chunks: ${#CHUNK_FILES[@]}"
+    echo -e "  Target size: $(( SUPER_SIZE / 1048576 )) MiB"
+
+    # Create the image and place each chunk at its offset
+    truncate -s "${SUPER_SIZE}" "${RAW_IMG}"
+    for i in "${!CHUNK_FILES[@]}"; do
+        offset_sectors=$(( CHUNK_SECTORS[i] - SUPER_START ))
+        offset_bytes=$(( offset_sectors * 4096 ))
+        src="${FIRMWARE_DIR}/${CHUNK_FILES[$i]}"
+        echo -e "  Writing ${CHUNK_FILES[$i]} at offset ${offset_bytes}"
+        dd if="$src" of="${RAW_IMG}" bs=4096 seek="${offset_sectors}" conv=notrunc status=none 2>/dev/null
+    done
+    echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${RAW_IMG}" | cut -f1)"
 else
+    # Fallback: naive concatenation (works for standard Android sparse images)
+    echo -e "${CYAN}[1/2]${RESET} Concatenating super_1.img … super_8.img"
+    cat "${FIRMWARE_DIR}"/super_{1..8}.img > "${SPARSE_IMG}"
+    echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${SPARSE_IMG}" | cut -f1)"
+
     # Check if the combined image is sparse (magic 0xED26FF3A) or already raw
     MAGIC="$(xxd -l4 -p "${SPARSE_IMG}" 2>/dev/null || true)"
     if [[ "$MAGIC" == "3aff26ed" ]]; then
-        echo -e "${CYAN}[2/3]${RESET} Converting sparse image → raw image (simg2img)"
+        echo -e "${CYAN}Converting sparse → raw (simg2img)${RESET}"
         simg2img "${SPARSE_IMG}" "${RAW_IMG}"
         echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${RAW_IMG}" | cut -f1)"
     else
-        echo -e "${CYAN}[2/3]${RESET} Image is already raw (not sparse), using directly."
         ln -sf "$(basename "${SPARSE_IMG}")" "${RAW_IMG}"
-        echo -e "${GREEN}  Done.${RESET} (symlink to combined image)"
     fi
 fi
 
@@ -132,13 +199,13 @@ if [[ -d "$PARTITIONS_DIR" ]]; then
     if [[ $existing -eq ${#EXPECTED_PARTITIONS[@]} ]]; then
         echo -e "${YELLOW}Skipping:${RESET} All partitions already extracted (idempotent)."
     else
-        echo -e "${CYAN}[3/3]${RESET} Extracting logical partitions with lpunpack"
+        echo -e "${CYAN}[2/2]${RESET} Extracting logical partitions with lpunpack"
         lpunpack "${RAW_IMG}" "${PARTITIONS_DIR}"
         echo -e "${GREEN}  Done.${RESET}"
     fi
 else
     mkdir -p "${PARTITIONS_DIR}"
-    echo -e "${CYAN}[3/3]${RESET} Extracting logical partitions with lpunpack"
+    echo -e "${CYAN}[2/2]${RESET} Extracting logical partitions with lpunpack"
     lpunpack "${RAW_IMG}" "${PARTITIONS_DIR}"
     echo -e "${GREEN}  Done.${RESET}"
 fi
