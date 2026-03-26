@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <!-- Device tree -->
+  <project name="Gao-OS/lineageos-ayaneo-pocket-ds"
+           path="device/ayaneo/pocket_ds"
+           remote="github"
+           revision="lineage-21" />
+
+  <!-- Vendor blobs (proprietary files) -->
+  <project name="Gao-OS/android_vendor_ayaneo_pocket_ds"
+           path="vendor/ayaneo/pocket_ds"
+           remote="github"
+           revision="lineage-21" />
+
+  <!-- Kernel prebuilt -->
+  <project name="Gao-OS/android_kernel_ayaneo_sm8750"
+           path="kernel/ayaneo/sm8750"
+           remote="github"
+           revision="lineage-21" />
+</manifest>

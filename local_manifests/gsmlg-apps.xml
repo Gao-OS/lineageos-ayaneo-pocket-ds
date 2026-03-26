@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <!-- gsmlg-apps prebuilt APKs -->
+  <project name="Gao-OS/android_packages_gsmlg-apps"
+           path="packages/gsmlg-apps"
+           remote="github"
+           revision="main" />
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <!-- MindTheGapps for LineageOS 21 (arm64) -->
+  <project name="nicholaschum/mindthegapps"
+           path="vendor/gapps"
+           remote="gitlab"
+           revision="14" />
+</manifest>
