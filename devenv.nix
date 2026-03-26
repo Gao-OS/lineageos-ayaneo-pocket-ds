@@ -45,6 +45,10 @@
     fontconfig
     freetype
 
+    # Script linting
+    shellcheck
+    jq
+
     # NOTE: The following tools are NOT available in nixpkgs and must be
     # built from AOSP source or obtained as pre-built binaries:
     #   - unpackbootimg / mkbootimg  (from system/tools/mkbootimg)
