@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HIDL/AIDL Device Manifest for Ayaneo Pocket DS (SM8750) -->
+<!-- TODO: Populate from stock device manifest (adb shell cat /vendor/etc/vintf/manifest.xml) -->
+<manifest version="1.0" type="device">
+
+    <!-- Common Qualcomm HALs -->
+
+    <!-- TODO: Add audio HAL -->
+    <!-- <hal format="hidl">
+        <name>android.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <version>7.1</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal> -->
+
+    <!-- TODO: Add graphics/composer HAL -->
+    <!-- <hal format="aidl">
+        <name>android.hardware.graphics.composer3</name>
+        <version>1</version>
+        <fqname>IComposer/default</fqname>
+    </hal> -->
+
+    <!-- TODO: Add camera HAL -->
+    <!-- TODO: Add bluetooth HAL -->
+    <!-- TODO: Add sensors HAL -->
+    <!-- TODO: Add DRM HAL -->
+    <!-- TODO: Add NFC HAL (if present) -->
+    <!-- TODO: Add power HAL -->
+    <!-- TODO: Add thermal HAL -->
+    <!-- TODO: Add USB HAL -->
+    <!-- TODO: Add Wi-Fi HAL -->
+    <!-- TODO: Add health HAL -->
+    <!-- TODO: Add keymaster/keymint HAL -->
+    <!-- TODO: Add vibrator HAL -->
+    <!-- TODO: Add fingerprint HAL (if present) -->
+
+</manifest>

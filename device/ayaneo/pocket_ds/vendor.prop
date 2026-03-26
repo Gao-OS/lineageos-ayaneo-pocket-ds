@@ -1,0 +1,6 @@
+# Vendor properties for Ayaneo Pocket DS
+# TODO: Extract from stock vendor/build.prop
+
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+persist.vendor.qcom.bluetooth.soc=hastings

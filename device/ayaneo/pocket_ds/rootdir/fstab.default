@@ -1,0 +1,23 @@
+# Android fstab file for Ayaneo Pocket DS (SM8750)
+#
+# TODO: Verify all partition paths and flags from stock firmware
+# TODO: Confirm encryption settings match stock device policy
+#
+# <dev>                                         <mnt_point>    <type>  <mnt_flags and options>                          <fs_mgr_flags>
+
+system                                          /system        ext4    ro,barrier=1                                     wait,logical,first_stage_mount
+vendor                                          /vendor        ext4    ro,barrier=1                                     wait,logical,first_stage_mount
+product                                         /product       ext4    ro,barrier=1                                     wait,logical,first_stage_mount
+system_ext                                      /system_ext    ext4    ro,barrier=1                                     wait,logical,first_stage_mount
+odm                                             /odm           ext4    ro,barrier=1                                     wait,logical,first_stage_mount
+
+# TODO: Verify userdata encryption flags from stock fstab
+/dev/block/bootdevice/by-name/userdata          /data          f2fs    noatime,nosuid,nodev                             wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,quota,formattable,checkpoint=fs
+
+# TODO: Verify metadata partition path
+/dev/block/bootdevice/by-name/metadata          /metadata      ext4    noatime,nosuid,nodev                             wait,check,formattable,first_stage_mount
+
+/dev/block/bootdevice/by-name/misc              /misc          emmc    defaults                                         defaults
+
+# TODO: Verify cache and persist partition entries if present on this device
+# TODO: Add firmware partition mounts if needed for modem/bluetooth

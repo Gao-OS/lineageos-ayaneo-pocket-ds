@@ -1,0 +1,5 @@
+# System properties for Ayaneo Pocket DS
+# TODO: Extract from stock system/build.prop
+
+ro.hardware.chipname=sm8750
+persist.sys.timezone=America/New_York
