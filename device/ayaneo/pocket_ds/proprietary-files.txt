@@ -1,0 +1,18 @@
+# Proprietary blobs for Ayaneo Pocket DS
+# Format: [- ]<path_on_device>[|sha1sum]
+#   Lines starting with '-' are pinned (not updated during extract)
+#   |sha1sum suffix pins to a specific file version
+#
+# Populate this file after running scripts/unpack-super.sh and
+# scripts/extract-blobs.sh on the stock firmware dump.
+#
+# Common blob categories for Qualcomm SM8750:
+#   - vendor/lib64/hw/ (HAL implementations)
+#   - vendor/lib64/ (shared libraries)
+#   - vendor/bin/ (daemons and services)
+#   - vendor/firmware/ (firmware blobs)
+#   - vendor/etc/ (configuration files)
+#   - system_ext/etc/ (system extension configs)
+#   - odm/etc/ (ODM configs)
+#
+# TODO: Extract from stock firmware and populate
