@@ -31,48 +31,70 @@ TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/$(BOARD_KERNEL_IMAGE_NAME)
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-# TODO: Verify kernel command line from stock boot image
-BOARD_KERNEL_CMDLINE := \
-    console=ttyMSM0,115200n8 \
+# Kernel command line from stock vendor_boot.img
+# boot.img cmdline is empty; vendor_boot carries the actual args
+BOARD_VENDOR_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000 \
+    qcom_geni_serial.con_enabled=0 \
+    nosoftlockup \
+    bootconfig
+
+# boot.img cmdline is empty on this device (all args via vendor_boot)
+BOARD_KERNEL_CMDLINE :=
+
+# Bootconfig (from vendor_boot bootconfig section)
+BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
-    androidboot.console=ttyMSM0 \
     androidboot.memcg=1 \
-    lpm_levels.sleep_disabled=1 \
-    msm_rtb.filter=0x237 \
-    service_locator.enable=1 \
-    androidboot.usbcontroller=a600000.dwc3 \
-    swiotlb=0 \
-    loop.max_part=7 \
-    cgroup.memory=nokmem,nosocket \
-    iptable_raw.raw_before_defrag=1 \
-    ip6table_raw.raw_before_defrag=1
+    androidboot.usbcontroller=a600000.dwc3
 
 # GKI
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+# A/B — Virtual A/B with snapshot compression (confirmed by stock LP metadata flags)
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    init_boot \
+    odm \
+    product \
+    recovery \
+    system \
+    system_dlkm \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot \
+    vendor_dlkm
 
 # Ramdisk compression
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Partitions — flash block size
-BOARD_FLASH_BLOCK_SIZE := 131072 # (512 * 256)
+BOARD_FLASH_BLOCK_SIZE := 262144 # 256 KB (64 * 4096 sector size)
 
-# Partitions — fixed sizes
-BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296        # 96 MB
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296 # 96 MB
-BOARD_DTBOIMG_PARTITION_SIZE := 12582912           # 12 MB
-BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608    # 8 MB
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600    # 100 MB
+# Partitions — fixed sizes (verified from rawprogram_unsparse4.xml, sector size = 4096)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296        # 96 MB (24576 sectors)
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296 # 96 MB (24576 sectors)
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824           # 24 MB (6144 sectors) — stock is 24 MB not 12 MB
+BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608    # 8 MB (2048 sectors)
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600    # 100 MB (25600 sectors)
 
 # Partitions — dynamic (super)
-# TODO: Verify BOARD_SUPER_PARTITION_SIZE from stock super partition
-BOARD_SUPER_PARTITION_SIZE := 9126805504
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200  # BOARD_SUPER_PARTITION_SIZE - 4MB overhead
+# Verified from stock firmware lpdump: super block device = 6,442,450,944 bytes
+# Dynamic group max = 6,438,256,640 bytes, header flags = virtual_ab_device
+BOARD_SUPER_PARTITION_SIZE := 6442450944
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system \
-    vendor \
-    product \
+    system_dlkm \
     system_ext \
+    vendor \
+    vendor_dlkm \
+    product \
     odm
 
 # Partitions — filesystem types
@@ -81,6 +103,8 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 # Partitions — output paths
@@ -88,6 +112,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_SYSTEM_DLKM := system_dlkm
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.default

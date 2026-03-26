@@ -58,17 +58,24 @@ while [[ $# -gt 0 ]]; do
 done
 
 # ── Dependency Checks ─────────────────────────────────────────────────────
-MISSING=()
-for cmd in unpackbootimg mkdtboimg; do
-    if ! command -v "$cmd" &>/dev/null; then
-        MISSING+=("$cmd")
-    fi
-done
-if [[ ${#MISSING[@]} -gt 0 ]]; then
-    echo -e "${RED}Error:${RESET} Missing required tools: ${MISSING[*]}" >&2
-    echo "  unpackbootimg: from android-tools or AOSP system/tools/mkbootimg" >&2
-    echo "  mkdtboimg:     from AOSP system/libufdt/utils" >&2
+# unpack_bootimg.py (AOSP) or unpackbootimg binary
+UNPACK_BOOTIMG=""
+if command -v unpack_bootimg.py &>/dev/null; then
+    UNPACK_BOOTIMG="unpack_bootimg.py"
+elif command -v unpackbootimg &>/dev/null; then
+    UNPACK_BOOTIMG="unpackbootimg"
+elif [[ -f /tmp/mkbootimg/unpack_bootimg.py ]]; then
+    UNPACK_BOOTIMG="python3 /tmp/mkbootimg/unpack_bootimg.py"
+else
+    echo -e "${RED}Error:${RESET} No boot image unpacker found." >&2
+    echo "  Install: git clone https://android.googlesource.com/platform/system/tools/mkbootimg /tmp/mkbootimg" >&2
     exit 1
+fi
+echo -e "  ${GREEN}Using:${RESET} ${UNPACK_BOOTIMG}"
+
+HAS_MKDTBOIMG=false
+if command -v mkdtboimg &>/dev/null; then
+    HAS_MKDTBOIMG=true
 fi
 
 # ── Validate Firmware Directory ────────────────────────────────────────────
@@ -98,7 +105,7 @@ unpack_boot_image() {
 
     mkdir -p "$out"
     echo -e "  ${CYAN}Unpacking${RESET} ${img_name} → ${out}/"
-    unpackbootimg --boot_img "${img_path}" --out "${out}" 2>&1 | sed 's/^/    /'
+    $UNPACK_BOOTIMG --boot_img "${img_path}" --out "${out}" 2>&1 | sed 's/^/    /'
     echo -e "  ${GREEN}Done.${RESET}"
 }
 
@@ -114,7 +121,9 @@ unpack_boot_image "vendor_boot.img"
 echo -e "${BOLD}[3/4] dtbo.img${RESET} (DTB overlays)"
 DTBO_IMG="${FIRMWARE_DIR}/dtbo.img"
 DTBO_OUT="${OUTPUT_DIR}/dtbo"
-if [[ ! -f "$DTBO_IMG" ]]; then
+if ! $HAS_MKDTBOIMG; then
+    echo -e "  ${YELLOW}Warning:${RESET} mkdtboimg not found, skipping dtbo.img."
+elif [[ ! -f "$DTBO_IMG" ]]; then
     echo -e "  ${YELLOW}Warning:${RESET} dtbo.img not found, skipping."
 elif [[ -d "$DTBO_OUT" && "$(ls -A "$DTBO_OUT" 2>/dev/null)" ]]; then
     echo -e "  ${YELLOW}Skipping:${RESET} dtbo.img already unpacked (idempotent)."
@@ -132,19 +141,20 @@ unpack_boot_image "init_boot.img"
 # ── Kernel Version ────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}═══ Kernel Version ═══${RESET}"
-KERNEL_VERSION_FILE="${OUTPUT_DIR}/boot/boot.img-osVersion"
-KERNEL_IMG="${OUTPUT_DIR}/boot/boot.img-kernel"
-if [[ -f "$KERNEL_VERSION_FILE" ]]; then
-    echo -e "  ${GREEN}OS version:${RESET} $(cat "${KERNEL_VERSION_FILE}")"
-fi
-# Try to extract version string from kernel binary
-if [[ -f "$KERNEL_IMG" ]]; then
-    version_string="$(strings "${KERNEL_IMG}" 2>/dev/null | grep -m1 'Linux version' || true)"
+# unpack_bootimg.py outputs to "kernel", unpackbootimg outputs to "boot.img-kernel"
+KERNEL_IMG=""
+for candidate in "${OUTPUT_DIR}/boot/kernel" "${OUTPUT_DIR}/boot/boot.img-kernel"; do
+    [[ -f "$candidate" ]] && KERNEL_IMG="$candidate" && break
+done
+if [[ -n "$KERNEL_IMG" ]]; then
+    # Try to find kernel version via vermagic-style strings
+    version_string="$(strings "${KERNEL_IMG}" 2>/dev/null | grep -oE '[0-9]+\.[0-9]+\.[0-9]+-[a-z0-9]+' | head -1 || true)"
     if [[ -n "$version_string" ]]; then
         echo -e "  ${GREEN}Kernel:${RESET} ${version_string}"
     else
         echo -e "  ${YELLOW}Could not extract kernel version string from binary.${RESET}"
     fi
+    echo -e "  ${GREEN}Size:${RESET} $(du -h "${KERNEL_IMG}" | cut -f1)"
 else
     echo -e "  ${YELLOW}No kernel image found to extract version from.${RESET}"
 fi
@@ -164,7 +174,8 @@ if [[ -d "$VENDOR_RAMDISK" ]]; then
     if ! $modules_found; then
         # Vendor ramdisk may be compressed; try to unpack it
         vendor_ramdisk_file=""
-        for candidate in "${VENDOR_RAMDISK}/vendor_boot.img-vendor_ramdisk" \
+        for candidate in "${VENDOR_RAMDISK}/vendor_ramdisk00" \
+                         "${VENDOR_RAMDISK}/vendor_boot.img-vendor_ramdisk" \
                          "${VENDOR_RAMDISK}/vendor_boot.img-ramdisk"; do
             if [[ -f "$candidate" ]]; then
                 vendor_ramdisk_file="$candidate"

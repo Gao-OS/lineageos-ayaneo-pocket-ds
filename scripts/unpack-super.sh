@@ -104,17 +104,25 @@ else
     echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${SPARSE_IMG}" | cut -f1)"
 fi
 
-# ── Step 2: Sparse → Raw ─────────────────────────────────────────────────
+# ── Step 2: Sparse → Raw (or detect already-raw) ────────────────────────
 if [[ -f "$RAW_IMG" ]]; then
     echo -e "${YELLOW}Skipping:${RESET} ${RAW_IMG} already exists (idempotent)."
 else
-    echo -e "${CYAN}[2/3]${RESET} Converting sparse image → raw image (simg2img)"
-    simg2img "${SPARSE_IMG}" "${RAW_IMG}"
-    echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${RAW_IMG}" | cut -f1)"
+    # Check if the combined image is sparse (magic 0xED26FF3A) or already raw
+    MAGIC="$(xxd -l4 -p "${SPARSE_IMG}" 2>/dev/null || true)"
+    if [[ "$MAGIC" == "3aff26ed" ]]; then
+        echo -e "${CYAN}[2/3]${RESET} Converting sparse image → raw image (simg2img)"
+        simg2img "${SPARSE_IMG}" "${RAW_IMG}"
+        echo -e "${GREEN}  Done.${RESET} Size: $(du -h "${RAW_IMG}" | cut -f1)"
+    else
+        echo -e "${CYAN}[2/3]${RESET} Image is already raw (not sparse), using directly."
+        ln -sf "$(basename "${SPARSE_IMG}")" "${RAW_IMG}"
+        echo -e "${GREEN}  Done.${RESET} (symlink to combined image)"
+    fi
 fi
 
 # ── Step 3: Extract Logical Partitions ────────────────────────────────────
-EXPECTED_PARTITIONS=(system vendor product system_ext odm)
+EXPECTED_PARTITIONS=(system_a vendor_a product_a system_ext_a odm_a system_dlkm_a vendor_dlkm_a)
 
 if [[ -d "$PARTITIONS_DIR" ]]; then
     existing=0
@@ -157,18 +165,26 @@ if $DO_MOUNT; then
     done
 fi
 
-# ── Summary ───────────────────────────────────────────────────────────────
+# ── LP Metadata ──────────────────────────────────────────────────────────
+echo ""
+if command -v lpdump &>/dev/null; then
+    echo -e "${BOLD}═══ LP Metadata (lpdump) ═══${RESET}"
+    lpdump "${RAW_IMG}" 2>/dev/null || echo -e "  ${YELLOW}lpdump failed.${RESET}"
+    echo ""
+fi
+
+# ── Summary ──────────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}═══ Partition Summary ═══${RESET}"
-printf "  ${BOLD}%-15s %10s${RESET}\n" "PARTITION" "SIZE"
-printf "  %-15s %10s\n" "───────────────" "──────────"
+printf "  ${BOLD}%-20s %10s${RESET}\n" "PARTITION" "SIZE"
+printf "  %-20s %10s\n" "────────────────────" "──────────"
 for part in "${EXPECTED_PARTITIONS[@]}"; do
     part_img="${PARTITIONS_DIR}/${part}.img"
     if [[ -f "$part_img" ]]; then
         size="$(du -h "${part_img}" | cut -f1)"
-        printf "  ${GREEN}%-15s${RESET} %10s\n" "${part}" "${size}"
+        printf "  ${GREEN}%-20s${RESET} %10s\n" "${part}" "${size}"
     else
-        printf "  ${RED}%-15s${RESET} %10s\n" "${part}" "(missing)"
+        printf "  ${RED}%-20s${RESET} %10s\n" "${part}" "(missing)"
     fi
 done
 echo ""

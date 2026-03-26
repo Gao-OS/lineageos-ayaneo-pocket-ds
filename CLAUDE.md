@@ -114,10 +114,99 @@ This is non-negotiable. No "vanilla" build target exists.
 - `patch{0-5}.xml` — patch scripts per LUN
 
 ## Stock Firmware Partition Map
-Derived from gpt_main*.bin and rawprogram*.xml files.
-Document every partition: name, LUN, start sector, size, image file.
-Note which partitions are in the dynamic super group.
-(To be populated after firmware analysis with scripts/unpack-super.sh)
+
+Derived from rawprogram*.xml and lpdump analysis. Sector size = 4096 bytes on all LUNs.
+
+### LUN 0 — `rawprogram_unsparse0.xml`
+Main data LUN. Contains super (dynamic partitions), metadata, userdata, rawdump.
+
+| Partition | Image | Size |
+|-----------|-------|------|
+| persist | `persist.img` | 32 MB |
+| super (8 chunks) | `super_{1-8}.img` | ~5.6 GB (raw, not sparse) |
+| vbmeta_system_a/b | `vbmeta_system.img` | 64 KB |
+| metadata (5 chunks) | `metadata_{1-5}.img` | ~10 MB |
+| rawdump | — | ~12.2 GB |
+| userdata (10 chunks) | `userdata_{1-10}.img` | extends to end of disk |
+
+### LUN 1 — `rawprogram1.xml` (XBL slot A)
+| Partition | Image | Size |
+|-----------|-------|------|
+| xbl_a | `xbl_s.melf` | 3.5 MB |
+| xbl_config_a | `xbl_config.elf` | 300 KB |
+| multiimgqti_a | `multi_image_qti.mbn` | 32 KB |
+| multiimgoem_a | `multi_image.mbn` | 32 KB |
+
+### LUN 2 — `rawprogram2.xml` (XBL slot B, empty at factory)
+
+### LUN 3 — `rawprogram3.xml` (DDR training)
+| Partition | Size |
+|-----------|------|
+| cdt | 128 KB |
+| ddr | 1 MB |
+
+### LUN 4 — `rawprogram_unsparse4.xml` (main firmware, A/B)
+
+**Slot A (flashed at factory)**
+| Partition | Image | Size |
+|-----------|-------|------|
+| uefi_a | `uefi.elf` | 5 MB |
+| aop_a | `aop.mbn` | 512 KB |
+| tz_a | `tz.mbn` | 4 MB |
+| hyp_a | `hypvm.mbn` | 8 MB |
+| modem_a | `NON-HLOS.bin` | 320 MB |
+| bluetooth_a | `BTFM.bin` | 6 MB |
+| abl_a | `abl.elf` | 1 MB |
+| dsp_a | `dspso.bin` | 64 MB |
+| keymaster_a | `keymint.mbn` | 512 KB |
+| boot_a | `boot.img` | 96 MB |
+| vbmeta_a | `vbmeta.img` | 64 KB |
+| dtbo_a | `dtbo.img` | 24 MB |
+| vm-bootsys_a | `vm-bootsys_{1-9}.img` | ~490 MB total |
+| cpucp_a | `cpucp.elf` | 1 MB |
+| vendor_boot_a | `vendor_boot.img` | 96 MB |
+| recovery_a | `recovery.img` | 100 MB |
+| init_boot_a | `init_boot.img` | 8 MB (confirms GKI 2.0) |
+
+**Slot-independent (LUN 4)**
+| Partition | Image | Size |
+|-----------|-------|------|
+| splash | — | ~33 MB |
+| toolsfv | `tools.fv` | 1 MB |
+| logfs | `logfs_ufs_8mb.bin` | 8 MB |
+| logdump | — | 512 MB |
+| storsec | `storsec.mbn` | 128 KB |
+| vm-persist | `vm-persist_1.img` | ~119 MB |
+
+### LUN 5 — `rawprogram5.xml` (modem NV, never overwrite)
+| Partition | Size |
+|-----------|------|
+| modemst1 | 3 MB |
+| modemst2 | 3 MB |
+| fsg | 3 MB |
+| fsc | 128 KB |
+
+### Dynamic Super Partition (lpdump)
+- **Total super size**: 6,442,450,944 bytes (6 GiB)
+- **Dynamic group max**: 6,438,256,640 bytes
+- **Header flags**: virtual_ab_device
+- **A/B slots**: Only slot A populated at factory
+
+| Logical Partition | Sectors | Size |
+|-------------------|---------|------|
+| system_ext_a | 4,445,592 | 2.2 GB |
+| vendor_a | 3,014,464 | 1.5 GB |
+| system_a | 2,323,616 | 1.2 GB |
+| product_a | 1,613,984 | 789 MB |
+| vendor_dlkm_a | 248,208 | 121 MB |
+| odm_a | 2,584 | 1.3 MB |
+| system_dlkm_a | 856 | 428 KB |
+
+### Partitions to NEVER Overwrite
+- `persist` (LUN 0) — NV calibration data
+- `modemst1`, `modemst2`, `fsg`, `fsc` (LUN 5) — modem RF calibration
+- `vm-bootsys_a/b`, `vm-persist`, `vm-data` (LUN 4) — Qualcomm hypervisor
+- `storsec` (LUN 4) — storage security fuses
 
 ## Boot Chain
 XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
@@ -125,11 +214,23 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 - TrustZone: tz.mbn
 - Verified Boot: AVB 2.0, vbmeta must be disabled or re-signed
 
+## Kernel Details (from stock firmware analysis)
+- **Version**: 5.15.104-g59fb11f14619 (android13, SMP preempt aarch64)
+- **GKI 2.0**: confirmed (init_boot.img = 8 MB separate partition, boot.img ramdisk = 0)
+- **Boot header version**: 4
+- **Image format**: PE/COFF (arm64 Image, 45 MB)
+- **Vendor modules**: 306 .ko files in vendor_boot ramdisk (lz4 compressed)
+- **DTB**: 4.5 MB FDT in vendor_boot.img
+- **Prebuilt**: extracted to kernel/ayaneo/sm8750/Image
+- **Vendor cmdline**: `video=vfb:640x400,bpp=32,memsize=3072000 qcom_geni_serial.con_enabled=0 nosoftlockup bootconfig`
+- **Bootconfig**: `androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3`
+- **OS version**: Android 13.0.0, patch level 2023-06
+
 ## Kernel Strategy
 - Stock kernel is GKI 2.0 (confirmed by init_boot.img in stock firmware)
 - Start with prebuilt kernel extracted from stock boot.img
 - KernelSU as GKI kernel module (not patched into source)
-- vendor_boot.img contains vendor ramdisk + vendor kernel modules
+- vendor_boot.img contains vendor ramdisk + 306 vendor kernel modules
 - DTB/DTBO in separate partitions
 
 ## KernelSU Integration
