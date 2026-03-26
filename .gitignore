@@ -1,0 +1,35 @@
+# Stock firmware dumps
+stock-firmware/ufs/
+
+# Android build artifacts
+*.img
+*.bin
+*.elf
+*.mbn
+*.melf
+*.fv
+out/
+.repo/
+ccache/
+
+# Python
+*.pyc
+__pycache__/
+
+# Nix/devenv
+.devenv/
+.devenv.flake.nix
+
+# direnv
+.direnv/
+
+# Editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
