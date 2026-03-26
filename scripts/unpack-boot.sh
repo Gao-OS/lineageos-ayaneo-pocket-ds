@@ -158,7 +158,7 @@ if [[ -d "$VENDOR_RAMDISK" ]]; then
     modules_found=false
     while IFS= read -r -d '' mod; do
         modules_found=true
-        echo -e "  ${GREEN}*${RESET} ${mod#${VENDOR_RAMDISK}/}"
+        echo -e "  ${GREEN}*${RESET} ${mod#"${VENDOR_RAMDISK}"/}"
     done < <(find "${VENDOR_RAMDISK}" -name "*.ko" -print0 2>/dev/null || true)
 
     if ! $modules_found; then
@@ -209,7 +209,7 @@ if [[ -d "$VENDOR_RAMDISK" ]]; then
 
             while IFS= read -r -d '' mod; do
                 modules_found=true
-                echo -e "  ${GREEN}*${RESET} ${mod#${ramdisk_extract}/}"
+                echo -e "  ${GREEN}*${RESET} ${mod#"${ramdisk_extract}"/}"
             done < <(find "${ramdisk_extract}" -name "*.ko" -print0 2>/dev/null || true)
         fi
 

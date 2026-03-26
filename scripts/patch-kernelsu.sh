@@ -391,40 +391,46 @@ mode_gki() {
     mkboot_args+=(--vendor_ramdisk "${new_ramdisk}")
 
     # Read header version
-    local header_version_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-header_version"
+    local header_version_file
+    header_version_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-header_version"
     if [[ -f "${header_version_file}" ]]; then
-        mkboot_args+=(--header_version "$(cat "${header_version_file}" | tr -d '[:space:]')")
+        mkboot_args+=(--header_version "$(tr -d '[:space:]' < "${header_version_file}")")
     fi
 
     # Read page size
-    local pagesize_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-pagesize"
+    local pagesize_file
+    pagesize_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-pagesize"
     if [[ -f "${pagesize_file}" ]]; then
-        mkboot_args+=(--pagesize "$(cat "${pagesize_file}" | tr -d '[:space:]')")
+        mkboot_args+=(--pagesize "$(tr -d '[:space:]' < "${pagesize_file}")")
     fi
 
     # Read kernel base
-    local base_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-base"
+    local base_file
+    base_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-base"
     if [[ -f "${base_file}" ]]; then
-        mkboot_args+=(--base "$(cat "${base_file}" | tr -d '[:space:]')")
+        mkboot_args+=(--base "$(tr -d '[:space:]' < "${base_file}")")
     fi
 
     # Read dtb if present
-    local dtb_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-dtb"
+    local dtb_file
+    dtb_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-dtb"
     if [[ -f "${dtb_file}" && -s "${dtb_file}" ]]; then
         mkboot_args+=(--dtb "${dtb_file}")
     fi
 
     # Read vendor cmdline
-    local cmdline_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-vendor_cmdline"
+    local cmdline_file
+    cmdline_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-vendor_cmdline"
     if [[ -f "${cmdline_file}" ]]; then
         mkboot_args+=(--vendor_cmdline "$(cat "${cmdline_file}")")
     fi
 
     # Read board/name
-    local board_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-board"
+    local board_file
+    board_file="${vb_dir}/$(basename "${VENDOR_BOOT_IMG}")-board"
     if [[ -f "${board_file}" ]]; then
         local board_val
-        board_val="$(cat "${board_file}" | tr -d '[:space:]')"
+        board_val="$(tr -d '[:space:]' < "${board_file}")"
         if [[ -n "${board_val}" ]]; then
             mkboot_args+=(--board "${board_val}")
         fi

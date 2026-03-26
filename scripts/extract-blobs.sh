@@ -71,7 +71,7 @@ done
 
 # ── Dependency Checks ─────────────────────────────────────────────────────
 MISSING=()
-for cmd in sha256sum; do
+for cmd in sha256sum cp mkdir find; do
     if ! command -v "$cmd" &>/dev/null; then
         MISSING+=("$cmd")
     fi
@@ -211,7 +211,7 @@ echo -e "${BOLD}Extraction:${RESET} ${GREEN}${copied} copied${RESET}, ${YELLOW}$
 ALL_FILES=()
 if [[ -d "$PROPRIETARY_DIR" ]]; then
     while IFS= read -r -d '' f; do
-        rel="${f#${PROPRIETARY_DIR}/}"
+        rel="${f#"${PROPRIETARY_DIR}"/}"
         ALL_FILES+=("$rel")
     done < <(find "$PROPRIETARY_DIR" -type f -print0 | sort -z)
 fi
@@ -238,7 +238,6 @@ HEADER
         for i in "${!ALL_FILES[@]}"; do
             entry="${ALL_FILES[$i]}"
             # Target path: strip partition prefix for the install location
-            target_path="${entry}"
             src_path="vendor/ayaneo/pocket_ds/proprietary/${entry}"
             if [[ $i -eq $last_idx ]]; then
                 echo "    ${src_path}:\$(TARGET_COPY_OUT_${entry%%/*})/${entry#*/}"

@@ -152,7 +152,8 @@ phase_extract() {
     # Extract blobs (mount partitions temporarily)
     local mnt_base
     mnt_base=$(mktemp -d)
-    trap "sudo umount '$mnt_base'/* 2>/dev/null; rm -rf '$mnt_base'" EXIT
+    # shellcheck disable=SC2064
+    trap "sudo umount '${mnt_base}'/* 2>/dev/null; rm -rf '${mnt_base}'" EXIT
 
     for part in system vendor product system_ext odm; do
         local img="$unpacked_dir/${part}.img"

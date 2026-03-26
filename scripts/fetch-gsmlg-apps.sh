@@ -46,9 +46,9 @@ if [[ ${#APPS[@]} -eq 0 ]]; then
     exit 0
 fi
 
-for app_entry in "${APPS[@]}"; do
+fetch_app() {
     local repo apk_name
-    read -r repo apk_name <<< "$app_entry"
+    read -r repo apk_name <<< "$1"
 
     info "Fetching latest release of $repo..."
     local release_url
@@ -59,12 +59,16 @@ for app_entry in "${APPS[@]}"; do
 
     if [[ -z "$release_url" ]]; then
         warn "No APK found in latest release of $repo"
-        continue
+        return 0
     fi
 
     info "Downloading: $release_url"
     curl -sL -o "$PREBUILT_DIR/$apk_name" "$release_url"
     ok "Saved: $PREBUILT_DIR/$apk_name"
+}
+
+for app_entry in "${APPS[@]}"; do
+    fetch_app "$app_entry"
 done
 
 ok "gsmlg-apps fetch complete"
