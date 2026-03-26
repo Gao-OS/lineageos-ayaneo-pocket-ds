@@ -89,6 +89,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600    # 100 MB (25600 sectors)
 # Partitions — dynamic (super)
 # Verified from stock firmware lpdump: super block device = 6,442,450,944 bytes
 # Dynamic group max = 6,438,256,640 bytes, header flags = virtual_ab_device
+BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BOARD_SUPER_PARTITION_SIZE := 6442450944
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
