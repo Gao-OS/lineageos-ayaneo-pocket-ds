@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Framework configuration overlay for Ayaneo Pocket DS
+  (Qualcomm TurboX C8550 / SM8750, dual-screen handheld gaming device)
+
+  NOTE: Values marked TODO require verification from first boot / firmware
+  analysis. Conservative/safe defaults are used until then.
+-->
+<resources>
+
+    <!-- ── Display ── -->
+
+    <!-- LCD pixel density. Also set via ro.sf.lcd_density in device.mk.
+         Verify against actual display PPI after first boot:
+           adb shell wm density
+         Typical range for ~6" 1080p handheld: 320-400 dpi -->
+    <integer name="config_screenDensityDpiForVrMode">320</integer>
+
+    <!-- Minimum/maximum screen brightness. Verify with actual panel PWM range. -->
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingDefault">128</integer>
+
+    <!-- Auto-brightness: disable until ambient light sensor is confirmed working -->
+    <bool name="config_automatic_brightness_available">false</bool>
+
+    <!-- ── Rotation ── -->
+
+    <!-- Handheld gaming device: lock to landscape by default.
+         0 = portrait, 1 = landscape, 2 = reverse-portrait, 3 = reverse-landscape -->
+    <integer name="config_lidOpenRotation">-1</integer>  <!-- -1 = don't force -->
+    <integer name="config_lidCloseRotation">-1</integer>
+
+    <!-- Allow all rotations; game launchers will lock as needed -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- ── Power / Doze ── -->
+
+    <!-- Disable ambient display / doze — not useful on a gaming handheld -->
+    <bool name="config_dozeAfterScreenOffByDefault">false</bool>
+    <bool name="config_supportDoze">false</bool>
+
+    <!-- Wake on pick-up: disable (device sits on table during gaming) -->
+    <bool name="config_dozePulseOnPickUp">false</bool>
+
+    <!-- ── Vibrator ── -->
+    <!-- Confirm vibrator is present after first boot. If not, set to false. -->
+    <bool name="config_vibratorEnabled">true</bool>
+
+    <!-- ── Input / Gamepad ── -->
+
+    <!-- The device has a physical keyboard/gamepad; show the IME only when
+         explicitly requested -->
+    <bool name="config_forceDefaultOrientation">false</bool>
+
+    <!-- ── Telephony ── -->
+
+    <!-- Ayaneo Pocket DS does NOT have telephony (no cellular modem for calls/SMS)
+         Note: NON-HLOS.bin is present for QMI/data services, not voice -->
+    <bool name="config_voice_capable">false</bool>
+    <bool name="config_sms_capable">false</bool>
+
+    <!-- ── WiFi / Bluetooth ── -->
+
+    <!-- Default WiFi channels; verify against Qualcomm WCN7850 regulatory domain -->
+    <bool name="config_wifi_dual_band_support">true</bool>
+    <bool name="config_wifi5ghzBandSupported">true</bool>
+
+    <!-- ── USB ── -->
+    <!-- Default USB config: MTP + ADB (matches persist.sys.usb.config in device.mk) -->
+    <string name="config_default_usb_configuration">mtp,adb</string>
+
+</resources>
