@@ -59,9 +59,29 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.gamepad.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.gamepad.xml
 
+# Fstab — install to vendor ramdisk for first-stage init mount
+PRODUCT_COPY_FILES += \
+    device/ayaneo/pocket_ds/rootdir/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+    device/ayaneo/pocket_ds/rootdir/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+
 # Dynamic partitions — build system control (board-level config is in BoardConfig.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Virtual A/B (confirmed by lpdump: virtual_ab_device flag set)
 # Required for OTA update engine to include snapshot merge service (snapuserd)
 PRODUCT_VIRTUAL_AB_OTA := true
+
+# A/B OTA packages
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qcom \
+    android.hardware.boot@1.2-service
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd

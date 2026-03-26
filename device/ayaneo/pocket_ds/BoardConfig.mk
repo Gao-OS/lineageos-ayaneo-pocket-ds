@@ -22,10 +22,22 @@ TARGET_CPU_VARIANT_RUNTIME := kryo785
 TARGET_BOOTLOADER_BOARD_NAME := sun
 TARGET_NO_BOOTLOADER := true
 
-# Kernel
+# Kernel — prebuilt from stock boot.img (GKI 2.0)
 TARGET_KERNEL_SOURCE := kernel/ayaneo/sm8750
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/$(BOARD_KERNEL_IMAGE_NAME)
+
+# DTB — extracted from stock vendor_boot.img (4.5 MB FDT)
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_SOURCE)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+# Vendor kernel modules — 306 .ko files from stock vendor_boot ramdisk
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
+    $(wildcard $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/*.ko)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
+    $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/modules.load
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := \
+    $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/modules.blocklist
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
