@@ -5,10 +5,43 @@
 #
 # Derived from LineageOS android_device_oneplus_sm8750-common (lineage-23.0)
 # with OnePlus/OPLUS-specific blobs removed. Platform codename: sun
-# Actual blob paths must be verified against Ayaneo stock firmware.
-# Run scripts/catalog-blobs.sh on-device to generate a verified blob list.
 #
 # Reference: LineageOS/android_device_oneplus_sm8750-common
+#
+# ============================================================
+# HOW TO VERIFY AND UPDATE BLOBS AGAINST STOCK FIRMWARE
+# ============================================================
+#
+# All blob paths in this file are UNVERIFIED placeholders derived from the
+# upstream SM8750 ("sun") reference device (OnePlus 13 "dodge"). They must
+# be validated against the actual Ayaneo stock partitions before building.
+#
+# Step 1 — Mount stock partitions
+#   Use simg2img + mount, or unpack super with lpunpack:
+#     simg2img super_1.img..super_8.img super_raw.img
+#     lpunpack super_raw.img out/
+#     mount -o ro out/vendor.img /mnt/vendor
+#     mount -o ro out/system.img /mnt/system
+#     mount -o ro out/odm.img /mnt/odm        # if present
+#
+# Step 2 — Run catalog-blobs.sh
+#     scripts/catalog-blobs.sh \
+#         --vendor /mnt/vendor \
+#         --system /mnt/system \
+#         --odm    /mnt/odm \
+#         --out    device/ayaneo/pocket_ds/proprietary-files.txt
+#
+#   The script emits one path per line, alphabetically within each
+#   partition prefix (vendor/, system/, system_ext/, odm/), and can
+#   optionally append sha1sum pins with --pin-sha1.
+#
+# Step 3 — Run extract_utils
+#   After verifying paths, extract blobs into vendor/ayaneo/pocket_ds/:
+#     ./extract-files.sh /mnt
+#
+# Blobs marked with '-' are pinned and will NOT be updated by extract-files.
+# Blobs with a '|sha1' suffix are version-locked to that exact binary.
+# ============================================================
 
 # ADSP
 vendor/bin/adsprpcd
@@ -778,5 +811,23 @@ vendor/lib64/libwfduibcsrc_vendor.so
 vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
+
+# ODM (Ayaneo-specific blobs — paths UNVERIFIED, must catalog from stock odm.img)
+# The /odm partition carries device-specific HAL overrides, sensor configs,
+# and gamepad/input firmware that differ from the upstream OnePlus reference.
+# Run scripts/catalog-blobs.sh --odm /mnt/odm to populate real paths.
+#
+# Common locations to check on Ayaneo stock odm.img:
+#   odm/lib64/          — 64-bit device HALs (sensors, input, display quirks)
+#   odm/lib/            — 32-bit HALs (if any)
+#   odm/etc/            — odm-specific configs (sensor registry, keylayout)
+#   odm/firmware/       — device-specific firmware blobs
+#   odm/bin/            — device-specific binaries
+#
+# Placeholder entries (REMOVE or REPLACE after running catalog-blobs.sh):
+#odm/lib64/libsensor_ayaneo.so
+#odm/lib64/libinput_ayaneo.so
+#odm/etc/sensors/config/ayaneo_sensors.json
+#odm/etc/keylayout/ayaneo_gamepad.kl
 
 # vi:ft=conf

@@ -9,9 +9,9 @@ DEVICE_PATH := device/ayaneo/pocket_ds
 # Platform (SM8750 "sun")
 TARGET_BOARD_PLATFORM := sun
 
-# Architecture (SM8750 uses Qualcomm Oryon cores)
+# Architecture — SM8750 Oryon implements ARMv9.2-A; arm64-only (no 32-bit support on this SoC)
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a-dotprod
+TARGET_ARCH_VARIANT := armv9-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
@@ -127,8 +127,11 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 80
 
 # AVB (Android Verified Boot)
+# NOTE: Verification is intentionally disabled for bringup/development.
+# Per project policy: vbmeta must be flashed with --disable-verity --disable-verification.
+# The test key below is a development placeholder. Before any production flash, replace with
+# a device-specific key and remove --flags 3 to re-enable verified boot.
 BOARD_AVB_ENABLE := true
-# TODO: Provide proper AVB key for production builds
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
