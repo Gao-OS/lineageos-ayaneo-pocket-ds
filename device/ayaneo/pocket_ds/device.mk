@@ -23,10 +23,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     gralloc.sm8750
 
-# KernelSU
-PRODUCT_PACKAGES += \
-    KernelSUManager
-
 # Device properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320 \
