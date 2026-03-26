@@ -1,6 +1,33 @@
 # Vendor properties for Ayaneo Pocket DS
-# TODO: Extract from stock vendor/build.prop
+# TODO: Verify against stock vendor/build.prop after firmware extraction
 
+# Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
+ro.opengles.version=196610
+
+# Bluetooth
 persist.vendor.qcom.bluetooth.soc=hastings
+
+# Audio
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=true
+
+# Camera
+camera.disable_zsl_mode=true
+
+# Charging
+persist.vendor.quick.charge=1
+
+# Display
+vendor.display.disable_rotator_downscale=1
+
+# DRM
+drm.service.enabled=true
+
+# Sensors
+persist.vendor.sensors.enable.mag_filter=true
+
+# Wi-Fi
+wifi.aware.interface=wifi-aware0

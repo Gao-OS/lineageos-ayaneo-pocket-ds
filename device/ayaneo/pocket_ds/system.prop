@@ -1,5 +1,25 @@
 # System properties for Ayaneo Pocket DS
-# TODO: Extract from stock system/build.prop
+# TODO: Verify against stock system/build.prop after firmware extraction
 
+# SoC
 ro.hardware.chipname=sm8750
-persist.sys.timezone=America/New_York
+
+# Display
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.protected_contents=true
+
+# Media
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+
+# Telephony (if applicable — handheld may have no modem)
+# TODO: Confirm modem presence on Pocket DS hardware
+# telephony.lteOnCdmaDevice=1
+
+# USB
+persist.sys.usb.config=mtp,adb
