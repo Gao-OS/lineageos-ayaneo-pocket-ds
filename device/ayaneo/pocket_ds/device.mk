@@ -85,3 +85,7 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
+
+# OTA kernel requirements — disable during bringup (prebuilt kernel lacks
+# kernel version manifest); re-enable after source-built kernel is in use.
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false

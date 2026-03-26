@@ -18,6 +18,9 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := kryo785
 
+# 64-bit apps — SM8750 is a pure arm64 SoC
+TARGET_SUPPORTS_64_BIT_APPS := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sun
 TARGET_NO_BOOTLOADER := true
@@ -173,10 +176,6 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# OTA kernel requirements — disable during bringup (prebuilt kernel lacks
-# kernel version manifest); re-enable after source-built kernel is in use.
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # TODO: Verify the following from actual firmware dumps:
 # - Exact kernel command line arguments
