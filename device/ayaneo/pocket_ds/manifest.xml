@@ -4,24 +4,21 @@
      Verify against stock: adb shell cat /vendor/etc/vintf/manifest.xml -->
 <manifest version="1.0" type="device">
 
-    <!-- Audio -->
-    <hal format="hidl">
-        <name>android.hardware.audio</name>
-        <transport>hwbinder</transport>
-        <version>7.1</version>
-        <interface>
-            <name>IDevicesFactory</name>
-            <instance>default</instance>
-        </interface>
+    <!-- Audio — SM8750 uses AIDL audio HAL (PAL / libaudiocorehal.qti).
+         HIDL audio@7.x is not used on SM8750; removing it prevents VINTF compliance
+         failures. The service binary ships in vendor via extract-blobs.sh. -->
+    <hal format="aidl">
+        <name>android.hardware.audio.core</name>
+        <version>1</version>
+        <fqname>IModule/default</fqname>
+        <fqname>IModule/r_submix</fqname>
+        <fqname>IModule/usb</fqname>
+        <fqname>IModule/stub</fqname>
     </hal>
-    <hal format="hidl">
+    <hal format="aidl">
         <name>android.hardware.audio.effect</name>
-        <transport>hwbinder</transport>
-        <version>7.0</version>
-        <interface>
-            <name>IEffectsFactory</name>
-            <instance>default</instance>
-        </interface>
+        <version>1</version>
+        <fqname>IFactory/default</fqname>
     </hal>
 
     <!-- Graphics -->
@@ -141,15 +138,11 @@
         <fqname>IBootControl/default</fqname>
     </hal>
 
-    <!-- Display (for dual-screen — TODO: verify second instance) -->
-    <hal format="hidl">
+    <!-- Lights — AIDL HAL (android.hardware.light is AIDL on Android 13+) -->
+    <hal format="aidl">
         <name>android.hardware.light</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ILight</name>
-            <instance>default</instance>
-        </interface>
+        <version>2</version>
+        <fqname>ILights/default</fqname>
     </hal>
 
 </manifest>
