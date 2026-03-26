@@ -1,0 +1,12 @@
+# Ayaneo Pocket DS vendor file_contexts
+# Minimal bringup — extend as HAL services are identified
+
+# HAL service executables
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.qti          u:object_r:hal_health_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service                u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.boot@1\.2-service            u:object_r:hal_bootctl_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.multihal    u:object_r:hal_sensors_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget@1\.1-service-qti u:object_r:hal_usb_gadget_default_exec:s0
+
+# Firmware directories
+/vendor/firmware(/.*)?    u:object_r:vendor_firmware_file:s0
