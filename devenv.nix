@@ -30,6 +30,13 @@
 
     # Binary analysis
     xxd
+    binutils       # provides strings, objdump (used by patch-kernelsu.sh)
+    file           # file type detection (required by patch-kernelsu.sh)
+
+    # Compression / archive tools (used by patch-kernelsu.sh and unpack-boot.sh)
+    cpio
+    lz4
+    zstd
 
     # XML parsing (for rawprogram XML)
     xmlstarlet
