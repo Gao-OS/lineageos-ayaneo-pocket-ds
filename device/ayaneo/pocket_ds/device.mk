@@ -33,7 +33,8 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    device/ayaneo/pocket_ds
+    device/ayaneo/pocket_ds \
+    packages/gsmlg-apps
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/ayaneo/pocket_ds/overlay
