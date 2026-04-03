@@ -12,6 +12,74 @@ out/
 .repo/
 ccache/
 
+# AOSP/LineageOS source tree (synced by repo, not tracked in git)
+android/
+art/
+bionic/
+bootable/
+build/
+cts/
+dalvik/
+developers/
+development/
+device/common/
+device/generic/
+device/google/
+device/google_car/
+device/lineage/
+device/qcom/
+device/sample/
+external/
+frameworks/
+hardware/
+kernel/configs/
+kernel/prebuilts/
+kernel/tests/
+libcore/
+libnativehelper/
+lineage-sdk/
+lineage/
+packages/apps/
+packages/inputmethods/
+packages/modules/
+packages/overlays/
+packages/providers/
+packages/resources/
+packages/screensavers/
+packages/services/
+packages/wallpapers/
+pdk/
+platform_testing/
+prebuilts/
+sdk/
+system/
+test/
+toolchain/
+tools/
+trusty/
+
+# AOSP root files (from repo sync)
+/Android.bp
+/BUILD
+/WORKSPACE
+/bootstrap.bash
+/lk_inc.mk
+
+# Vendor dirs (synced by repo)
+vendor/apn/
+vendor/codeaurora/
+vendor/crowdin/
+vendor/gapps/
+vendor/lineage/
+vendor/qcom/
+
+# Backup files
+*.bak
+*.bak2
+
+# JVM crash logs
+hs_err_pid*.log
+
 # Python
 *.pyc
 __pycache__/
