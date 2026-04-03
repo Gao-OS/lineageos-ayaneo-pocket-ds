@@ -7,108 +7,21 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/ayaneo/pocket_ds
 
 PRODUCT_COPY_FILES += \
-    vendor/ayaneo/pocket_ds/proprietary/odm/etc/group:$(TARGET_COPY_OUT_ODM)/etc/group \
-    vendor/ayaneo/pocket_ds/proprietary/odm/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_ODM)/etc/NOTICE.xml.gz \
-    vendor/ayaneo/pocket_ds/proprietary/odm/etc/passwd:$(TARGET_COPY_OUT_ODM)/etc/passwd \
     vendor/ayaneo/pocket_ds/proprietary/odm/etc/ueventd.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/CallFeaturesSetting/CallFeaturesSetting.apk:$(TARGET_COPY_OUT_PRODUCT)/app/CallFeaturesSetting/CallFeaturesSetting.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/CallFeaturesSetting/oat/arm64/CallFeaturesSetting.odex:$(TARGET_COPY_OUT_PRODUCT)/app/CallFeaturesSetting/oat/arm64/CallFeaturesSetting.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/CallFeaturesSetting/oat/arm64/CallFeaturesSetting.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/CallFeaturesSetting/oat/arm64/CallFeaturesSetting.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Chrome/Chrome.apk:$(TARGET_COPY_OUT_PRODUCT)/app/Chrome/Chrome.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Chrome/oat/arm64/Chrome.odex:$(TARGET_COPY_OUT_PRODUCT)/app/Chrome/oat/arm64/Chrome.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Chrome/oat/arm64/Chrome.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/Chrome/oat/arm64/Chrome.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Chrome/oat/arm/Chrome.odex:$(TARGET_COPY_OUT_PRODUCT)/app/Chrome/oat/arm/Chrome.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Chrome/oat/arm/Chrome.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/Chrome/oat/arm/Chrome.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConferenceDialer/ConferenceDialer.apk:$(TARGET_COPY_OUT_PRODUCT)/app/ConferenceDialer/ConferenceDialer.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConferenceDialer/oat/arm64/ConferenceDialer.odex:$(TARGET_COPY_OUT_PRODUCT)/app/ConferenceDialer/oat/arm64/ConferenceDialer.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConferenceDialer/oat/arm64/ConferenceDialer.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/ConferenceDialer/oat/arm64/ConferenceDialer.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConfURIDialer/ConfURIDialer.apk:$(TARGET_COPY_OUT_PRODUCT)/app/ConfURIDialer/ConfURIDialer.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConfURIDialer/oat/arm64/ConfURIDialer.odex:$(TARGET_COPY_OUT_PRODUCT)/app/ConfURIDialer/oat/arm64/ConfURIDialer.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ConfURIDialer/oat/arm64/ConfURIDialer.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/ConfURIDialer/oat/arm64/ConfURIDialer.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/DeskClock/DeskClock.apk:$(TARGET_COPY_OUT_PRODUCT)/app/DeskClock/DeskClock.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/DeskClock/oat/arm64/DeskClock.odex:$(TARGET_COPY_OUT_PRODUCT)/app/DeskClock/oat/arm64/DeskClock.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/DeskClock/oat/arm64/DeskClock.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/DeskClock/oat/arm64/DeskClock.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/FotaUpdate/FotaUpdate.apk:$(TARGET_COPY_OUT_PRODUCT)/app/FotaUpdate/FotaUpdate.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/FotaUpdate/oat/arm64/FotaUpdate.odex:$(TARGET_COPY_OUT_PRODUCT)/app/FotaUpdate/oat/arm64/FotaUpdate.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/FotaUpdate/oat/arm64/FotaUpdate.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/FotaUpdate/oat/arm64/FotaUpdate.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Gallery2/Gallery2.apk:$(TARGET_COPY_OUT_PRODUCT)/app/Gallery2/Gallery2.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Gallery2/oat/arm64/Gallery2.odex:$(TARGET_COPY_OUT_PRODUCT)/app/Gallery2/oat/arm64/Gallery2.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/Gallery2/oat/arm64/Gallery2.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/Gallery2/oat/arm64/Gallery2.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleCalendarSyncAdapter/oat/arm64/GoogleCalendarSyncAdapter.odex:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleCalendarSyncAdapter/oat/arm64/GoogleCalendarSyncAdapter.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleCalendarSyncAdapter/oat/arm64/GoogleCalendarSyncAdapter.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleCalendarSyncAdapter/oat/arm64/GoogleCalendarSyncAdapter.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleLocationHistory/GoogleLocationHistory.apk:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleLocationHistory/GoogleLocationHistory.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleLocationHistory/oat/arm64/GoogleLocationHistory.odex:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleLocationHistory/oat/arm64/GoogleLocationHistory.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/GoogleLocationHistory/oat/arm64/GoogleLocationHistory.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/GoogleLocationHistory/oat/arm64/GoogleLocationHistory.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/LatinImeGoogle/LatinImeGoogle.apk:$(TARGET_COPY_OUT_PRODUCT)/app/LatinImeGoogle/LatinImeGoogle.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/LatinImeGoogle/oat/arm64/LatinImeGoogle.odex:$(TARGET_COPY_OUT_PRODUCT)/app/LatinImeGoogle/oat/arm64/LatinImeGoogle.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/LatinImeGoogle/oat/arm64/LatinImeGoogle.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/LatinImeGoogle/oat/arm64/LatinImeGoogle.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ModuleMetadata/ModuleMetadata.apk:$(TARGET_COPY_OUT_PRODUCT)/app/ModuleMetadata/ModuleMetadata.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PhotoTable/oat/arm64/PhotoTable.odex:$(TARGET_COPY_OUT_PRODUCT)/app/PhotoTable/oat/arm64/PhotoTable.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PhotoTable/oat/arm64/PhotoTable.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/PhotoTable/oat/arm64/PhotoTable.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PhotoTable/PhotoTable.apk:$(TARGET_COPY_OUT_PRODUCT)/app/PhotoTable/PhotoTable.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PowerOffAlarm/oat/arm64/PowerOffAlarm.odex:$(TARGET_COPY_OUT_PRODUCT)/app/PowerOffAlarm/oat/arm64/PowerOffAlarm.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PowerOffAlarm/oat/arm64/PowerOffAlarm.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/PowerOffAlarm/oat/arm64/PowerOffAlarm.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/PowerOffAlarm/PowerOffAlarm.apk:$(TARGET_COPY_OUT_PRODUCT)/app/PowerOffAlarm/PowerOffAlarm.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/remoteSimLockAuthentication/remoteSimLockAuthentication.apk:$(TARGET_COPY_OUT_PRODUCT)/app/remoteSimLockAuthentication/remoteSimLockAuthentication.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/remotesimlockservice/oat/arm64/remotesimlockservice.odex:$(TARGET_COPY_OUT_PRODUCT)/app/remotesimlockservice/oat/arm64/remotesimlockservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/remotesimlockservice/oat/arm64/remotesimlockservice.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/remotesimlockservice/oat/arm64/remotesimlockservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/remotesimlockservice/remotesimlockservice.apk:$(TARGET_COPY_OUT_PRODUCT)/app/remotesimlockservice/remotesimlockservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/RideModeAudio/oat/arm64/RideModeAudio.odex:$(TARGET_COPY_OUT_PRODUCT)/app/RideModeAudio/oat/arm64/RideModeAudio.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/RideModeAudio/oat/arm64/RideModeAudio.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/RideModeAudio/oat/arm64/RideModeAudio.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/RideModeAudio/RideModeAudio.apk:$(TARGET_COPY_OUT_PRODUCT)/app/RideModeAudio/RideModeAudio.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SnapdragonMusic/oat/arm64/SnapdragonMusic.odex:$(TARGET_COPY_OUT_PRODUCT)/app/SnapdragonMusic/oat/arm64/SnapdragonMusic.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SnapdragonMusic/oat/arm64/SnapdragonMusic.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/SnapdragonMusic/oat/arm64/SnapdragonMusic.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SnapdragonMusic/SnapdragonMusic.apk:$(TARGET_COPY_OUT_PRODUCT)/app/SnapdragonMusic/SnapdragonMusic.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SpeechServicesByGoogle/oat/arm64/SpeechServicesByGoogle.odex:$(TARGET_COPY_OUT_PRODUCT)/app/SpeechServicesByGoogle/oat/arm64/SpeechServicesByGoogle.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SpeechServicesByGoogle/oat/arm64/SpeechServicesByGoogle.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/SpeechServicesByGoogle/oat/arm64/SpeechServicesByGoogle.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk:$(TARGET_COPY_OUT_PRODUCT)/app/SpeechServicesByGoogle/SpeechServicesByGoogle.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/ThemesStub/ThemesStub.apk:$(TARGET_COPY_OUT_PRODUCT)/app/ThemesStub/ThemesStub.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/TrichromeLibrary/TrichromeLibrary.apk:$(TARGET_COPY_OUT_PRODUCT)/app/TrichromeLibrary/TrichromeLibrary.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimgbaservice/oat/arm64/uimgbaservice.odex:$(TARGET_COPY_OUT_PRODUCT)/app/uimgbaservice/oat/arm64/uimgbaservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimgbaservice/oat/arm64/uimgbaservice.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/uimgbaservice/oat/arm64/uimgbaservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimgbaservice/uimgbaservice.apk:$(TARGET_COPY_OUT_PRODUCT)/app/uimgbaservice/uimgbaservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimlpaservice/oat/arm64/uimlpaservice.odex:$(TARGET_COPY_OUT_PRODUCT)/app/uimlpaservice/oat/arm64/uimlpaservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimlpaservice/oat/arm64/uimlpaservice.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/uimlpaservice/oat/arm64/uimlpaservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimlpaservice/uimlpaservice.apk:$(TARGET_COPY_OUT_PRODUCT)/app/uimlpaservice/uimlpaservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteclient/oat/arm64/uimremoteclient.odex:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteclient/oat/arm64/uimremoteclient.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteclient/oat/arm64/uimremoteclient.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteclient/oat/arm64/uimremoteclient.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteclient/uimremoteclient.apk:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteclient/uimremoteclient.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteserver/oat/arm64/uimremoteserver.odex:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteserver/oat/arm64/uimremoteserver.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteserver/oat/arm64/uimremoteserver.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteserver/oat/arm64/uimremoteserver.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/uimremoteserver/uimremoteserver.apk:$(TARGET_COPY_OUT_PRODUCT)/app/uimremoteserver/uimremoteserver.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/WebViewGoogle/oat/arm64/WebViewGoogle.odex:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/oat/arm64/WebViewGoogle.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/WebViewGoogle/oat/arm64/WebViewGoogle.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/oat/arm64/WebViewGoogle.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/WebViewGoogle/oat/arm/WebViewGoogle.odex:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/oat/arm/WebViewGoogle.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/WebViewGoogle/oat/arm/WebViewGoogle.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/oat/arm/WebViewGoogle.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/WebViewGoogle/WebViewGoogle.apk:$(TARGET_COPY_OUT_PRODUCT)/app/WebViewGoogle/WebViewGoogle.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/xdivert/oat/arm64/xdivert.odex:$(TARGET_COPY_OUT_PRODUCT)/app/xdivert/oat/arm64/xdivert.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/xdivert/oat/arm64/xdivert.vdex:$(TARGET_COPY_OUT_PRODUCT)/app/xdivert/oat/arm64/xdivert.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/app/xdivert/xdivert.apk:$(TARGET_COPY_OUT_PRODUCT)/app/xdivert/xdivert.apk \
     vendor/ayaneo/pocket_ds/proprietary/product/bin/init.qti.display.sh:$(TARGET_COPY_OUT_PRODUCT)/bin/init.qti.display.sh \
     vendor/ayaneo/pocket_ds/proprietary/product/bin/qvirtmgr:$(TARGET_COPY_OUT_PRODUCT)/bin/qvirtmgr \
     vendor/ayaneo/pocket_ds/proprietary/product/bin/xsu:$(TARGET_COPY_OUT_PRODUCT)/bin/xsu \
     vendor/ayaneo/pocket_ds/proprietary/product/bin/xsud:$(TARGET_COPY_OUT_PRODUCT)/bin/xsud \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/default-permissions/default-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions-google.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/group:$(TARGET_COPY_OUT_PRODUCT)/etc/group \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/init/init.qti.display.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.qti.display.rc \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/init/qvirtmgr.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/qvirtmgr.rc \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/init/xsud.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/xsud.rc \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_PRODUCT)/etc/NOTICE.xml.gz \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/passwd:$(TARGET_COPY_OUT_PRODUCT)/etc/passwd \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/com.adups.fota.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.adups.fota.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/com.android.imsserviceentitlement.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.imsserviceentitlement.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/com.android.settings.intelligence.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.settings.intelligence.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/com.qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.qti.snapdragon.sdk.display.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/extphonelib_product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/extphonelib_product.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/ims_ext_common.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/ims_ext_common.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/lpa.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/lpa.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/privapp-permissions-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/privapp-permissions-soundrecorder.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-soundrecorder.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/qti_telephony_hidl_wrapper_prd.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti_telephony_hidl_wrapper_prd.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/qti_telephony_utils_prd.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti_telephony_utils_prd.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/RemoteSimlockManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/RemoteSimlockManager.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/RemoteSimlock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/RemoteSimlock.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/permissions/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \
@@ -125,62 +38,8 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/security/fsverity/play_store_fsi_cert.der:$(TARGET_COPY_OUT_PRODUCT)/etc/security/fsverity/play_store_fsi_cert.der \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/sysconfig/d2d_cable_migration_feature.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/d2d_cable_migration_feature.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/sysconfig/google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/sysconfig/preinstalled-packages-platform-handheld-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-handheld-product.xml \
-    vendor/ayaneo/pocket_ds/proprietary/product/etc/sysconfig/preinstalled-packages-platform-overlays.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-overlays.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/etc/sysconfig/wellbeing.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/wellbeing.xml \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/com.qti.snapdragon.sdk.display.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/com.qti.snapdragon.sdk.display.jar \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/extphonelib-product.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/extphonelib-product.jar \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/ims-ext-common.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/ims-ext-common.jar \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/com.qti.snapdragon.sdk.display.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/com.qti.snapdragon.sdk.display.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/com.qti.snapdragon.sdk.display.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/com.qti.snapdragon.sdk.display.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/extphonelib-product.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/extphonelib-product.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/extphonelib-product.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/extphonelib-product.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/ims-ext-common.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/ims-ext-common.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/ims-ext-common.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/ims-ext-common.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/qti-telephony-hidl-wrapper-prd.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/qti-telephony-hidl-wrapper-prd.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/qti-telephony-hidl-wrapper-prd.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/qti-telephony-hidl-wrapper-prd.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/qti-telephony-utils-prd.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/qti-telephony-utils-prd.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/qti-telephony-utils-prd.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/qti-telephony-utils-prd.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/remotesimlockmanagerlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/remotesimlockmanagerlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/remotesimlockmanagerlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/remotesimlockmanagerlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimgbalibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimgbalibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimgbalibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimgbalibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimgbamanagerlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimgbamanagerlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimgbamanagerlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimgbamanagerlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimlpalibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimlpalibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimlpalibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimlpalibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremoteclientlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremoteclientlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremoteclientlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremoteclientlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremoteserverlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremoteserverlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremoteserverlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremoteserverlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremotesimlocklibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremotesimlocklibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm64/uimremotesimlocklibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm64/uimremotesimlocklibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/com.qti.snapdragon.sdk.display.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/com.qti.snapdragon.sdk.display.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/com.qti.snapdragon.sdk.display.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/com.qti.snapdragon.sdk.display.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/extphonelib-product.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/extphonelib-product.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/extphonelib-product.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/extphonelib-product.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/ims-ext-common.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/ims-ext-common.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/ims-ext-common.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/ims-ext-common.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/qti-telephony-hidl-wrapper-prd.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/qti-telephony-hidl-wrapper-prd.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/qti-telephony-hidl-wrapper-prd.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/qti-telephony-hidl-wrapper-prd.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/qti-telephony-utils-prd.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/qti-telephony-utils-prd.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/qti-telephony-utils-prd.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/qti-telephony-utils-prd.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/remotesimlockmanagerlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/remotesimlockmanagerlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/remotesimlockmanagerlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/remotesimlockmanagerlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimgbalibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimgbalibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimgbalibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimgbalibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimgbamanagerlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimgbamanagerlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimgbamanagerlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimgbamanagerlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimlpalibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimlpalibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimlpalibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimlpalibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremoteclientlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremoteclientlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremoteclientlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremoteclientlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremoteserverlibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremoteserverlibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremoteserverlibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremoteserverlibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremotesimlocklibrary.odex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremotesimlocklibrary.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/oat/arm/uimremotesimlocklibrary.vdex:$(TARGET_COPY_OUT_PRODUCT)/framework/oat/arm/uimremotesimlocklibrary.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/qti-telephony-hidl-wrapper-prd.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qti-telephony-hidl-wrapper-prd.jar \
-    vendor/ayaneo/pocket_ds/proprietary/product/framework/qti-telephony-utils-prd.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/qti-telephony-utils-prd.jar \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/remotesimlockmanagerlibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/remotesimlockmanagerlibrary.jar \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/uimgbalibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/uimgbalibrary.jar \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/uimgbamanagerlibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/uimgbamanagerlibrary.jar \
@@ -189,9 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/uimremoteserverlibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/uimremoteserverlibrary.jar \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/uimremotesimlocklibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/uimremotesimlocklibrary.jar \
     vendor/ayaneo/pocket_ds/proprietary/product/framework/uimservicelibrary.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/uimservicelibrary.jar \
-    vendor/ayaneo/pocket_ds/proprietary/product/lib64/libjni_eglfence.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libjni_eglfence.so \
-    vendor/ayaneo/pocket_ds/proprietary/product/lib64/libjni_filtershow_filters.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libjni_filtershow_filters.so \
-    vendor/ayaneo/pocket_ds/proprietary/product/lib64/libjni_jpegstream.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libjni_jpegstream.so \
     vendor/ayaneo/pocket_ds/proprietary/product/media/audio/alarms/Alarm_Beep_01.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Alarm_Beep_01.ogg \
     vendor/ayaneo/pocket_ds/proprietary/product/media/audio/alarms/Alarm_Beep_02.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Alarm_Beep_02.ogg \
     vendor/ayaneo/pocket_ds/proprietary/product/media/audio/alarms/Alarm_Beep_03.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Alarm_Beep_03.ogg \
@@ -413,77 +269,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/product/media/audio/ui/WirelessChargingStarted.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/WirelessChargingStarted.ogg \
     vendor/ayaneo/pocket_ds/proprietary/product/media/bootanimation-retro.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-retro.zip \
     vendor/ayaneo/pocket_ds/proprietary/product/media/bootanimation-silver.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-silver.zip \
-    vendor/ayaneo/pocket_ds/proprietary/product/media/bootanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip \
     vendor/ayaneo/pocket_ds/proprietary/product/media/shutdownanimation.zip:$(TARGET_COPY_OUT_PRODUCT)/media/shutdownanimation.zip \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/CarrierConfigResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/CarrierConfigResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/CellBroadcastReceiverResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/CellBroadcastReceiverResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/FrameworkResCommonAR11.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/FrameworkResCommonAR11.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/FrameworksResCommonQva_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/FrameworksResCommonQva_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/FrameworksResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/FrameworksResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/GmsConfigOverlayASI.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/GmsConfigOverlayASI.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/GmsConfigOverlayCommon.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/GmsConfigOverlayCommon.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/GmsConfigOverlayGeotz.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/GmsConfigOverlayGeotz.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/GmsConfigOverlayGSA.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/GmsConfigOverlayGSA.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/SettingsResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/SettingsResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/SystemUIResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/SystemUIResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/TelecommResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/TelecommResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/TelephonyResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/TelephonyResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/overlay/WifiResCommon_Sys.apk:$(TARGET_COPY_OUT_PRODUCT)/overlay/WifiResCommon_Sys.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/AndroidAutoStub/AndroidAutoStub.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AndroidAutoStub/AndroidAutoStub.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/AndroidAutoStub/oat/arm64/AndroidAutoStub.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AndroidAutoStub/oat/arm64/AndroidAutoStub.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/AndroidAutoStub/oat/arm64/AndroidAutoStub.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/AndroidAutoStub/oat/arm64/AndroidAutoStub.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ConfigUpdater/ConfigUpdater.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ConfigUpdater/ConfigUpdater.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ConfigUpdater/oat/arm64/ConfigUpdater.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ConfigUpdater/oat/arm64/ConfigUpdater.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ConfigUpdater/oat/arm64/ConfigUpdater.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ConfigUpdater/oat/arm64/ConfigUpdater.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FamilyLinkParentalControls/oat/arm64/FamilyLinkParentalControls.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FamilyLinkParentalControls/oat/arm64/FamilyLinkParentalControls.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FamilyLinkParentalControls/oat/arm64/FamilyLinkParentalControls.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FamilyLinkParentalControls/oat/arm64/FamilyLinkParentalControls.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FilesGoogle/FilesGoogle.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FilesGoogle/FilesGoogle.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FilesGoogle/oat/arm64/FilesGoogle.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FilesGoogle/oat/arm64/FilesGoogle.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/FilesGoogle/oat/arm64/FilesGoogle.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/FilesGoogle/oat/arm64/FilesGoogle.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/GmsCore.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/GmsCore.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/m/independent/AndroidPlatformServices.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/m/independent/oat/arm64/AndroidPlatformServices.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/oat/arm64/GmsCore.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/oat/arm64/GmsCore.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/oat/arm64/GmsCore.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/oat/arm64/GmsCore.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/oat/arm/GmsCore.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/oat/arm/GmsCore.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GmsCore/oat/arm/GmsCore.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GmsCore/oat/arm/GmsCore.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleOneTimeInitializer/oat/arm64/GoogleOneTimeInitializer.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleOneTimeInitializer/oat/arm64/GoogleOneTimeInitializer.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleOneTimeInitializer/oat/arm64/GoogleOneTimeInitializer.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleOneTimeInitializer/oat/arm64/GoogleOneTimeInitializer.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GooglePartnerSetup/oat/arm64/GooglePartnerSetup.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GooglePartnerSetup/oat/arm64/GooglePartnerSetup.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GooglePartnerSetup/oat/arm64/GooglePartnerSetup.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GooglePartnerSetup/oat/arm64/GooglePartnerSetup.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleRestore/GoogleRestore.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleRestore/GoogleRestore.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleRestore/oat/arm64/GoogleRestore.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleRestore/oat/arm64/GoogleRestore.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/GoogleRestore/oat/arm64/GoogleRestore.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/GoogleRestore/oat/arm64/GoogleRestore.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ImsServiceEntitlement/ImsServiceEntitlement.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ImsServiceEntitlement/oat/arm64/ImsServiceEntitlement.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ImsServiceEntitlement/oat/arm64/ImsServiceEntitlement.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/ImsServiceEntitlement/oat/arm64/ImsServiceEntitlement.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/ImsServiceEntitlement/oat/arm64/ImsServiceEntitlement.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Phonesky/oat/arm64/Phonesky.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Phonesky/oat/arm64/Phonesky.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Phonesky/oat/arm64/Phonesky.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Phonesky/oat/arm64/Phonesky.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Phonesky/Phonesky.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Phonesky/Phonesky.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/QtiSoundRecorder/oat/arm64/QtiSoundRecorder.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/QtiSoundRecorder/oat/arm64/QtiSoundRecorder.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/QtiSoundRecorder/oat/arm64/QtiSoundRecorder.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/QtiSoundRecorder/oat/arm64/QtiSoundRecorder.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/QtiSoundRecorder/QtiSoundRecorder.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/QtiSoundRecorder/QtiSoundRecorder.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/SettingsIntelligence/oat/arm64/SettingsIntelligence.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/SettingsIntelligence/oat/arm64/SettingsIntelligence.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/SettingsIntelligence/oat/arm64/SettingsIntelligence.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/SettingsIntelligence/oat/arm64/SettingsIntelligence.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/SettingsIntelligence/SettingsIntelligence.apk \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Wellbeing/oat/arm64/Wellbeing.odex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Wellbeing/oat/arm64/Wellbeing.odex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Wellbeing/oat/arm64/Wellbeing.vdex:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Wellbeing/oat/arm64/Wellbeing.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/product/priv-app/Wellbeing/Wellbeing.apk:$(TARGET_COPY_OUT_PRODUCT)/priv-app/Wellbeing/Wellbeing.apk \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/apex_manifest.pb:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/apex_manifest.pb \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/apex_pubkey:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/apex_pubkey \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/etc/llndk.libraries.30.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/etc/llndk.libraries.30.txt \
@@ -492,28 +278,10 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/etc/vndkproduct.libraries.30.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/etc/vndkproduct.libraries.30.txt \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/etc/vndksp.libraries.30.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/etc/vndksp.libraries.30.txt \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.automotive.display@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.automotive.display@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.common@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.common@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.device@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.device@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.service@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.service@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.service@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.cameraservice.service@2.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.displayservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.displayservice@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.schedulerservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.schedulerservice@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.sensorservice@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.frameworks.stats@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.frameworks.stats@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.atrace@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.atrace@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio@5.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio@6.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio@6.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@5.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@6.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.common@6.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@5.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@6.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.audio.effect@6.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.authsecret@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.authsecret@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.audiocontrol@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.audiocontrol@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.audiocontrol@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.audiocontrol@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.can@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.can@1.0.so \
@@ -521,20 +289,12 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.evs@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.evs@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.occupant_awareness-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.occupant_awareness-V1-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.sv@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.sv@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.automotive.vehicle@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.automotive.vehicle@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.face@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.face@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.fingerprint@2.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.fingerprint@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.biometrics.fingerprint@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth.a2dp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth.a2dp@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth.audio@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.bluetooth.audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.boot@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.boot@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.boot@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.boot@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.broadcastradio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.camera.common@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.camera.common@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@3.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@3.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@3.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.camera.device@3.3.so \
@@ -560,14 +320,9 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.confirmationui-support-lib.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.confirmationui-support-lib.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.contexthub@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.contexthub@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.contexthub@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.contexthub@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.drm@1.3.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.dumpstate@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.dumpstate@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.dumpstate@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.dumpstate@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.fastboot@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.fastboot@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.gatekeeper@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.gatekeeper@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.gnss@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.gnss@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.gnss@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.gnss@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.gnss@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.gnss@2.0.so \
@@ -584,32 +339,21 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.common-V1-ndk_platform.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.4.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.composer@2.4.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@2.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@3.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.graphics.mapper@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.health@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.health@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.health@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.health@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.health@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.health@2.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.health.storage@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.health.storage@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.identity-V2-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.identity-V2-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.input.classifier@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.input.classifier@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.input.common@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.input.common@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.ir@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.ir@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@4.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@4.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.keymaster@4.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.keymaster-V2-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.keymaster-V2-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.light@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.light@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.light-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.light-V1-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media.bufferpool@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media.bufferpool@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media.bufferpool@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media.bufferpool@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media.c2@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media.c2@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media.c2@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media.c2@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.media.omx@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.memtrack@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.memtrack@1.0.so \
@@ -621,49 +365,22 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.nfc@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.nfc@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.nfc@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.oemlock@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.oemlock@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power@1.3.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power.stats@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power.stats@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.power-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.power-V1-ndk_platform.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.4.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio@1.5.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio.config@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.radio.deprecated@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.radio.deprecated@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.rebootescrow-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.rebootescrow-V1-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.renderscript@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.renderscript@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.secure_element@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.sensors@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.sensors@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.sensors@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.sensors@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.sensors@2.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.0-core.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.0-core.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.soundtrigger@2.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tetheroffload.config@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tetheroffload.config@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tetheroffload.control@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tetheroffload.control@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.thermal@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.thermal@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.thermal@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.thermal@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tv.cec@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tv.cec@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tv.cec@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tv.cec@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tv.input@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tv.input@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.tv.tuner@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.tv.tuner@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.usb@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.usb.gadget@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.usb.gadget@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.usb.gadget@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.usb.gadget@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.vibrator@1.2.so \
@@ -671,11 +388,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.vibrator-V1-ndk_platform.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.vibrator-V1-ndk_platform.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.vr@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.vr@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.weaver@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.weaver@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.4.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi@1.4.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.hostapd@1.2.so \
@@ -684,17 +396,12 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hardware.wifi.supplicant@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.allocator@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.memory@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.memory@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.memory.block@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.memory.block@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.memory.token@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.memory.token@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.safe_union@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.safe_union@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.token@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.token@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.hidl.token@1.0-utils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.hidl.token@1.0-utils.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.system.net.netd@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.system.net.netd@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.system.net.netd@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.system.net.netd@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.system.suspend@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.system.suspend@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/android.system.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/android.system.wifi.keystore@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/hw/android.hidl.memory@1.0-impl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/hw/android.hidl.memory@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/libadf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/libadf.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v30/lib64/libaudioroute.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v30/lib64/libaudioroute.so \
@@ -1615,97 +1322,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v32/lib/libyuv.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v32/lib/libyuv.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v32/lib/libziparchive.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v32/lib/libziparchive.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/apex/com.android.vndk.v32/lib/libz.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/apex/com.android.vndk.v32/lib/libz.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/aptxacu/aptxacu.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/aptxacu/aptxacu.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/aptxui/aptxui.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/aptxui/aptxui.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/atfwd/atfwd.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/atfwd/atfwd.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/atfwd/oat/arm64/atfwd.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/atfwd/oat/arm64/atfwd.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/atfwd/oat/arm64/atfwd.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/atfwd/oat/arm64/atfwd.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/AyaArmHelper/AyaArmHelper.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/AyaArmHelper/AyaArmHelper.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/AyaArmHelper/oat/arm64/AyaArmHelper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/AyaArmHelper/oat/arm64/AyaArmHelper.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/AyaArmHelper/oat/arm64/AyaArmHelper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/AyaArmHelper/oat/arm64/AyaArmHelper.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/BluetoothDsDaService/BluetoothDsDaService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/BluetoothDsDaService/BluetoothDsDaService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/BluetoothDsDaService/oat/arm64/BluetoothDsDaService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/BluetoothDsDaService/oat/arm64/BluetoothDsDaService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/BluetoothDsDaService/oat/arm64/BluetoothDsDaService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/BluetoothDsDaService/oat/arm64/BluetoothDsDaService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/colorservice/colorservice.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/colorservice/colorservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/com.qualcomm.qti.services.secureui/oat/arm64/com.qualcomm.qti.services.secureui.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.secureui/oat/arm64/com.qualcomm.qti.services.secureui.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/com.qualcomm.qti.services.secureui/oat/arm64/com.qualcomm.qti.services.secureui.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.secureui/oat/arm64/com.qualcomm.qti.services.secureui.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/datastatusnotification/datastatusnotification.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/datastatusnotification/datastatusnotification.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/datastatusnotification/oat/arm64/datastatusnotification.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/datastatusnotification/oat/arm64/datastatusnotification.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/datastatusnotification/oat/arm64/datastatusnotification.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/datastatusnotification/oat/arm64/datastatusnotification.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceInfo/DeviceInfo.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceInfo/DeviceInfo.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceInfo/oat/arm64/DeviceInfo.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceInfo/oat/arm64/DeviceInfo.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceInfo/oat/arm64/DeviceInfo.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceInfo/oat/arm64/DeviceInfo.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceStatisticsService/DeviceStatisticsService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceStatisticsService/oat/arm64/DeviceStatisticsService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceStatisticsService/oat/arm64/DeviceStatisticsService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DeviceStatisticsService/oat/arm64/DeviceStatisticsService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DeviceStatisticsService/oat/arm64/DeviceStatisticsService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DynamicDDSService/DynamicDDSService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DynamicDDSService/DynamicDDSService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DynamicDDSService/oat/arm64/DynamicDDSService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DynamicDDSService/oat/arm64/DynamicDDSService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/DynamicDDSService/oat/arm64/DynamicDDSService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/DynamicDDSService/oat/arm64/DynamicDDSService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/embms/embms.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/embms/embms.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/embms/oat/arm64/embms.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/embms/oat/arm64/embms.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/embms/oat/arm64/embms.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/embms/oat/arm64/embms.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FactoryMode/FactoryMode.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FactoryMode/FactoryMode.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FactoryMode/oat/arm64/FactoryMode.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FactoryMode/oat/arm64/FactoryMode.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FactoryMode/oat/arm64/FactoryMode.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FactoryMode/oat/arm64/FactoryMode.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FingerprintSensorTester/FingerprintSensorTester.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FingerprintSensorTester/FingerprintSensorTester.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FingerprintSensorTester/oat/arm64/FingerprintSensorTester.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FingerprintSensorTester/oat/arm64/FingerprintSensorTester.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/FingerprintSensorTester/oat/arm64/FingerprintSensorTester.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/FingerprintSensorTester/oat/arm64/FingerprintSensorTester.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GamePadTester/GamePadTester.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GamePadTester/GamePadTester.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GamePadTester/oat/arm64/GamePadTester.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GamePadTester/oat/arm64/GamePadTester.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GamePadTester/oat/arm64/GamePadTester.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GamePadTester/oat/arm64/GamePadTester.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GmsSampleIntegration/GmsSampleIntegration.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GmsSampleIntegration/GmsSampleIntegration.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GmsSampleIntegration/oat/arm64/GmsSampleIntegration.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GmsSampleIntegration/oat/arm64/GmsSampleIntegration.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/GmsSampleIntegration/oat/arm64/GmsSampleIntegration.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/GmsSampleIntegration/oat/arm64/GmsSampleIntegration.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsDataChannelService/ImsDataChannelService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsDataChannelService/ImsDataChannelService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsDataChannelService/oat/arm64/ImsDataChannelService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsDataChannelService/oat/arm64/ImsDataChannelService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsDataChannelService/oat/arm64/ImsDataChannelService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsDataChannelService/oat/arm64/ImsDataChannelService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsRcsService/ImsRcsService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsRcsService/ImsRcsService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsRcsService/oat/arm64/ImsRcsService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsRcsService/oat/arm64/ImsRcsService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/ImsRcsService/oat/arm64/ImsRcsService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/ImsRcsService/oat/arm64/ImsRcsService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/imssettings/imssettings.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/imssettings/imssettings.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/imssettings/oat/arm64/imssettings.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/imssettings/oat/arm64/imssettings.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/imssettings/oat/arm64/imssettings.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/imssettings/oat/arm64/imssettings.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Nfc_st/Nfc_st.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Nfc_st/Nfc_st.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Nfc_st/oat/arm64/Nfc_st.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Nfc_st/oat/arm64/Nfc_st.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Nfc_st/oat/arm64/Nfc_st.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Nfc_st/oat/arm64/Nfc_st.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/NQNfcNci/NQNfcNci.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/NQNfcNci/NQNfcNci.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/NQNfcNci/oat/arm64/NQNfcNci.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/NQNfcNci/oat/arm64/NQNfcNci.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/NQNfcNci/oat/arm64/NQNfcNci.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/NQNfcNci/oat/arm64/NQNfcNci.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PerformanceMode/oat/arm64/PerformanceMode.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PerformanceMode/oat/arm64/PerformanceMode.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PerformanceMode/oat/arm64/PerformanceMode.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PerformanceMode/oat/arm64/PerformanceMode.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PerformanceMode/PerformanceMode.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PerformanceMode/PerformanceMode.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PowerSaveMode/oat/arm64/PowerSaveMode.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PowerSaveMode/oat/arm64/PowerSaveMode.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PowerSaveMode/oat/arm64/PowerSaveMode.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PowerSaveMode/oat/arm64/PowerSaveMode.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/PowerSaveMode/PowerSaveMode.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/PowerSaveMode/PowerSaveMode.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QColor/oat/arm64/QColor.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QColor/oat/arm64/QColor.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QColor/oat/arm64/QColor.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QColor/oat/arm64/QColor.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QColor/QColor.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QColor/QColor.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QdcmFF/QdcmFF.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QdcmFF/QdcmFF.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QesdkSysService/oat/arm64/QesdkSysService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QesdkSysService/oat/arm64/QesdkSysService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QesdkSysService/oat/arm64/QesdkSysService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QesdkSysService/oat/arm64/QesdkSysService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QesdkSysService/QesdkSysService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QesdkSysService/QesdkSysService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Qmmi/oat/arm64/Qmmi.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Qmmi/oat/arm64/Qmmi.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Qmmi/oat/arm64/Qmmi.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Qmmi/oat/arm64/Qmmi.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/Qmmi/Qmmi.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/Qmmi/Qmmi.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephony/oat/arm64/QtiTelephony.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephony/oat/arm64/QtiTelephony.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephony/oat/arm64/QtiTelephony.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephony/oat/arm64/QtiTelephony.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephony/QtiTelephony.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephony/QtiTelephony.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephonyService/oat/arm64/QtiTelephonyService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephonyService/oat/arm64/QtiTelephonyService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephonyService/oat/arm64/QtiTelephonyService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephonyService/oat/arm64/QtiTelephonyService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/QtiTelephonyService/QtiTelephonyService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/SimContact/oat/arm64/SimContact.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/SimContact/oat/arm64/SimContact.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/SimContact/oat/arm64/SimContact.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/SimContact/oat/arm64/SimContact.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/SimContact/SimContact.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/SimContact/SimContact.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/uceShimService/oat/arm64/uceShimService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/uceShimService/oat/arm64/uceShimService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/uceShimService/oat/arm64/uceShimService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/uceShimService/oat/arm64/uceShimService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/uceShimService/uceShimService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/uceShimService/uceShimService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/WAPPushManager/oat/arm64/WAPPushManager.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/WAPPushManager/oat/arm64/WAPPushManager.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/WAPPushManager/oat/arm64/WAPPushManager.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/WAPPushManager/oat/arm64/WAPPushManager.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/WAPPushManager/WAPPushManager.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/WAPPushManager/WAPPushManager.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/workloadclassifier/oat/arm64/workloadclassifier.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/workloadclassifier/oat/arm64/workloadclassifier.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/workloadclassifier/oat/arm64/workloadclassifier.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/workloadclassifier/oat/arm64/workloadclassifier.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/app/workloadclassifier/workloadclassifier.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/app/workloadclassifier/workloadclassifier.apk \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/bin/aptxalsOverlayCreateProject.sh:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/aptxalsOverlayCreateProject.sh \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/bin/bt_logger:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/bt_logger \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/bin/diag_callback_sample_system:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/diag_callback_sample_system \
@@ -1735,7 +1351,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/default-permissions/com.qualcomm.qtil.btdsda.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/com.qualcomm.qtil.btdsda.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/default-permissions/default-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-com.quicinc.voice.activation.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/group:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/group \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/hdr_config/ans_off/ans_config.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/hdr_config/ans_off/ans_config.txt \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/hdr_config/ans_on/ans_config.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/hdr_config/ans_on/ans_config.txt \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/hdr_config/main_inv_ls/RPP_BiquadHPF_config.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/hdr_config/main_inv_ls/RPP_BiquadHPF_config.txt \
@@ -1852,17 +1467,9 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/mmi/path_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/mmi/path_config.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/mmi/strings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/mmi/strings.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/mmi/strings-zh-rCN.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/mmi/strings-zh-rCN.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/NOTICE.xml.gz \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/passwd:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/passwd \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/perf/wlc_model.tflite:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/perf/wlc_model.tflite \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.software.verified_boot.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.carrierconfig.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.emergency.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.emergency.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.launcher3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.launcher3.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.settings.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.storagemanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.storagemanager.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.android.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.systemui.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.nxp.nfc.nq.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.nxp.nfc.nq.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/com.qti.location.sdk.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.location.sdk.xml \
@@ -1880,7 +1487,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/embms-noship_product_privapp_permissions_qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/embms-noship_product_privapp_permissions_qti.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/embms.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/embms.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/extphonelib.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/extphonelib.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/privapp-permissions-aptxals.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-aptxals.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.qualcomm.location.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/privapp-permissions-com.quicinc.voice.activation.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.quicinc.voice.activation.xml \
@@ -1890,8 +1496,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/qti_telephony_hidl_wrapper.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_telephony_hidl_wrapper.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/qti_telephony_utils.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_telephony_utils.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/vendor.qti.imsdcservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.imsdcservice.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
@@ -1905,11 +1509,8 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/spn-conf.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/vintf/manifest/atcmdfwd-saidl.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest/atcmdfwd-saidl.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/vintf/manifest/vendor.qti.hardware.sigma_miracast.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest/vendor.qti.hardware.sigma_miracast.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/vintf/manifest/vendor.qti.qesdsys.service.xml \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/etc/wmshell.protolog.json.gz:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wmshell.protolog.json.gz \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/ActivityExt.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/ActivityExt.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/audiosphere.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/audiosphere.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/com.nxp.nfc.nq.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/com.nxp.nfc.nq.jar \
@@ -1932,202 +1533,11 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/datachannellib.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/datachannellib.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/dpmapi.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/dpmapi.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/embmslibrary.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/embmslibrary.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/extphonelib.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/extphonelib.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.nxp.nfc.nq.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.nxp.nfc.nq.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.nxp.nfc.nq.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.nxp.nfc.nq.vdex \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qti.location.sdk.art:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qti.location.sdk.art \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qti.location.sdk.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qti.location.sdk.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qti.location.sdk.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qti.location.sdk.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qti.media.secureprocessor.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qti.media.secureprocessor.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qti.media.secureprocessor.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qti.media.secureprocessor.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.imscmservice-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.3-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.3-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.3-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.qualcomm.qti.uceservice-V2.3-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.st.android.nfc_extensions.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.st.android.nfc_extensions.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/com.st.android.nfc_extensions.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/com.st.android.nfc_extensions.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/datachannellib.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/datachannellib.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/datachannellib.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/datachannellib.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/extphonelib.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/extphonelib.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/extphonelib.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/extphonelib.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qcrilhook.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qcrilhook.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qcrilhook.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-common.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-common.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-hidl-wrapper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-hidl-wrapper.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-hidl-wrapper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-hidl-wrapper.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-utils.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-utils.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/qti-telephony-utils.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-utils.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.data.mwqem-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.data.mwqem-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.data.mwqem-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.data.mwqem-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.data.slm-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.data.slm-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.data.slm-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.data.slm-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.alarm-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.alarm-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.alarm-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.alarm-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.capabilityconfigstore-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.capabilityconfigstore-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.capabilityconfigstore-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.capabilityconfigstore-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.connection-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.dynamicdds-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.flow-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.iwlan-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.latency-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.latency-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.latency-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.latency-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.lce-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.lce-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.data.lce-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.data.lce-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.fingerprint-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.fingerprint-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.fingerprint-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.fingerprint-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.sensorscalibrate-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.sensorscalibrate-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.sensorscalibrate-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.sensorscalibrate-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.wigig.netperftuner-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.wigig.netperftuner-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.wigig.netperftuner-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.wigig.netperftuner-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.wigig.supptunnel-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.wigig.supptunnel-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.hardware.wigig.supptunnel-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.hardware.wigig.supptunnel-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.callcapability-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.callcapability-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.callcapability-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.callcapability-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.callinfo-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.callinfo-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.callinfo-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.callinfo-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.configservice-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.configservice-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.configservice-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.configservice-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.configservice-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.configservice-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.configservice-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.configservice-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.latency-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.latency-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.voiceprint-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.voiceprint-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm64/vendor.qti.voiceprint-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.voiceprint-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.nxp.nfc.nq.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.nxp.nfc.nq.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.nxp.nfc.nq.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.nxp.nfc.nq.vdex \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qti.location.sdk.art:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qti.location.sdk.art \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qti.location.sdk.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qti.location.sdk.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qti.location.sdk.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qti.location.sdk.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qti.media.secureprocessor.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qti.media.secureprocessor.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qti.media.secureprocessor.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qti.media.secureprocessor.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.imscmservice-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.3-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.3-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.qualcomm.qti.uceservice-V2.3-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.qualcomm.qti.uceservice-V2.3-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.st.android.nfc_extensions.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.st.android.nfc_extensions.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/com.st.android.nfc_extensions.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/com.st.android.nfc_extensions.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/datachannellib.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/datachannellib.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/datachannellib.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/datachannellib.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/extphonelib.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/extphonelib.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/extphonelib.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/extphonelib.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qcrilhook.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-common.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-common.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-common.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-common.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-hidl-wrapper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-hidl-wrapper.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-hidl-wrapper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-hidl-wrapper.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-utils.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-utils.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/qti-telephony-utils.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-utils.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.data.mwqem-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.data.mwqem-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.data.mwqem-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.data.mwqem-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.data.slm-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.data.slm-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.data.slm-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.data.slm-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.alarm-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.capabilityconfigstore-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.capabilityconfigstore-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.capabilityconfigstore-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.capabilityconfigstore-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.connection-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.connection-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.connection-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.connection-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.connection-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.connection-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.connection-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.connection-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.dynamicdds-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.flow-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.flow-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.flow-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.flow-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.flow-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.flow-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.flow-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.flow-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.iwlan-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.latency-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.latency-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.latency-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.latency-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.lce-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.lce-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.data.lce-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.data.lce-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.fingerprint-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.fingerprint-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.fingerprint-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.fingerprint-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.sensorscalibrate-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.sensorscalibrate-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.sensorscalibrate-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.sensorscalibrate-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.wigig.netperftuner-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.wigig.netperftuner-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.wigig.netperftuner-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.wigig.netperftuner-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.wigig.supptunnel-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.wigig.supptunnel-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.hardware.wigig.supptunnel-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.hardware.wigig.supptunnel-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.callcapability-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.callcapability-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.callcapability-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.callcapability-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.callinfo-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.callinfo-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.callinfo-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.callinfo-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.configservice-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.configservice-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.configservice-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.configservice-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.configservice-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.configservice-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.configservice-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.configservice-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.0-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.1-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.1-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.2-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.2-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.latency-V2.2-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.latency-V2.2-java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.voiceprint-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.voiceprint-V1.0-java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/oat/arm/vendor.qti.voiceprint-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.voiceprint-V1.0-java.vdex \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/qmapbridge.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qmapbridge.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/qti-telephony-common.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-common.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/qti-telephony-hidl-wrapper.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-hidl-wrapper.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/qti-telephony-utils.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-utils.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.data.factory-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.factory-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.data.factory-V2.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.factory-V2.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.data.factory-V2.1-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.factory-V2.1-java.jar \
@@ -2140,7 +1550,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.data.mwqem-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.mwqem-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.data.slm-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.data.slm-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar \
@@ -2194,9 +1603,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.latency-V2.1-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.latency-V2.1-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.latency-V2.2-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.latency-V2.2-java.jar \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.voiceprint-V1.0-java.jar \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio@1.5.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/android.hardware.radio@1.6.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hardware.radio@1.6.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/android.hidl.base@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/android.hidl.base@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
@@ -2295,7 +1701,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqccfileservice.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqccfileservice.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqcc_netstats.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqcc_netstats.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqcc.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqcc.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqcomfm_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqcomfm_jni.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqdMetaData.system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqdMetaData.system.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqesdk_ndk_platform.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqesdk_ndk_platform.qti.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqmi_cci_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqmi_cci_system.so \
@@ -2308,8 +1713,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti-iopd-client_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti-iopd-client_system.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti-perfd-client_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti-perfd-client_system.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti_performance.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti_performance.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti_vndfwk_detect.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti_vndfwk_detect_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti_vndfwk_detect_system.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqti_workloadclassifiermodel.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqti_workloadclassifiermodel.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libqxrsplitauxservice.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libqxrsplitauxservice.qti.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/librecpp_intf.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/librecpp_intf.so \
@@ -2331,8 +1734,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libthermalclient.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libthermalclient.qti.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libtrigger-handler.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libtrigger-handler.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libupdateprof.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libupdateprof.qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libvndfwk_detect_jni.qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libvndfwk_detect_jni.qti_system.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libvndfwk_detect_jni.qti_system.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libvr_amb_engine.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libvr_amb_engine.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libvr_object_engine.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libvr_object_engine.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/libwfdavenhancements.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libwfdavenhancements.so \
@@ -2358,22 +1759,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.color@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.color@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.color@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.color@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.10.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.10.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.11.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.11.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.12.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.12.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.13.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.13.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.14.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.14.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.4.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.5.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.5.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.6.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.6.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.7.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.7.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.8.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.8.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@1.9.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@1.9.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.config@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.config@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.postproc@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.nxp.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.nxp.hardware.nfc@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.nxp.hardware.nfc@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.nxp.hardware.nfc@1.1.so \
@@ -2392,11 +1777,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.diaghal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.diaghal@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.audiohalext@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.btconfigstore@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.btconfigstore@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.cryptfshw@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.cryptfshw@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.cvp@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.cvp@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
@@ -2419,8 +1799,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.data.lce@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.data.lce@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.display.composer@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.display.composer@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.display.composer@3.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.display.composer@3.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.dpmservice@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.dpmservice@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.dpmservice@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.embmssl@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.embmssl@1.0.so \
@@ -2434,10 +1812,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.limits@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.limits@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.mwqemadapter@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.perf@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.perf@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.perf@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.perf@2.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.perf@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.perf@2.3.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.perf@2.3.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so \
@@ -2487,7 +1861,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.sigma_miracast@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.slmadapter@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.systemhelper@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.systemhelper@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.trustedui@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.trustedui@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.hardware.vpp@1.1.so \
@@ -2835,119 +2208,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib/vendor.qti.qesdhal@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.qesdhal@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib/vendor.qti.qspmhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.qspmhal@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/system_ext/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.voiceprint@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/aptxals/aptxals.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/aptxals/aptxals.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/aptxals/oat/arm64/aptxals.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/aptxals/oat/arm64/aptxals.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/aptxals/oat/arm64/aptxals.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/aptxals/oat/arm64/aptxals.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/CarrierConfig/CarrierConfig.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/CarrierConfig/CarrierConfig.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/CarrierConfig/oat/arm64/CarrierConfig.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/CarrierConfig/oat/arm64/CarrierConfig.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/CarrierConfig/oat/arm64/CarrierConfig.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/CarrierConfig/oat/arm64/CarrierConfig.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.location/com.qualcomm.location.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.location/oat/arm64/com.qualcomm.location.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.location/oat/arm64/com.qualcomm.location.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.location/oat/arm64/com.qualcomm.location.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.location/oat/arm64/com.qualcomm.location.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/oat/arm64/com.qualcomm.qti.services.systemhelper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.qti.services.systemhelper/oat/arm64/com.qualcomm.qti.services.systemhelper.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/com.qualcomm.qti.services.systemhelper/oat/arm64/com.qualcomm.qti.services.systemhelper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/com.qualcomm.qti.services.systemhelper/oat/arm64/com.qualcomm.qti.services.systemhelper.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/dcf/dcf.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/dcf/dcf.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/dpmserviceapp/dpmserviceapp.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/dpmserviceapp/oat/arm64/dpmserviceapp.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfo/EmergencyInfo.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/EmergencyInfo/oat/arm64/EmergencyInfo.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfo/oat/arm64/EmergencyInfo.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/EmergencyInfo/oat/arm64/EmergencyInfo.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EmergencyInfo/oat/arm64/EmergencyInfo.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleFeedback/GoogleFeedback.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleFeedback/GoogleFeedback.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleFeedback/oat/arm64/GoogleFeedback.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/GoogleServicesFramework/oat/arm64/GoogleServicesFramework.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ims/ims.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/ims.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ims/oat/arm64/ims.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/oat/arm64/ims.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ims/oat/arm64/ims.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ims/oat/arm64/ims.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Launcher3QuickStep/oat/arm64/Launcher3QuickStep.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Launcher3QuickStep/oat/arm64/Launcher3QuickStep.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Launcher3QuickStep/oat/arm64/Launcher3QuickStep.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Launcher3QuickStep/oat/arm64/Launcher3QuickStep.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QAS_DVC_MSP/oat/arm64/QAS_DVC_MSP.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QAS_DVC_MSP/oat/arm64/QAS_DVC_MSP.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QAS_DVC_MSP/oat/arm64/QAS_DVC_MSP.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QAS_DVC_MSP/oat/arm64/QAS_DVC_MSP.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/qcrilmsgtunnel/oat/arm64/qcrilmsgtunnel.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/qcrilmsgtunnel/oat/arm64/qcrilmsgtunnel.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/qcrilmsgtunnel/oat/arm64/qcrilmsgtunnel.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/qcrilmsgtunnel/oat/arm64/qcrilmsgtunnel.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QtiWifiService/oat/arm64/QtiWifiService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QtiWifiService/oat/arm64/QtiWifiService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QtiWifiService/oat/arm64/QtiWifiService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QtiWifiService/oat/arm64/QtiWifiService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QtiWifiService/QtiWifiService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QtiWifiService/QtiWifiService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QualcommVoiceActivation/oat/arm64/QualcommVoiceActivation.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QualcommVoiceActivation/oat/arm64/QualcommVoiceActivation.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QualcommVoiceActivation/oat/arm64/QualcommVoiceActivation.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QualcommVoiceActivation/oat/arm64/QualcommVoiceActivation.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/QualcommVoiceActivation/QualcommVoiceActivation.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/QualcommVoiceActivation/QualcommVoiceActivation.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/RemoteProvisioner/oat/arm64/RemoteProvisioner.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/RemoteProvisioner/RemoteProvisioner.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/RemoteProvisioner/RemoteProvisioner.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/seccamservice/oat/arm64/seccamservice.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/seccamservice/oat/arm64/seccamservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/seccamservice/oat/arm64/seccamservice.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/seccamservice/oat/arm64/seccamservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/seccamservice/seccamservice.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/seccamservice/seccamservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Settings/oat/arm64/Settings.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Settings/oat/arm64/Settings.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Settings/oat/arm64/Settings.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Settings/oat/arm64/Settings.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/Settings/Settings.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/Settings/Settings.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SetupWizard/oat/arm64/SetupWizard.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/oat/arm64/SetupWizard.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SetupWizard/oat/arm64/SetupWizard.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/oat/arm64/SetupWizard.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SetupWizard/SetupWizard.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SetupWizard/SetupWizard.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/StorageManager/oat/arm64/StorageManager.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/StorageManager/oat/arm64/StorageManager.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/StorageManager/oat/arm64/StorageManager.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/StorageManager/oat/arm64/StorageManager.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/StorageManager/StorageManager.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/StorageManager/StorageManager.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SystemUI/oat/arm64/SystemUI.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SystemUI/oat/arm64/SystemUI.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/SystemUI/SystemUI.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/SystemUI/SystemUI.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ThemePicker/oat/arm64/ThemePicker.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ThemePicker/oat/arm64/ThemePicker.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ThemePicker/oat/arm64/ThemePicker.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ThemePicker/oat/arm64/ThemePicker.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/ThemePicker/ThemePicker.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/ThemePicker/ThemePicker.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/oat/arm64/WallpaperCropper.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WallpaperCropper/WallpaperCropper.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WfdService/oat/arm64/WfdService.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WfdService/oat/arm64/WfdService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WfdService/oat/arm64/WfdService.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WfdService/oat/arm64/WfdService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/WfdService/WfdService.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/WfdService/WfdService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrcbservice/oat/arm64/xrcbservice.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrcbservice/oat/arm64/xrcbservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrcbservice/oat/arm64/xrcbservice.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrcbservice/oat/arm64/xrcbservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrcbservice/xrcbservice.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrcbservice/xrcbservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrvdservice/oat/arm64/xrvdservice.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrvdservice/oat/arm64/xrvdservice.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrvdservice/oat/arm64/xrvdservice.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrvdservice/oat/arm64/xrvdservice.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xrvdservice/xrvdservice.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xrvdservice/xrvdservice.apk \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xtra_t_app/oat/arm64/xtra_t_app.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xtra_t_app/oat/arm64/xtra_t_app.odex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xtra_t_app/oat/arm64/xtra_t_app.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xtra_t_app/oat/arm64/xtra_t_app.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/system_ext/priv-app/xtra_t_app/xtra_t_app.apk:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/xtra_t_app/xtra_t_app.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CACertService/CACertService.apk:$(TARGET_COPY_OUT_VENDOR)/app/CACertService/CACertService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CACertService/oat/arm64/CACertService.odex:$(TARGET_COPY_OUT_VENDOR)/app/CACertService/oat/arm64/CACertService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CACertService/oat/arm64/CACertService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/CACertService/oat/arm64/CACertService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CneApp/CneApp.apk:$(TARGET_COPY_OUT_VENDOR)/app/CneApp/CneApp.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CneApp/oat/arm64/CneApp.odex:$(TARGET_COPY_OUT_VENDOR)/app/CneApp/oat/arm64/CneApp.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/CneApp/oat/arm64/CneApp.vdex:$(TARGET_COPY_OUT_VENDOR)/app/CneApp/oat/arm64/CneApp.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/com.qualcomm.qti.gpudrivers.kalama.api33/com.qualcomm.qti.gpudrivers.kalama.api33.apk:$(TARGET_COPY_OUT_VENDOR)/app/com.qualcomm.qti.gpudrivers.kalama.api33/com.qualcomm.qti.gpudrivers.kalama.api33.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/ConnectionSecurityService/ConnectionSecurityService.apk:$(TARGET_COPY_OUT_VENDOR)/app/ConnectionSecurityService/ConnectionSecurityService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.odex:$(TARGET_COPY_OUT_VENDOR)/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/ConnectionSecurityService/oat/arm64/ConnectionSecurityService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/IWlanService/IWlanService.apk:$(TARGET_COPY_OUT_VENDOR)/app/IWlanService/IWlanService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/IWlanService/oat/arm64/IWlanService.odex:$(TARGET_COPY_OUT_VENDOR)/app/IWlanService/oat/arm64/IWlanService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/IWlanService/oat/arm64/IWlanService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/IWlanService/oat/arm64/IWlanService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/powermodule_java/oat/arm64/powermodule_java.odex:$(TARGET_COPY_OUT_VENDOR)/app/powermodule_java/oat/arm64/powermodule_java.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/powermodule_java/oat/arm64/powermodule_java.vdex:$(TARGET_COPY_OUT_VENDOR)/app/powermodule_java/oat/arm64/powermodule_java.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/powermodule_java/powermodule_java.apk:$(TARGET_COPY_OUT_VENDOR)/app/powermodule_java/powermodule_java.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QCC-TR-UI/oat/arm64/QCC-TR-UI.odex:$(TARGET_COPY_OUT_VENDOR)/app/QCC-TR-UI/oat/arm64/QCC-TR-UI.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QCC-TR-UI/oat/arm64/QCC-TR-UI.vdex:$(TARGET_COPY_OUT_VENDOR)/app/QCC-TR-UI/oat/arm64/QCC-TR-UI.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QCC-TR-UI/QCC-TR-UI.apk:$(TARGET_COPY_OUT_VENDOR)/app/QCC-TR-UI/QCC-TR-UI.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QFingerprintService/oat/arm64/QFingerprintService.odex:$(TARGET_COPY_OUT_VENDOR)/app/QFingerprintService/oat/arm64/QFingerprintService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QFingerprintService/oat/arm64/QFingerprintService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/QFingerprintService/oat/arm64/QFingerprintService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/QFingerprintService/QFingerprintService.apk:$(TARGET_COPY_OUT_VENDOR)/app/QFingerprintService/QFingerprintService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TimeService/oat/arm64/TimeService.odex:$(TARGET_COPY_OUT_VENDOR)/app/TimeService/oat/arm64/TimeService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TimeService/oat/arm64/TimeService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/TimeService/oat/arm64/TimeService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TimeService/TimeService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TimeService/TimeService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustedUIService/oat/arm64/TrustedUIService.odex:$(TARGET_COPY_OUT_VENDOR)/app/TrustedUIService/oat/arm64/TrustedUIService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustedUIService/oat/arm64/TrustedUIService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/TrustedUIService/oat/arm64/TrustedUIService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustedUIService/TrustedUIService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TrustedUIService/TrustedUIService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustZoneAccessService/oat/arm64/TrustZoneAccessService.odex:$(TARGET_COPY_OUT_VENDOR)/app/TrustZoneAccessService/oat/arm64/TrustZoneAccessService.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustZoneAccessService/oat/arm64/TrustZoneAccessService.vdex:$(TARGET_COPY_OUT_VENDOR)/app/TrustZoneAccessService/oat/arm64/TrustZoneAccessService.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk:$(TARGET_COPY_OUT_VENDOR)/app/TrustZoneAccessService/TrustZoneAccessService.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TxPwrAdmin/oat/arm64/TxPwrAdmin.odex:$(TARGET_COPY_OUT_VENDOR)/app/TxPwrAdmin/oat/arm64/TxPwrAdmin.odex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TxPwrAdmin/oat/arm64/TxPwrAdmin.vdex:$(TARGET_COPY_OUT_VENDOR)/app/TxPwrAdmin/oat/arm64/TxPwrAdmin.vdex \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/app/TxPwrAdmin/TxPwrAdmin.apk:$(TARGET_COPY_OUT_VENDOR)/app/TxPwrAdmin/TxPwrAdmin.apk \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/adpl:$(TARGET_COPY_OUT_VENDOR)/bin/adpl \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/adsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/adsprpcd \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/agmcap:$(TARGET_COPY_OUT_VENDOR)/bin/agmcap \
@@ -2963,14 +2223,11 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/audioadsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/audioadsprpcd \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/audiodsd2pcmtest:$(TARGET_COPY_OUT_VENDOR)/bin/audiodsd2pcmtest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/audioflacapp:$(TARGET_COPY_OUT_VENDOR)/bin/audioflacapp \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/awk:$(TARGET_COPY_OUT_VENDOR)/bin/awk \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/battery_stats:$(TARGET_COPY_OUT_VENDOR)/bin/battery_stats \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/boringssl_self_test32:$(TARGET_COPY_OUT_VENDOR)/bin/boringssl_self_test32 \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/boringssl_self_test64:$(TARGET_COPY_OUT_VENDOR)/bin/boringssl_self_test64 \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/ccid_daemon_nr:$(TARGET_COPY_OUT_VENDOR)/bin/ccid_daemon_nr \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/cdsprpcd:$(TARGET_COPY_OUT_VENDOR)/bin/cdsprpcd \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/charger_fan_speed.sh:$(TARGET_COPY_OUT_VENDOR)/bin/charger_fan_speed.sh \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/checkpoint_gc:$(TARGET_COPY_OUT_VENDOR)/bin/checkpoint_gc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/chiaoncameratest:$(TARGET_COPY_OUT_VENDOR)/bin/chiaoncameratest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/chimcxtest:$(TARGET_COPY_OUT_VENDOR)/bin/chimcxtest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/chiofflinepostproctest:$(TARGET_COPY_OUT_VENDOR)/bin/chiofflinepostproctest \
@@ -2979,7 +2236,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/cnss_diag:$(TARGET_COPY_OUT_VENDOR)/bin/cnss_diag \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/compatibilitytest:$(TARGET_COPY_OUT_VENDOR)/bin/compatibilitytest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/COSNet_spatial_8bit_quantized.serialized.bin:$(TARGET_COPY_OUT_VENDOR)/bin/COSNet_spatial_8bit_quantized.serialized.bin \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/cplay:$(TARGET_COPY_OUT_VENDOR)/bin/cplay \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/ctrlapp_dut:$(TARGET_COPY_OUT_VENDOR)/bin/ctrlapp_dut \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/debug-diag:$(TARGET_COPY_OUT_VENDOR)/bin/debug-diag \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/diag_callback_sample:$(TARGET_COPY_OUT_VENDOR)/bin/diag_callback_sample \
@@ -2993,7 +2249,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/dlsc:$(TARGET_COPY_OUT_VENDOR)/bin/dlsc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/dspservice:$(TARGET_COPY_OUT_VENDOR)/bin/dspservice \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/dumpsys:$(TARGET_COPY_OUT_VENDOR)/bin/dumpsys \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/edgnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/edgnss-daemon \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/e_loop:$(TARGET_COPY_OUT_VENDOR)/bin/e_loop \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/embmsslServer:$(TARGET_COPY_OUT_VENDOR)/bin/embmsslServer \
@@ -3012,18 +2267,12 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hdcp1prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp1prov \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hdcp2p2prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp2p2prov \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hostapd_cli:$(TARGET_COPY_OUT_VENDOR)/bin/hostapd_cli \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.atrace@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.atrace@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.audio.service_64:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.audio.service_64 \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service-qti \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.boot@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.boot@1.2-service \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.cas@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.cas@1.2-service \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.drm-service.clearkey:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm-service.clearkey \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.drm-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm-service.widevine \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-spu-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-spu-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.gnss-aidl-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gnss-aidl-service-qti \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.health-service.qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.health-service.qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.identity-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.identity-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti \
@@ -3031,8 +2280,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.power-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.power-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.security.keymint-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.security.keymint-service-spu-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service-spu-qti \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.sensors-service.multihal:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.sensors-service.multihal \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.thermal@2.0-service.qti-v2:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.thermal@2.0-service.qti-v2 \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.usb@1.2-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.2-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.usb.gadget@1.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb.gadget@1.1-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/android.hardware.wifi@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.wifi@1.0-service \
@@ -3056,7 +2303,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.iop@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.iop@2.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.lights.service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.lights.service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.limits@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.limits@1.2-service \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.memtrack-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.memtrack-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.perf-hal-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf-hal-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qseecom@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.secureprocessor@1.0 \
@@ -3065,7 +2311,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.soter@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.soter@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.hardware.vibrator.service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.vibrator.service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.media.c2audio@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/hw/vendor.qti.secure_element@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.secure_element@1.2-service \
@@ -3110,7 +2355,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/ks:$(TARGET_COPY_OUT_VENDOR)/bin/ks \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/loadalgo:$(TARGET_COPY_OUT_VENDOR)/bin/loadalgo \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/loc_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/loc_launcher \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/logwrapper:$(TARGET_COPY_OUT_VENDOR)/bin/logwrapper \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/mcs_test:$(TARGET_COPY_OUT_VENDOR)/bin/mcs_test \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/mdm_helper:$(TARGET_COPY_OUT_VENDOR)/bin/mdm_helper \
@@ -3124,7 +2368,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/nativechitest:$(TARGET_COPY_OUT_VENDOR)/bin/nativechitest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/nativehaltest:$(TARGET_COPY_OUT_VENDOR)/bin/nativehaltest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/nqnfcinfo:$(TARGET_COPY_OUT_VENDOR)/bin/nqnfcinfo \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/offcamtest:$(TARGET_COPY_OUT_VENDOR)/bin/offcamtest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/osal_in_test_example:$(TARGET_COPY_OUT_VENDOR)/bin/osal_in_test_example \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/PalTest:$(TARGET_COPY_OUT_VENDOR)/bin/PalTest \
@@ -3173,7 +2416,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/rpmbClient:$(TARGET_COPY_OUT_VENDOR)/bin/rpmbClient \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/sec_nvm:$(TARGET_COPY_OUT_VENDOR)/bin/sec_nvm \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/sensors.qti:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qti \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/sh:$(TARGET_COPY_OUT_VENDOR)/bin/sh \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/shsusrd:$(TARGET_COPY_OUT_VENDOR)/bin/shsusrd \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/sigma_dut:$(TARGET_COPY_OUT_VENDOR)/bin/sigma_dut \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/slim_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/slim_daemon \
@@ -3200,8 +2442,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/tftp_server:$(TARGET_COPY_OUT_VENDOR)/bin/tftp_server \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/tlpd:$(TARGET_COPY_OUT_VENDOR)/bin/tlpd \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/toolbox:$(TARGET_COPY_OUT_VENDOR)/bin/toolbox \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/toybox_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/toybox_vendor \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/trusteduilistener:$(TARGET_COPY_OUT_VENDOR)/bin/trusteduilistener \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/TrustedUISampleTAClient:$(TARGET_COPY_OUT_VENDOR)/bin/TrustedUISampleTAClient \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/TrustedUISampleTest:$(TARGET_COPY_OUT_VENDOR)/bin/TrustedUISampleTest \
@@ -3213,8 +2453,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vendor.qti.hardware.soter@1.0-provision:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.qti.hardware.soter@1.0-provision \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vendor.qti.qspmhal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/vendor.qti.qspmhal@1.0-service \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vmmgr:$(TARGET_COPY_OUT_VENDOR)/bin/vmmgr \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vndservice:$(TARGET_COPY_OUT_VENDOR)/bin/vndservice \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vndservicemanager:$(TARGET_COPY_OUT_VENDOR)/bin/vndservicemanager \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vppcommonlibraryunittest:$(TARGET_COPY_OUT_VENDOR)/bin/vppcommonlibraryunittest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vppipcunittest:$(TARGET_COPY_OUT_VENDOR)/bin/vppipcunittest \
     vendor/ayaneo/pocket_ds/proprietary/vendor/bin/vpplibraryfunctionaltest:$(TARGET_COPY_OUT_VENDOR)/bin/vpplibraryfunctionaltest \
@@ -3378,36 +2616,26 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/group:$(TARGET_COPY_OUT_VENDOR)/etc/group \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_config.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/hostapd/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/hostapd/hostapd_default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd_default.conf \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/hostapd/hostapd.deny:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.deny \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.atrace@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.atrace@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.audio.service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service_64.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-qti.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.boot@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot@1.2-service.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.cas@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.cas@1.2-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.drm-service.clearkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.clearkey.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-spu-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-spu-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-aidl-service-qti.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.health-service.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.health-service.qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.identity-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.media.omx@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.omx@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.power-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.sensors-service-multihal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.sensors-service-multihal.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal@2.0-service.qti-v2.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.usb@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb@1.2-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.usb.gadget@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget@1.1-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.wifi@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/android.hardware.wifi.supplicant-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi.supplicant-service.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/boringssl_self_test.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/boringssl_self_test.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
@@ -3446,7 +2674,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/ipacm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipacm.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/ipa_fws.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipa_fws.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/loc-launcher.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/loc-launcher.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/memtrack_qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack_qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/modemManager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/modemManager.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
@@ -3500,7 +2727,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.hardware.vibrator.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.vibrator.service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
@@ -3513,7 +2739,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vendor.thundercomm.hardware.tsnv@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.thundercomm.hardware.tsnv@1.0-service.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vmmgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vmmgr.rc \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vndservicemanager.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/IPACM_cfg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/IPACM_cfg.xml \
@@ -3571,13 +2796,10 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/mkshrc:$(TARGET_COPY_OUT_VENDOR)/etc/mkshrc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/models/acd/music.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/music.eai \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/models/acd/speech.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/speech.eai \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/NOTICE.xml.gz:$(TARGET_COPY_OUT_VENDOR)/etc/NOTICE.xml.gz \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/passwd:$(TARGET_COPY_OUT_VENDOR)/etc/passwd \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/perf/avcsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/avcsysnodesconfigs.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/perf/commonsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonsysnodesconfigs.xml \
@@ -3595,7 +2817,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.light.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/permissions/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
@@ -3670,10 +2891,8 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/qvr/qvr_usb_device_list.txt:$(TARGET_COPY_OUT_VENDOR)/etc/qvr/qvr_usb_device_list.txt \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/recovery-resource.dat:$(TARGET_COPY_OUT_VENDOR)/etc/recovery-resource.dat \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/res/images/default/charger/18x32.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/default/charger/18x32.png \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/res/images/default/charger/battery_fail.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/default/charger/battery_fail.png \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/res/images/default/charger/battery_scale_fhd.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/default/charger/battery_scale_fhd.png \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/res/images/default/charger/battery_scale_icon.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/default/charger/battery_scale_icon.png \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/res/images/default/charger/battery_scale.png:$(TARGET_COPY_OUT_VENDOR)/etc/res/images/default/charger/battery_scale.png \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
@@ -3811,7 +3030,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/etc/usb_compositions.conf:$(TARGET_COPY_OUT_VENDOR)/etc/usb_compositions.conf \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml \
     vendor/ayaneo/pocket_ds/proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml \
@@ -3965,125 +3183,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
     vendor/ayaneo/pocket_ds/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
     vendor/ayaneo/pocket_ds/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.automotive.watchdog-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.automotive.watchdog-V2-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.common@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.common@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.device@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.device@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.device@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.device@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.cameraservice.service@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.cameraservice.service@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.frameworks.sensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.frameworks.sensorservice@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.atrace@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.atrace@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@2.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@4.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@4.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@5.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@5.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@6.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@6.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@7.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio@7.1-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio@7.1-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@2.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@4.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@4.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@5.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@5.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@6.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@6.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@7.0-enums.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0-enums.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@7.1-enums.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.1-enums.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common@7.1-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common@7.1-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.common-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.common-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@2.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@2.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@4.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@4.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@5.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@5.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@5.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@6.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@6.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@6.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@6.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@7.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@7.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.audio.effect@7.0-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.audio.effect@7.0-util.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.authsecret@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.authsecret@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.automotive.vehicle@2.0-manager-lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.automotive.vehicle@2.0-manager-lib.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.automotive.vehicle@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.automotive.vehicle@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.biometrics.common-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.common-V2-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.fingerprint@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.biometrics.fingerprint-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.biometrics.fingerprint-V2-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.bluetooth@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.bluetooth@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.bluetooth.audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.bluetooth.audio@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.boot@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.boot@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.boot@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.boot@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.camera.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.common@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.drm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.drm@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.drm@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.drm@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.drm@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.gatekeeper@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gatekeeper@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.graphics.composer@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.graphics.composer@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.graphics.composer@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.graphics.composer@2.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.composer@2.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.health@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.health@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.health@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.health@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.keymaster@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.keymaster@4.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.media.c2@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.media.c2@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.power@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.power@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.power@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.5.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.radio@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.radio@1.6.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.secure_element@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.secure_element@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.secure_element@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.secure_element@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.security.keymint-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-V1-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.sensors@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0-ScopedWakelock.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.sensors@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.sensors@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.sensors@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.soundtrigger@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.soundtrigger@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.soundtrigger@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.soundtrigger@2.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.tetheroffload.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.config@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.tetheroffload.control@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.control@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.tetheroffload.control@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.tetheroffload.control@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.thermal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.thermal@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.thermal@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.usb@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.usb@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.usb@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.usb.gadget@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.usb.gadget@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.usb.gadget@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.5.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hardware.wifi@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.wifi@1.6.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hidl.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.allocator@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.hidl.memory.block@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hidl.memory.block@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.system.keystore2-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.keystore2-V1-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.system.net.netd@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.net.netd@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.system.net.netd@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.net.netd@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/android.system.wifi.keystore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.system.wifi.keystore@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/camera/components/com.bots.node.vendortagwrite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.bots.node.vendortagwrite.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/camera/components/com.qti.eisv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.qti.eisv2.so \
@@ -4227,7 +3327,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/camera/imx688.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx688.pb \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/camx.device-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camx.device-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/camx.provider-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camx.provider-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/com.dsi.ant@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.dsi.ant@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/com.qti.camx.chiiqutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.camx.chiiqutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/com.qti.chiusecaseselector.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.chiusecaseselector.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/com.qti.feature2.afbrckt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.qti.feature2.afbrckt.so \
@@ -4282,43 +3381,20 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_esx.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libVkLayer_ADRENO_qprofiler.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/ftm_fm_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/ftm_fm_lib.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@2.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@4.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@5.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@5.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@6.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@7.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio@7.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@7.1-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio.effect@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@2.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@4.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@5.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@6.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@7.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.boot@1.0-impl-1.2-qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.gnss-aidl-impl-qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-qti-display.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.renderscript@1.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.soundtrigger@2.2-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.soundtrigger@2.3-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.bluetooth.default.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.bluetooth_qti.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.bluetooth_qti.default.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.default.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.primary.kalama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.kalama.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.r_submix.default.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.usb.default.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/com.dsi.ant@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.dsi.ant@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/com.qti.chi.offline.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.offline.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.default.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.default.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/local_time.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/local_time.default.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/power.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/power.default.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/sensors.dynamic_sensor_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.dynamic_sensor_hal.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/sound_trigger.primary.kalama.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.kalama.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vendor.aks.gamepad@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.aks.gamepad@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so \
@@ -4338,7 +3414,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.wifidisplaysession@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vendor.qti.memory.pasrmanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.memory.pasrmanager@1.0-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vibrator.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vibrator.default.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.adreno.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/jcos_nq_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/jcos_nq_client.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libadaptlaunch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadaptlaunch.so \
@@ -4356,7 +3431,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libaidenoiser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiser.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libaidenoiserv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaidenoiserv2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlacSwDec.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libalsautils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libaodoptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaodoptfeature.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libapengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libapengine.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libApeSwDec.so \
@@ -4368,19 +3442,15 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libats.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libaudiochargerlistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudiochargerlistener.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libaudio_log_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudio_log_utils.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libavservices_minijail.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libavservices_minijail.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbacklight-calib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbacklight-calib.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbase64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase64.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbatterylistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatterylistener.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbinderdebug.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderdebug.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlengine.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbitmlenginev2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlenginev2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbluetooth_audio_session_aidl_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_aidl_qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbluetooth_audio_session_aidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_aidl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbluetooth_audio_session_qti_2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti_2_1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbluetooth_audio_session_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session_qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libboot_control_qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libboot_control_qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/lib_bt_aptx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bt_aptx.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/lib_bt_ble.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_bt_ble.so \
@@ -4388,7 +3458,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-hidlclient.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbtnv.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcacertclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcacertclient.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera2ndk_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcamerapostproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamerapostproc.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcamxcommonutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxcommonutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxexternalformatutils.so \
@@ -4415,7 +3484,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libchifeature2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchifeature2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchilog.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libchrome.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchrome.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcld80211.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcld80211.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libclstc_algorithm_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclstc_algorithm_adapter.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libclstc_gcp_adapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libclstc_gcp_adapter.so \
@@ -4424,9 +3492,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcneoplookup.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneoplookup.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcneqmiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneqmiutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcodec2_hidl@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl_plugin.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcodec2_vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_vndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcommonchiutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcommonchiutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libconfigdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconfigdb.so \
@@ -4449,7 +3514,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdpps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpps.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdrmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libdsd2pcm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsd2pcm.so \
@@ -4459,8 +3523,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libeai_fixed.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeai_fixed.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libeai_float.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeai_float.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libeepromcutter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeepromcutter.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libeffectsconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffectsconfig.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libeffects.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffects.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libembmsservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libembmsservice.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libengineplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libengineplugin.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libesepmconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libesepmconfig.so \
@@ -4505,11 +3567,8 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhdr_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_stub.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhfp_pal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhfp_pal.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhidltransport.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidltransport.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhidparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidparser.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhistogram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhistogram.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhme.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhme.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libhwbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwbinder.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libidl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/lib-imscommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscommon.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/lib-imsdcservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imsdcservice.so \
@@ -4530,15 +3589,11 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libjni_aidenoiserutilv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjni_aidenoiserutilv2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libjnihelper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjnihelper.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libjpege.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpege.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libjson.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjson.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkcl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkcl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkernelmanager.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkernelmanager.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterdeviceutils.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeymaster_messages.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster_messages.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeymasterprovision.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterprovision.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeymasterutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymasterutils.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-engine-wifi-hidl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libkeystore-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-wifi-hidl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/liblbs_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblbs_core.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/liblearningmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblearningmodule.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/liblightninglaunches.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblightninglaunches.so \
@@ -4582,9 +3637,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmdmdetect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmdetect.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmdmimgload.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdmimgload.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmdsprpc.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmediautils_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmediautils_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmemperfd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemperfd.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmemunreachable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemunreachable.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmemutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmeters-ns.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmeters-ns.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmeters.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmeters.so \
@@ -4606,8 +3659,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libmmrtpencoder_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmrtpencoder_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnanopb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnanopb.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnative-api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnative-api.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnbaio_mono.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnbaio_mono.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetfilter_conntrack.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetfilter_conntrack.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgr_common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_common.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgr_datapath_proxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_datapath_proxy.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgrext_interface_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgrext_interface_client.so \
@@ -4620,7 +3671,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgr_sscm3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_sscm3.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgr_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgr_utils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnetmgrxfrmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnetmgrxfrmutils.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnfnetlink.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnfnetlink.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libnlnetmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnlnetmgr.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/liboemaids_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemaids_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
@@ -4649,9 +3699,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libprefapps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprefapps.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libprekill.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprekill.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libprocomp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprocomp.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libprotobuf-cpp-full-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full-3.9.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libprotobuf-cpp-lite-3.9.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite-3.9.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libpsi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpsi.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libpsmoptfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpsmoptfeature.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libQ6MSFR_manager_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQ6MSFR_manager_stub.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqape_oem_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqape_oem_ext.so \
@@ -4760,10 +3807,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libQtiRilLoadable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libQtiRilLoadable.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqti-util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-util.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqti-utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-utils.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqtivibratoreffectoffload.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtivibratoreffectoffload.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqtivibratoreffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqtivibratoreffect.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqti_vndfwk_detect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti_vndfwk_detect.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqti_vndfwk_detect_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti_vndfwk_detect_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqvr_cam_cdsp_driver_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqvr_cam_cdsp_driver_stub.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqvrcamera_client.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqvrcamera_client.qti.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libqvrcameraplayback.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqvrcameraplayback.so \
@@ -4783,7 +3826,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/librilqmimiscservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmimiscservices.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/librmnetctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librmnetctl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librpmb.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/lib-rtpcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-rtpcommon.so \
@@ -4808,7 +3850,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsensor_calibration.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensor_calibration.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsensorcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorcal.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsensorndkbridge.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorndkbridge.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libSensorsInterface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSensorsInterface.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorslog.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libsfeShiftExtrapolation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsfeShiftExtrapolation.so \
@@ -4845,7 +3886,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_default_listener.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_bufferpool@2.0.1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefrighthw.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libstandbyfeature.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstandbyfeature.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libStereoRectifyWrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStereoRectifyWrapper.so \
@@ -4864,7 +3904,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libtinycompress.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinycompress.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libtlpd_configmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlpd_configmgr.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libtlpd_crypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlpd_crypto.so \
@@ -4890,8 +3929,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvideoutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvmfilexfer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvmfilexfer.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvmmem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvmmem.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvndfwk_detect_jni.qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvndfwk_detect_jni.qti.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvndfwk_detect_jni.qti_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvndfwk_detect_jni.qti_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvppclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvppclient.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvppcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvppcommon.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvpphcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphcp.so \
@@ -4901,7 +3938,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpptestutils.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvui_dmgr_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvui_dmgr_client.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libvui_dmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvui_dmgr.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwfdaac_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdaac_vendor.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwfdcodecv4l2_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdcodecv4l2_proprietary.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwfdcommonutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdcommonutils_proprietary.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwfdconfigutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdconfigutils_proprietary.so \
@@ -4924,7 +3960,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwfdutils_proprietary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwfdutils_proprietary.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwifi-hal-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-ctrl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwifi-hal-qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-qcom.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
@@ -4932,8 +3967,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/libxtadapter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxtadapter.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/ls_nq_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/ls_nq_client.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/mediacas/libclearkeycasplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediacas/libclearkeycasplugin.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libdrmclearkeyplugin.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/qcril_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcril_client.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/qcrild_libqcrilnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_libqcrilnr.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/qcrild_libqcrilnrutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_libqcrilnrutils.so \
@@ -4956,20 +3989,11 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/se_nq_extn_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/se_nq_extn_client.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libbundlewrapper.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdownmix.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynproc.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeffectproxy.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libhapticgenerator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libhapticgenerator.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libldnhncr.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libqcompostprocbundle.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcompostprocbundle.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libqcomvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvisualizer.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libqcomvoiceprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcomvoiceprocessing.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libquasar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libquasar.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libreverbwrapper.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libshoebox.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libshoebox.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvisualizer.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/soundfx/libvolumelistener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvolumelistener.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.aks.gamepad@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.aks.gamepad@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
@@ -4980,19 +4004,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.color@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.6.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.color@1.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.7.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.10.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.10.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.11.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.11.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.3.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.4.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.5.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.6.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.6.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.7.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.7.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.8.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.8.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@1.9.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@1.9.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.config@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.config@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.libdpmctmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.libdpmctmgr.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.libdpmfdmgr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.libdpmfdmgr.so \
@@ -5018,23 +4029,12 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.AGMIPC@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.alarm@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.automotive.vehicle@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_audio@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth.audio-V1-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.btconfigstore@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.btconfigstore@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.bttpi-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.bttpi-V2-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.cacert@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.aon@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.aon@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.aon@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.aon@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.aon@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.aon@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.aon@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.aon@1.3.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.aon-service-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so \
@@ -5055,29 +4055,12 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.latency@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.latency@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.lce@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.lce@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.data.qmi@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.allocator@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.allocator@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.allocator@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.composer@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.composer@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.composer@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.composer@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.composer@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.composer@3.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.composer@3.1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V1-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V2-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V3-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V4-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V4-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V5-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.config-V6-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.config-V6-ndk.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.demura@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.demura@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapper@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapper@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapper@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapper@3.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapper@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapper@4.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapperextensions@1.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.display.mapperextensions@1.3.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.dpmservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.dpmservice@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.dpmservice@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.dsp@1.0.so \
@@ -5097,10 +4080,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.mwqemadapter@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.2.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.perf@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@2.3.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.power.powermodule@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.power.powermodule@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.qccsyshal@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.qccsyshal@1.1.so \
@@ -5156,25 +4135,19 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.servicetracker@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.servicetracker@1.1.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.servicetracker@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.servicetracker@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.sigma_miracast@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.slmadapter@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.soter@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.soter@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.systemhelper@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.systemhelper@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.trustedui@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.trustedui@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.tui_comm@1.0.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.vibrator.impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vibrator.impl.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.1.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.2.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.vpp@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@1.3.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.vpp@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.vpp@2.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.supplicant-V1-ndk.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib64/vendor.qti.ims.callcapability@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.ims.callcapability@1.0.so \
@@ -6433,10 +5406,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib/vendor.qti.voiceprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.voiceprint@1.0.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib/vndk/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_foundation.so \
     vendor/ayaneo/pocket_ds/proprietary/vendor/lib/vndk/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_omx.so \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/overlay/FrameworksResTarget_Vendor.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/FrameworksResTarget_Vendor.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/overlay/SecureElementResTarget_Vendor.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/SecureElementResTarget_Vendor.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/overlay/WifiResTarget.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/WifiResTarget.apk \
-    vendor/ayaneo/pocket_ds/proprietary/vendor/overlay/WifiResTarget_spf.apk:$(TARGET_COPY_OUT_VENDOR)/overlay/WifiResTarget_spf.apk \
     vendor/ayaneo/pocket_ds/proprietary/vendor/rfs/rfs_symlinks:$(TARGET_COPY_OUT_VENDOR)/rfs/rfs_symlinks \
     vendor/ayaneo/pocket_ds/proprietary/vendor/usr/keylayout/Vendor_2212_Product_0010.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_2212_Product_0010.kl
 

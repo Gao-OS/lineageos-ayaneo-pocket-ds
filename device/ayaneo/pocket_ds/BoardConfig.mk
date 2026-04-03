@@ -6,6 +6,18 @@
 
 DEVICE_PATH := device/ayaneo/pocket_ds
 
+# Bringup flags — allow VINTF metadata in PRODUCT_COPY_FILES (stock blobs from vendor partition)
+# TODO: Convert VINTF files to vintf_fragments modules after bringup
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+
+# Allow duplicate install rules during bringup — vendor blobs may overlap with
+# AOSP/LineageOS built modules. Remove after resolving all conflicts.
+BUILD_BROKEN_DUP_RULES := true
+
+# Allow ELF binaries in PRODUCT_COPY_FILES during bringup — vendor blobs contain
+# .so/.bin ELF files that should eventually become cc_prebuilt_library_shared modules.
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Platform (SM8750 "sun")
 TARGET_BOARD_PLATFORM := sun
 
@@ -26,21 +38,27 @@ TARGET_BOOTLOADER_BOARD_NAME := sun
 TARGET_NO_BOOTLOADER := true
 
 # Kernel — prebuilt from stock boot.img (GKI 2.0)
-TARGET_KERNEL_SOURCE := kernel/ayaneo/sm8750
+# Do NOT set TARGET_KERNEL_SOURCE for a prebuilt kernel: LineageOS kernel.mk
+# interprets a set TARGET_KERNEL_SOURCE as "build from source" and requires
+# TARGET_KERNEL_CONFIG. Use TARGET_PREBUILT_KERNEL with a direct path instead.
+KERNEL_PATH := kernel/ayaneo/sm8750
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_SOURCE)/$(BOARD_KERNEL_IMAGE_NAME)
+TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
 
 # DTB — extracted from stock vendor_boot.img (4.5 MB FDT)
-BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_SOURCE)
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+# DTBO — prebuilt from stock firmware (12 MB)
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 
 # Vendor kernel modules — 306 .ko files from stock vendor_boot ramdisk
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := \
-    $(wildcard $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/*.ko)
+    $(wildcard $(KERNEL_PATH)/vendor_ramdisk/lib/modules/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/modules.load
+    $(KERNEL_PATH)/vendor_ramdisk/lib/modules/modules.load
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := \
-    $(TARGET_KERNEL_SOURCE)/vendor_ramdisk/lib/modules/modules.blocklist
+    $(KERNEL_PATH)/vendor_ramdisk/lib/modules/modules.blocklist
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096

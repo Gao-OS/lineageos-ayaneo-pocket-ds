@@ -2,6 +2,10 @@
 # LineageOS product definition for Ayaneo Pocket DS
 #
 
+# Inherit AOSP base product (provides framework, bootclasspath, core packages).
+# Must come before device and LineageOS inherits.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
 # Inherit from device
 $(call inherit-product, device/ayaneo/pocket_ds/device.mk)
 

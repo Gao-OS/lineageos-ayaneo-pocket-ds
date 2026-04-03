@@ -249,7 +249,15 @@ phase_build() {
     # shellcheck disable=SC1091
     source build/envsetup.sh
 
-    local lunch_target="lineage_pocket_ds-${VARIANT}"
+    # Prepend AOSP host lib64 to LD_LIBRARY_PATH so the AOSP-built xmllint and
+    # other host tools load AOSP's libxml2 (with schematron support) instead of
+    # the system libxml2 from nix-ld or pipewire-jack LD_LIBRARY_PATH entries.
+    local out_host_lib
+    out_host_lib="${OUT_DIR:-out}/host/linux-x86/lib64"
+    export LD_LIBRARY_PATH="${out_host_lib}:${LD_LIBRARY_PATH:-}"
+
+    # Android 14 lunch format: <product>-<release>-<variant>
+    local lunch_target="lineage_pocket_ds-ap2a-${VARIANT}"
     info "Lunch target: $lunch_target"
     lunch "$lunch_target"
 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minimal framework/system VINTF manifest for bringup.
+     Required because vendor blob VINTF fragments in system_ext trigger
+     check_vintf_system, which needs a system manifest to exist. -->
+<manifest version="1.0" type="framework" />
