@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="nicholaschum-gitlab"
-          fetch="https://gitlab.com/nicholaschum/" />
+  <remote name="mindthegapps-gitlab"
+          fetch="https://gitlab.com/MindTheGapps/" />
 
-  <!-- MindTheGapps for LineageOS 21 (arm64) -->
-  <project name="mindthegapps"
+  <!-- MindTheGapps for LineageOS 21 (arm64) — branch "upsilon" = Android 14 -->
+  <project name="vendor_gapps"
            path="vendor/gapps"
-           remote="nicholaschum-gitlab"
-           revision="14" />
+           remote="mindthegapps-gitlab"
+           revision="upsilon" />
 </manifest>
