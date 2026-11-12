@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Fetch/verify MindTheGapps for LineageOS 21 (arm64)
+# Fetch/verify MindTheGapps for LineageOS 24 (arm64)
 # Usually synced via repo sync with local_manifests/gapps.xml
 # This script is a fallback for manual setup
 

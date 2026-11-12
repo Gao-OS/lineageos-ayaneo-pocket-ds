@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Build orchestration script for LineageOS 21 — Ayaneo Pocket DS
+# Build orchestration script for LineageOS 24 — Ayaneo Pocket DS
 # Usage: ./scripts/build.sh [--all|--init|--extract|--patch|--build] [options]
 
 # --- Colors ---
@@ -99,12 +99,10 @@ cd "$ROOT_DIR"
 phase_init() {
     info "=== Phase 1: Repository Init & Sync ==="
 
-    if [[ ! -d .repo ]]; then
-        info "Initializing LineageOS 21 repo..."
-        repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
-    else
-        ok "Repo already initialized"
-    fi
+    # repo init is idempotent; re-running it also switches an existing
+    # checkout to the branch below.
+    info "Initializing LineageOS 24 repo..."
+    repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs --depth=1
 
     # Copy local manifests
     mkdir -p .repo/local_manifests
@@ -275,7 +273,7 @@ phase_build() {
 
     # Copy output
     local out_zip
-    out_zip=$(find out/target/product/pocket_ds -maxdepth 1 -name 'lineage-21*.zip' -print -quit 2>/dev/null)
+    out_zip=$(find out/target/product/pocket_ds -maxdepth 1 -name 'lineage-24*.zip' -print -quit 2>/dev/null)
 
     if [[ -n "$out_zip" ]]; then
         mkdir -p out/release
@@ -300,7 +298,7 @@ phase_build() {
 # =============================================================================
 # Main
 # =============================================================================
-info "LineageOS 21 — Ayaneo Pocket DS Build"
+info "LineageOS 24 — Ayaneo Pocket DS Build"
 info "Variant: $VARIANT | Jobs: $JOBS | GApps: $WITH_GAPPS"
 echo ""
 

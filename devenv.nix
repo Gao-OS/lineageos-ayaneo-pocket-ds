@@ -18,7 +18,7 @@
 
     # Build essentials
     python3
-    jdk17
+    jdk21
     git-lfs
     ccache
     gnumake
@@ -87,22 +87,22 @@
     ALLOW_MISSING_DEPENDENCIES = "true";
 
     # Java home for Android build
-    JAVA_HOME = "${pkgs.jdk17.home}";
+    JAVA_HOME = "${pkgs.jdk21.home}";
   };
 
   enterShell = ''
     echo ""
     echo "================================================"
-    echo "  LineageOS 21 — Ayaneo Pocket DS Build Environment"
+    echo "  LineageOS 24 — Ayaneo Pocket DS Build Environment"
     echo "================================================"
     echo ""
-    echo "  Target:  Ayaneo Pocket DS (Qualcomm TurboX C8550 / SM8750)"
-    echo "  Base:    LineageOS 21 (Android 14)"
+    echo "  Target:  Ayaneo Pocket DS (Qualcomm TurboX C8550 / QCS8550 \"kalama\")"
+    echo "  Base:    LineageOS 24 (Android 17)"
     echo "  Java:    $(java -version 2>&1 | head -1)"
     echo "  ccache:  $CCACHE_EXEC"
     echo ""
     echo "  Quick Start:"
-    echo "    1. repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs"
+    echo "    1. repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs --depth=1"
     echo "    2. cp local_manifests/* .repo/local_manifests/"
     echo "    3. repo sync -c -j$(nproc) --force-sync --no-tags"
     echo "    4. source build/envsetup.sh"
@@ -117,6 +117,6 @@
     echo ""
 
     # Ensure JAVA_HOME is on PATH
-    export PATH="${pkgs.jdk17}/bin:$PATH"
+    export PATH="${pkgs.jdk21}/bin:$PATH"
   '';
 }

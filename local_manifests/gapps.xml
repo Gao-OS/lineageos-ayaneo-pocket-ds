@@ -3,9 +3,9 @@
   <remote name="mindthegapps-gitlab"
           fetch="https://gitlab.com/MindTheGapps/" />
 
-  <!-- MindTheGapps for LineageOS 21 (arm64) — branch "upsilon" = Android 14 -->
+  <!-- MindTheGapps for LineageOS 24 (arm64) — branch "cinnamonbun" = Android 17 -->
   <project name="vendor_gapps"
            path="vendor/gapps"
            remote="mindthegapps-gitlab"
-           revision="upsilon" />
+           revision="cinnamonbun" />
 </manifest>

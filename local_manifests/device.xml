@@ -5,9 +5,10 @@
     locally in this monorepo. They already exist at the correct paths:
       device/ayaneo/pocket_ds/
       vendor/ayaneo/pocket_ds/
-      kernel/ayaneo/sm8750/
+      kernel/ayaneo/qcs8550/
       packages/gsmlg-apps/
 
-    device/qcom/sepolicy is already in the LineageOS main manifest.
+    device/qcom/sepolicy_vndr/sm8550 and hardware/qcom-caf/sm8550 are already
+    in the LineageOS main manifest.
   -->
 </manifest>

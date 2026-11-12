@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Flash script for LineageOS 21 — Ayaneo Pocket DS
+# Flash script for LineageOS 24 — Ayaneo Pocket DS
 # Supports fastboot (default) and EDL mode
 
 # --- Colors ---

@@ -20,7 +20,7 @@ FAILED=0
 WARNINGS=0
 
 echo ""
-printf "${BOLD}LineageOS 21 — Ayaneo Pocket DS Build Prerequisites Check${RESET}\n"
+printf "${BOLD}LineageOS 24 — Ayaneo Pocket DS Build Prerequisites Check${RESET}\n"
 echo "──────────────────────────────────────────────────────────"
 echo ""
 
