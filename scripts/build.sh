@@ -197,6 +197,28 @@ phase_patch() {
     ok "Phase 3 complete: KernelSU patched"
 }
 
+# NixOS only: AOSP's prebuilt host tools are started through the nix-ld
+# shim. The prebuilt one-true-awk segfaults under that shim whenever no
+# library path variable is set, which is always the case inside soong's
+# sandboxed genrules (they run with a fixed, minimal environment). Point the
+# binary straight at the real dynamic loader instead. The change is local to
+# prebuilts/build-tools and has to be redone after a repo sync, so it is
+# applied here on every build.
+fix_nixos_prebuilts() {
+    [[ -n "${NIX_LD:-}" ]] || return 0
+
+    local awk_bin="prebuilts/build-tools/linux-x86/bin/one-true-awk"
+    if env -i "$awk_bin" 'BEGIN { exit 0 }' >/dev/null 2>&1; then
+        return 0
+    fi
+
+    command -v patchelf &>/dev/null || die "patchelf is required to fix $awk_bin on NixOS"
+    info "NixOS: pointing $awk_bin at $NIX_LD"
+    patchelf --set-interpreter "$NIX_LD" "$awk_bin"
+    env -i "$awk_bin" 'BEGIN { exit 0 }' >/dev/null 2>&1 \
+        || die "$awk_bin still fails with an empty environment"
+}
+
 # =============================================================================
 # Phase 4: Build — lunch + mka bacon
 # =============================================================================
@@ -228,13 +250,7 @@ phase_build() {
     out_host_lib="${OUT_DIR:-out}/host/linux-x86/lib64"
     export LD_LIBRARY_PATH="${out_host_lib}:${LD_LIBRARY_PATH:-}"
 
-    # NixOS: AOSP's prebuilt host tools are started through nix-ld, which
-    # needs NIX_LD/NIX_LD_LIBRARY_PATH. soong strips unknown variables from
-    # the ninja environment, and without them the prebuilt awk segfaults in
-    # sandboxed genrules. Keep the environment when nix-ld is in use.
-    if [[ -n "${NIX_LD:-}" ]]; then
-        export ALLOW_NINJA_ENV=true
-    fi
+    fix_nixos_prebuilts
 
     # lunch format: <product>-<release>-<variant>; LineageOS records the
     # release it builds against in vendor/lineage/vars/aosp_target_release.
