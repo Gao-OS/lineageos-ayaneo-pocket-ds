@@ -55,9 +55,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/qwesd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1')
         .add_line_if_missing('pipe2: 1'),
-    'vendor/lib64/hw/audio.primary.kalama.so': blob_fixup()
-        .binary_regex_replace(b'/sys/class/switch_legacy/hdmi_audio/state',
-                              b'/sys/class/switch/hdmi_audio/state\x00\x00\x00\x00\x00\x00\x00'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
     (
