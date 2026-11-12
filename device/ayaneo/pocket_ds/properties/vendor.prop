@@ -129,19 +129,18 @@ persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.vendor.qcom.bluetooth.scram.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
-ro.vendor.bt.bdaddr_path=/mnt/vendor/persist/quec_bt_mac
 
 # Chipset
 ro.soc.manufacturer=QTI
 
 # Display
-persist.sys.sf.color_mode=9
+persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=1
@@ -184,15 +183,15 @@ vendor.gatekeeper.is_security_level_spu=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=13666666
-debug.sf.early.sf.duration=15666666
+debug.sf.early.sf.duration=10500000
 debug.sf.earlyGl.app.duration=13666666
-debug.sf.earlyGl.sf.duration=15666666
+debug.sf.earlyGl.sf.duration=10500000
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_hwc_vds=0
 debug.sf.latch_unsignaled=1
 debug.sf.late.app.duration=13666666
-debug.sf.late.sf.duration=15666666
+debug.sf.late.sf.duration=10500000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
@@ -235,9 +234,9 @@ vendor.usb.controller=a600000.dwc3
 vendor.usb.diag.func.name=ffs
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss_sw
-vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.func.name=rmnet
 vendor.usb.rmnet.inst.name=rmnet
-vendor.usb.rndis.func.name=gsi
+vendor.usb.rndis.func.name=rndis
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
