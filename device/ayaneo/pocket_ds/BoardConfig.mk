@@ -11,7 +11,7 @@
 #
 
 DEVICE_PATH := device/ayaneo/pocket_ds
-KERNEL_PATH := kernel/ayaneo/qcs8550
+PREBUILT_KERNEL_PATH := kernel/ayaneo/qcs8550
 
 # A/B
 AB_OTA_PARTITIONS += \
@@ -70,8 +70,8 @@ TARGET_SCREEN_DENSITY := 320
 
 # DTB / DTBO (prebuilt, from stock vendor_boot.img and dtbo.img)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtbs
-BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_KERNEL_PATH)/dtbs
+BOARD_PREBUILT_DTBOIMAGE := $(PREBUILT_KERNEL_PATH)/dtbo.img
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
@@ -97,14 +97,15 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_FORCE_PREBUILT_KERNEL := true
-TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
+TARGET_KERNEL_VERSION := 5.15
+TARGET_PREBUILT_KERNEL := $(PREBUILT_KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
 
 # Kernel modules (prebuilt, from stock vendor_boot, vendor_dlkm and
 # system_dlkm). Stock keeps the first-stage modules only in vendor_boot and
 # ships every other vendor_boot module in vendor_dlkm as well, so
 # vendor_dlkm is assembled from those plus the modules that exist only there.
-VENDOR_RAMDISK_MODULES_PATH := $(KERNEL_PATH)/vendor_ramdisk/lib/modules
-VENDOR_DLKM_MODULES_PATH := $(KERNEL_PATH)/vendor_dlkm/lib/modules
+VENDOR_RAMDISK_MODULES_PATH := $(PREBUILT_KERNEL_PATH)/vendor_ramdisk/lib/modules
+VENDOR_DLKM_MODULES_PATH := $(PREBUILT_KERNEL_PATH)/vendor_dlkm/lib/modules
 
 FIRST_STAGE_MODULES := $(strip $(shell cat $(VENDOR_RAMDISK_MODULES_PATH)/modules.load))
 
@@ -121,7 +122,7 @@ BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(VENDOR_DLKM_MODULES_PATH)/module
 
 # system_dlkm is copied verbatim: its GKI modules are signed, and the stock
 # system_dlkm_modprobe.sh expects the lib/modules/<kernel release>/ layout.
-BOARD_SYSTEM_DLKM_SRC := $(KERNEL_PATH)/system_dlkm
+BOARD_SYSTEM_DLKM_SRC := $(PREBUILT_KERNEL_PATH)/system_dlkm
 
 # The stock modules are already stripped.
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
