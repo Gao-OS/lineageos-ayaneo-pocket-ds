@@ -228,8 +228,12 @@ phase_build() {
     out_host_lib="${OUT_DIR:-out}/host/linux-x86/lib64"
     export LD_LIBRARY_PATH="${out_host_lib}:${LD_LIBRARY_PATH:-}"
 
-    # Android 14 lunch format: <product>-<release>-<variant>
-    local lunch_target="lineage_pocket_ds-ap2a-${VARIANT}"
+    # lunch format: <product>-<release>-<variant>; LineageOS records the
+    # release it builds against in vendor/lineage/vars/aosp_target_release.
+    local aosp_target_release
+    # shellcheck disable=SC1091
+    source vendor/lineage/vars/aosp_target_release
+    local lunch_target="lineage_pocket_ds-${aosp_target_release}-${VARIANT}"
     info "Lunch target: $lunch_target"
     lunch "$lunch_target"
 
