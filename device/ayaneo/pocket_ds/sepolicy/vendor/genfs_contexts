@@ -1,0 +1,5 @@
+# Fan
+genfscon sysfs /devices/platform/soc/soc:pwm-fan u:object_r:vendor_sysfs_fan:s0
+
+# Wakeup
+genfscon sysfs /devices/platform/soc/soc:focaltech_fp/wakeup u:object_r:sysfs_wakeup:s0

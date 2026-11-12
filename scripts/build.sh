@@ -128,7 +128,7 @@ phase_extract() {
     local unpacked_dir="$ROOT_DIR/stock-firmware/unpacked"
 
     # Unpack super partition
-    if [[ ! -f "$unpacked_dir/system.img" ]]; then
+    if [[ ! -f "$unpacked_dir/partitions/vendor_a.img" ]]; then
         info "Unpacking super partition..."
         "$SCRIPT_DIR/unpack-super.sh" \
             --firmware-dir "$FIRMWARE_DIR" \
@@ -147,37 +147,8 @@ phase_extract() {
         ok "Boot images already unpacked"
     fi
 
-    # Extract blobs (mount partitions temporarily)
-    local mnt_base
-    mnt_base=$(mktemp -d)
-    # shellcheck disable=SC2064
-    trap "sudo umount '${mnt_base}'/* 2>/dev/null; rm -rf '${mnt_base}'" EXIT
-
-    for part in system vendor product system_ext odm; do
-        local img="$unpacked_dir/${part}.img"
-        if [[ -f "$img" ]]; then
-            mkdir -p "$mnt_base/$part"
-            info "Mounting $part..."
-            sudo mount -o ro,loop "$img" "$mnt_base/$part"
-        else
-            warn "Partition image not found: $img"
-        fi
-    done
-
     info "Extracting proprietary blobs..."
-    "$SCRIPT_DIR/extract-blobs.sh" \
-        --system "$mnt_base/system" \
-        --vendor "$mnt_base/vendor" \
-        --product "$mnt_base/product" \
-        --system-ext "$mnt_base/system_ext" \
-        --odm "$mnt_base/odm"
-
-    # Unmount
-    for part in system vendor product system_ext odm; do
-        sudo umount "$mnt_base/$part" 2>/dev/null || true
-    done
-    rm -rf "$mnt_base"
-    trap - EXIT
+    "$SCRIPT_DIR/extract-blobs.sh" --partitions-dir "$unpacked_dir/partitions"
 
     # Fetch GApps and gsmlg-apps
     if [[ "$WITH_GAPPS" == true ]]; then

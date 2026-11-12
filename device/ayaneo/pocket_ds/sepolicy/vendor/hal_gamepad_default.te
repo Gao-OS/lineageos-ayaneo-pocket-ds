@@ -1,0 +1,17 @@
+# Ayaneo integrated gamepad HAL (vendor.aks.gamepad@1.0), rules taken from
+# the stock vendor policy.
+type hal_gamepad_default, domain;
+type hal_gamepad_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_gamepad_default)
+hwbinder_use(hal_gamepad_default)
+vndbinder_use(hal_gamepad_default)
+get_prop(hal_gamepad_default, hwservicemanager_prop)
+
+add_hwservice(hal_gamepad_default, hal_gamepad_hwservice)
+
+allow hal_gamepad_default vendor_aks_chr_device:chr_file rw_file_perms;
+allow hal_gamepad_default input_device:dir r_dir_perms;
+allow hal_gamepad_default input_device:chr_file rw_file_perms;
+allow hal_gamepad_default sysfs_leds:dir r_dir_perms;
+allow hal_gamepad_default sysfs_leds:file rw_file_perms;

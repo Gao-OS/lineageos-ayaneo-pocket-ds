@@ -1,0 +1,15 @@
+# Ayaneo fan on/off helper (/vendor/bin/fan_service). It switches the
+# max31760 cooling device by shelling out to "echo N > .../cur_state".
+type vendor_fan_service, domain;
+type vendor_fan_service_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_fan_service)
+
+allow vendor_fan_service vendor_shell_exec:file rx_file_perms;
+allow vendor_fan_service vendor_toolbox_exec:file rx_file_perms;
+
+allow vendor_fan_service sysfs_thermal:dir r_dir_perms;
+allow vendor_fan_service sysfs_thermal:file rw_file_perms;
+allow vendor_fan_service sysfs_thermal:lnk_file r_file_perms;
+allow vendor_fan_service vendor_sysfs_fan:dir r_dir_perms;
+allow vendor_fan_service vendor_sysfs_fan:file rw_file_perms;

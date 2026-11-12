@@ -1,0 +1,18 @@
+type vendor_rpmb_block_device, dev_type;
+
+# Fingerprint
+type focal_fingerprint_device, dev_type;
+
+# Gamepad
+type vendor_aks_chr_device, dev_type;
+
+# Fan
+type vendor_sysfs_fan, fs_type, sysfs_type;
+
+# Partitions
+type vendor_nvdata_block_device, dev_type;
+type vendor_reserved_block_device, dev_type;
+type vendor_vm-persist_block_device, dev_type;
+
+# Thundercomm NV storage
+type tsnv_device, dev_type;

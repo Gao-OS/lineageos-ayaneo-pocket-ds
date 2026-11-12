@@ -1,0 +1,47 @@
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# Ayaneo Pocket DS specific init, carried over from the stock
+# init.target.rc, init.vendor.aks.rc and init.focalfp.rc.
+#
+
+on boot
+    # Integrated gamepad
+    chown system system /dev/aks_input
+    chmod 0660 /dev/aks_input
+
+    # FocalTech fingerprint sensor
+    chown system system /dev/focaltech_fp
+    chmod 0660 /dev/focaltech_fp
+
+    # The WLAN driver reads its MAC address from persist; the bootloader
+    # passes the provisioned address in ro.boot.wifimac.
+    mkdir /mnt/vendor/persist/kiwi
+    write /mnt/vendor/persist/kiwi/wlan_mac.bin "Intf0MacAddress=${ro.boot.wifimac}
+END"
+    mkdir /mnt/vendor/persist/kiwi_v2
+    write /mnt/vendor/persist/kiwi_v2/wlan_mac.bin "Intf0MacAddress=${ro.boot.wifimac}
+END"
+    mkdir /mnt/vendor/persist/qca6490
+    write /mnt/vendor/persist/qca6490/wlan_mac.bin "Intf0MacAddress=${ro.boot.wifimac}
+END"
+
+on post-fs-data
+    mkdir /data/vendor/focaltech 0770 system system
+    restorecon /data/vendor/focaltech
+
+on charger
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/charger_fan_speed.sh
+
+service fan_control_turn_on /vendor/bin/fan_service 1
+    class late_start
+    user root
+    disabled
+    oneshot
+
+service fan_control_turn_off /vendor/bin/fan_service 0
+    class late_start
+    user root
+    disabled
+    oneshot

@@ -1,0 +1,25 @@
+//
+// gsmlg-apps — prebuilt APKs, installed to /product (user-removable).
+//
+// To add a new app:
+//   1. Place the APK in prebuilt/<AppName>.apk
+//   2. Add an android_app_import block below (copy KernelSUManager)
+//   3. Add the module name to apps.mk PRODUCT_PACKAGES
+//
+
+soong_namespace {
+}
+
+android_app_import {
+    name: "KernelSUManager",
+    apk: "prebuilt/KernelSUManager.apk",
+    presigned: true,
+    product_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}

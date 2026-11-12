@@ -1,0 +1,8 @@
+set_prop(vendor_init, vendor_adsprpc_prop)
+
+allow vendor_init vendor_nvdata_block_device:blk_file setattr;
+allow vendor_init vendor_reserved_block_device:blk_file setattr;
+allow vendor_init vendor_vm-persist_block_device:blk_file setattr;
+allow vendor_init vendor_aks_chr_device:chr_file setattr;
+allow vendor_init focal_fingerprint_device:chr_file setattr;
+allow vendor_init tsnv_device:chr_file setattr;

@@ -1,0 +1,3 @@
+vendor.focaltech.hardware.biometrics.fingerprint::IFocalFingerprint    u:object_r:focal_fingerprint_hwservice:s0
+vendor.aks.gamepad::IGamepad                u:object_r:hal_gamepad_hwservice:s0
+vendor.thundercomm.hardware.tsnv::ITsnv     u:object_r:hal_tsnv_hwservice:s0

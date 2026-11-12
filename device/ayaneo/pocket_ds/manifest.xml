@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- HIDL/AIDL Device Manifest for Ayaneo Pocket DS (SM8750)
-     Bringup: All HALs are declared by vendor blob VINTF fragments in
-     vendor/etc/vintf/manifest/*.xml (extracted via extract-blobs.sh).
-     Only add entries here for HALs NOT provided by vendor blobs. -->
-<manifest version="1.0" type="device">
-    <!-- All HALs provided by vendor blob VINTF fragments.
-         See vendor/ayaneo/pocket_ds/proprietary/vendor/etc/vintf/manifest/ -->
-</manifest>
