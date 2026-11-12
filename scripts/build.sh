@@ -228,6 +228,14 @@ phase_build() {
     out_host_lib="${OUT_DIR:-out}/host/linux-x86/lib64"
     export LD_LIBRARY_PATH="${out_host_lib}:${LD_LIBRARY_PATH:-}"
 
+    # NixOS: AOSP's prebuilt host tools are started through nix-ld, which
+    # needs NIX_LD/NIX_LD_LIBRARY_PATH. soong strips unknown variables from
+    # the ninja environment, and without them the prebuilt awk segfaults in
+    # sandboxed genrules. Keep the environment when nix-ld is in use.
+    if [[ -n "${NIX_LD:-}" ]]; then
+        export ALLOW_NINJA_ENV=true
+    fi
+
     # lunch format: <product>-<release>-<variant>; LineageOS records the
     # release it builds against in vendor/lineage/vars/aosp_target_release.
     local aosp_target_release
