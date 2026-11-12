@@ -1,5 +1,7 @@
 # LineageOS 21 Port for Ayaneo Pocket DS — PRD & Execution Plan
 
+> **Superseded (2026-11-13).** This is the original plan. It assumed an SM8750 "sun" SoC and LineageOS 21; the device is QCS8550 "kalama" and the project now targets LineageOS 24. See README.md and docs/upstream-reference.md for the current state.
+
 ## Project Overview
 
 **Goal**: Port LineageOS 21 (Android 14) to the Ayaneo Pocket DS handheld gaming device, with GApps, gsmlg-apps, and KernelSU baked into the default build.

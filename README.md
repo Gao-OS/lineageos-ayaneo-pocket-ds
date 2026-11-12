@@ -1,18 +1,18 @@
-# LineageOS 21 for Ayaneo Pocket DS
+# LineageOS 24 for Ayaneo Pocket DS
 
 <!-- badges -->
-![LineageOS 21](https://img.shields.io/badge/LineageOS-21-green)
-![Android 14](https://img.shields.io/badge/Android-14-blue)
+![LineageOS 24](https://img.shields.io/badge/LineageOS-24-green)
+![Android 17](https://img.shields.io/badge/Android-17-blue)
 ![Device](https://img.shields.io/badge/Device-Ayaneo%20Pocket%20DS-orange)
 ![Build Status](https://img.shields.io/badge/Build-WIP-yellow)
 
-Port of LineageOS 21 (Android 14) for the **Ayaneo Pocket DS** handheld gaming device.
+Port of LineageOS 24 (Android 17) for the **Ayaneo Pocket DS** handheld gaming device.
 
 ## About
 
-This project builds a complete LineageOS 21 ROM for the Ayaneo Pocket DS with:
+This project builds a complete LineageOS 24 ROM for the Ayaneo Pocket DS with:
 
-- **LineageOS 21** — Full Android 14 custom ROM
+- **LineageOS 24** — Full Android 17 custom ROM
 - **MindTheGapps** — Google Apps (Play Store, GMS, SetupWizard) baked into /system
 - **gsmlg-apps** — Prebuilt APKs from the gsmlg-app GitHub org in /product
 - **KernelSU** — Root solution integrated as GKI kernel module
@@ -23,7 +23,7 @@ Every build includes all four components by default. There is no "vanilla" build
 
 | Component | Detail |
 |---|---|
-| SoC | Qualcomm TurboX C8550 (SM8750-class, Kryo CPU, Adreno GPU) |
+| SoC | Thundercomm TurboX C8550 (Qualcomm QCS8550 "kalama", SM8550 class, Adreno 740) |
 | Form Factor | Dual-screen handheld with integrated gamepad |
 | Storage | UFS (flash via EDL/QSaharaServer or fastboot) |
 | Boot Chain | XBL → UEFI → ABL → Linux kernel (GKI 2.0) |
@@ -55,7 +55,7 @@ cd lineageos-ayaneo-pocket-ds
 devenv shell
 
 # 3. Init + sync LineageOS source (~100GB download)
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs --depth=1
 mkdir -p .repo/local_manifests
 cp local_manifests/* .repo/local_manifests/
 repo sync -c -j$(nproc) --force-sync --no-tags
@@ -96,12 +96,12 @@ The `scripts/build.sh` script supports individual phases:
 Add a new prebuilt app:
 
 1. Place APK in `packages/gsmlg-apps/prebuilt/YourApp.apk`
-2. Add `include $(CLEAR_VARS)` block in `packages/gsmlg-apps/Android.mk`
+2. Add an `android_app_import` block in `packages/gsmlg-apps/Android.bp`
 3. Add package name to `packages/gsmlg-apps/apps.mk`
 
 ### Switching Kernel
 
-Replace `kernel/ayaneo/sm8750/Image` with your kernel binary and update `BOARD_BOOT_HEADER_VERSION` in `BoardConfig.mk` if the header format changes.
+Replace `kernel/ayaneo/qcs8550/Image` and the matching module directories next to it, and update `BOARD_BOOT_HEADER_VERSION` in `BoardConfig.mk` if the header format changes.
 
 ### Disabling GApps (for testing)
 
@@ -140,9 +140,9 @@ adb reboot bootloader
 
 | Branch | Android | LineageOS | Status |
 |---|---|---|---|
-| `lineage-21` | 14 | 21 | **Active** |
-| `lineage-22` | 15 | 22 | Planned |
-| `lineage-23` | 16 | 23 | Planned |
+| `main` | 17 | 24 (`lineage-24.0`) | **Active** |
+
+The first bringup targeted LineageOS 21; that state ends at commit `65a48d3`.
 
 ## Device-Specific Notes
 
@@ -172,14 +172,14 @@ fastboot flash vbmeta vbmeta.img --disable-verity --disable-verification
 ```
 device/ayaneo/pocket_ds/   — Device tree (BoardConfig, overlays, sepolicy, makefiles)
 vendor/ayaneo/pocket_ds/   — Proprietary blobs extracted from stock firmware
-kernel/ayaneo/sm8750/      — Prebuilt or source kernel
-packages/gsmlg-apps/       — Prebuilt APKs with Android.mk integration
+kernel/ayaneo/qcs8550/     — Prebuilt stock kernel, DTB/DTBO and kernel modules
+packages/gsmlg-apps/       — Prebuilt APKs with Android.bp integration
 scripts/                   — Automation scripts:
   ├── build.sh             — Full build orchestration
   ├── flash.sh             — Flash via fastboot or EDL
   ├── unpack-super.sh      — Unpack split sparse super partition
   ├── unpack-boot.sh       — Unpack boot/vendor_boot/dtbo/init_boot images
-  ├── extract-blobs.sh     — Extract proprietary blobs from mounted partitions
+  ├── extract-blobs.sh     — Dump stock partitions and extract proprietary blobs
   ├── patch-kernelsu.sh    — Patch KernelSU into boot/vendor_boot
   ├── fetch-gapps.sh       — Download MindTheGapps (fallback)
   └── fetch-gsmlg-apps.sh  — Download gsmlg-app APKs
@@ -221,7 +221,8 @@ stock-firmware/            — Gitignored directory for raw firmware dump
 - [KernelSU](https://kernelsu.org/) — Kernel-based root solution
 - [MindTheGapps](https://gitlab.com/nicholaschum/mindthegapps) — Google Apps package
 - [Ayaneo](https://www.ayaneo.com/) — Hardware manufacturer
-- Qualcomm — SoC vendor (TurboX C8550 / SM8750)
+- Qualcomm / Thundercomm — SoC and module vendor (TurboX C8550 / QCS8550)
+- [LineageOS AYN Odin 2 maintainers](https://github.com/LineageOS/android_device_ayn_qcs8550-common) — the QCS8550 device trees this port is derived from
 
 ## License
 

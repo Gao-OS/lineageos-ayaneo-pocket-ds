@@ -1,9 +1,9 @@
-# CLAUDE.md — LineageOS 21 for Ayaneo Pocket DS
+# CLAUDE.md — LineageOS 24 for Ayaneo Pocket DS
 
 ## Project Identity
 - Repo: Gao-OS/lineageos-ayaneo-pocket-ds
-- Target: Ayaneo Pocket DS (Qualcomm TurboX C8550 / SM8750)
-- Base: LineageOS 21 (Android 14)
+- Target: Ayaneo Pocket DS (Thundercomm TurboX C8550 / Qualcomm QCS8550 "kalama")
+- Base: LineageOS 24 (Android 17, `lineage-24.0`)
 - Stock: Android 13 flat build (AR11_FlatBuild_TurboX_C8550)
 
 ## Build Defaults
@@ -11,7 +11,8 @@ Every build includes: LineageOS + MindTheGapps + gsmlg-apps + KernelSU.
 This is non-negotiable. No "vanilla" build target exists.
 
 ## Hardware Specifications
-- SoC: Qualcomm TurboX C8550 (SM8750-class, Kryo CPU, Adreno GPU)
+- SoC: Thundercomm TurboX C8550 module = Qualcomm QCS8550, platform codename **kalama** (SM8550 class, Snapdragon G3x Gen 2). It is NOT SM8750 "sun": the stock DTB only carries `qcom,kalama*` compatibles and the kernel is 5.15 android13.
+- Board: "Kalama QRD, Graph-DVT/PVT" in the stock DTBO; panels `ar11_7inch_cmd` (top) and `ar11_5inch_video` (bottom); FocalTech touch (`fts_ts`) and fingerprint; sound card `kalama-qrd-dvt-snd-card`; WLAN driver kiwi/kiwi_v2/qca6490
 - Storage: UFS (flash via EDL/QSaharaServer + fh_loader)
 - Boot chain: XBL → UEFI (uefi.elf) → ABL (abl.elf) → Linux kernel
 - Hypervisor: Qualcomm hypvm (vm-bootsys partitions, vm-persist)
@@ -221,7 +222,7 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 - **Image format**: PE/COFF (arm64 Image, 45 MB)
 - **Vendor modules**: 306 .ko files in vendor_boot ramdisk (lz4 compressed)
 - **DTB**: 4.5 MB FDT in vendor_boot.img
-- **Prebuilt**: extracted to kernel/ayaneo/sm8750/Image
+- **Prebuilt**: kernel/ayaneo/qcs8550/ — `Image`, `dtbs/kalama.dtb`, `dtbo.img`, plus the stock modules under `vendor_ramdisk/` (306, from vendor_boot), `vendor_dlkm/` (the 84 that exist only in vendor_dlkm) and `system_dlkm/` (zram, zsmalloc)
 - **Vendor cmdline**: `video=vfb:640x400,bpp=32,memsize=3072000 qcom_geni_serial.con_enabled=0 nosoftlockup bootconfig`
 - **Bootconfig**: `androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3`
 - **OS version**: Android 13.0.0, patch level 2023-06
@@ -249,10 +250,10 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 - Source: github.com/gsmlg-app org
 - Prebuilt APKs in packages/gsmlg-apps/prebuilt/
 - Installed to /product partition (user-removable)
-- Each app defined in packages/gsmlg-apps/Android.mk as LOCAL_PREBUILT
+- Each app defined in packages/gsmlg-apps/Android.bp as android_app_import
 
 ## Device Tree Reference
-- Closest upstream: identify from LineageOS device list for SM8650/SM8750
+- Closest upstream: AYN Odin 2 family, same QCS8550 BSP — `LineageOS/android_device_ayn_qcs8550-common` (platform), `android_device_ayn_odin2thor` (dual screen), `android_device_ayn_odin2` (FocalTech fingerprint), all on `lineage-24.0`. The Pocket DS tree is a single tree derived from these; see docs/upstream-reference.md
 - Qualcomm common: device/qcom/common, hardware/qcom-caf
 - Display: dual-screen needs framework overlay + display HAL config
 - Input: gamepad keylayout in device/ayaneo/pocket_ds/keylayout/
@@ -263,7 +264,7 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 devenv shell
 
 # Initialize LineageOS source
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs --depth=1
 cp local_manifests/* .repo/local_manifests/
 repo sync -c -j$(nproc) --force-sync --no-tags
 
@@ -277,22 +278,22 @@ mka bacon
 - device/ — device tree (BoardConfig, overlays, sepolicy)
 - vendor/ — proprietary blobs extracted from stock
 - kernel/ — prebuilt or source kernel
-- packages/gsmlg-apps/ — prebuilt APKs with Android.mk
+- packages/gsmlg-apps/ — prebuilt APKs with Android.bp
 - scripts/ — automation (extract, unpack, patch, build)
 - local_manifests/ — repo manifest fragments
 - stock-firmware/ — gitignored, raw firmware dump
 
 ## Key Decisions
-1. Start lineage-21 (A14) because stock A13 blobs are closest compatible
+1. Target lineage-24 (A17): the goal is the newest Android, and the AYN QCS8550 devices prove the stock A13 vendor blobs and 5.15 kernel work there
 2. MindTheGapps over OpenGApps — officially supported by LineageOS
 3. KernelSU GKI module over Magisk — cleaner, no boot image patching at flash time
 4. Prebuilt kernel first, source-built kernel later
 5. gsmlg-apps in /product not /system — user can remove if desired
 
 ## Common Tasks
-- **Add a new gsmlg-app**: Place APK in packages/gsmlg-apps/prebuilt/, add entry in Android.mk, add to apps.mk PRODUCT_PACKAGES
-- **Update blobs**: Run scripts/extract-blobs.sh with mounted stock partitions, commit vendor/ changes
-- **Switch kernel**: Replace kernel/ayaneo/sm8750/Image, update BoardConfig.mk if boot header changes
+- **Add a new gsmlg-app**: Place APK in packages/gsmlg-apps/prebuilt/, add entry in Android.bp, add to apps.mk PRODUCT_PACKAGES
+- **Update blobs**: Edit device/ayaneo/pocket_ds/proprietary-files.txt, run scripts/extract-blobs.sh (dumps the stock images with debugfs, then runs extract-files.py), commit the regenerated makefiles in vendor/ayaneo/pocket_ds/
+- **Switch kernel**: Replace kernel/ayaneo/qcs8550/Image together with all module directories (modules must match the kernel), update BoardConfig.mk if boot header changes
 - **Disable GApps for testing**: Build with `./scripts/build.sh --no-gapps` (debug only, non-standard)
 
 ## Pitfalls
