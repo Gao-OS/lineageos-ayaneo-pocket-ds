@@ -84,6 +84,7 @@
 
     <!-- Whether the current device's internal display can host desktop sessions.  -->
     <bool name="config_canInternalDisplayHostDesktops">false</bool>
+
     <!-- Dual-screen clamshell: closing the lid puts the device to sleep. -->
     <bool name="config_lidControlsSleep">true</bool>
 
@@ -95,4 +96,7 @@
 
     <!-- Allow Presentation windows on the second built-in screen. -->
     <bool name="config_allowPresentationOnInternalDisplay">true</bool>
+
+    <!-- The fingerprint sensor sits in the power button. -->
+    <bool name="config_is_powerbutton_fps">true</bool>
 </resources>

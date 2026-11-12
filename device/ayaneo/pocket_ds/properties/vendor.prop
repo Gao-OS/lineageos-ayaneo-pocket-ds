@@ -170,6 +170,9 @@ ro.crypto.metadata_init_delete_all_keys.enabled=true
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
