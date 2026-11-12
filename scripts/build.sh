@@ -241,12 +241,15 @@ phase_build() {
     if [[ "$DO_CLEAN" == true ]]; then
         info "Cleaning build..."
         # shellcheck disable=SC1091
+        set +u
         source build/envsetup.sh
+        set -u
         make clean
     fi
 
     info "Setting up build environment..."
     # shellcheck disable=SC1091
+    set +u
     source build/envsetup.sh
 
     # Prepend AOSP host lib64 to LD_LIBRARY_PATH so the AOSP-built xmllint and
@@ -268,6 +271,7 @@ phase_build() {
 
     info "Building (jobs=$JOBS)..."
     mka bacon -j"$JOBS"
+    set -u
 
     # Copy output
     local out_zip

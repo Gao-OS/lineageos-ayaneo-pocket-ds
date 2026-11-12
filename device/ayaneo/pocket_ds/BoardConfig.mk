@@ -103,7 +103,6 @@ AB_OTA_PARTITIONS += \
     init_boot \
     odm \
     product \
-    recovery \
     system \
     system_dlkm \
     system_ext \
@@ -124,7 +123,8 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296        # 96 MB (24576 sectors)
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296 # 96 MB (24576 sectors)
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824           # 24 MB (6144 sectors) — stock is 24 MB not 12 MB
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608    # 8 MB (2048 sectors)
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600    # 100 MB (25600 sectors)
+# Recovery is in vendor_boot (BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT)
+# No separate recovery partition image is built.
 
 # Partitions — dynamic (super)
 # Verified from stock firmware lpdump: super block device = 6,442,450,944 bytes
