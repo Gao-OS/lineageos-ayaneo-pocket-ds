@@ -105,7 +105,6 @@ TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
 # vendor_dlkm is assembled from those plus the modules that exist only there.
 VENDOR_RAMDISK_MODULES_PATH := $(KERNEL_PATH)/vendor_ramdisk/lib/modules
 VENDOR_DLKM_MODULES_PATH := $(KERNEL_PATH)/vendor_dlkm/lib/modules
-SYSTEM_DLKM_MODULES_PATH := $(KERNEL_PATH)/system_dlkm/lib/modules
 
 FIRST_STAGE_MODULES := $(strip $(shell cat $(VENDOR_RAMDISK_MODULES_PATH)/modules.load))
 
@@ -120,10 +119,11 @@ BOARD_VENDOR_KERNEL_MODULES := \
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(VENDOR_DLKM_MODULES_PATH)/modules.load))
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(VENDOR_DLKM_MODULES_PATH)/modules.blocklist
 
-BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(SYSTEM_DLKM_MODULES_PATH)/*.ko)
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := zsmalloc.ko zram.ko
+# system_dlkm is copied verbatim: its GKI modules are signed, and the stock
+# system_dlkm_modprobe.sh expects the lib/modules/<kernel release>/ layout.
+BOARD_SYSTEM_DLKM_SRC := $(KERNEL_PATH)/system_dlkm
 
-# The stock modules are already stripped and the GKI ones are signed.
+# The stock modules are already stripped.
 BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
 BOARD_DO_NOT_STRIP_VENDOR_RAMDISK_MODULES := true
 

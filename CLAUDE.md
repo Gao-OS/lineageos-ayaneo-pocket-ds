@@ -222,7 +222,7 @@ XBL (xbl_s.melf) → UEFI (uefi.elf) → ABL (abl.elf) → kernel (boot.img)
 - **Image format**: PE/COFF (arm64 Image, 45 MB)
 - **Vendor modules**: 306 .ko files in vendor_boot ramdisk (lz4 compressed)
 - **DTB**: 4.5 MB FDT in vendor_boot.img
-- **Prebuilt**: kernel/ayaneo/qcs8550/ — `Image`, `dtbs/kalama.dtb`, `dtbo.img`, plus the stock modules under `vendor_ramdisk/` (306, from vendor_boot), `vendor_dlkm/` (the 84 that exist only in vendor_dlkm) and `system_dlkm/` (zram, zsmalloc)
+- **Prebuilt**: kernel/ayaneo/qcs8550/ — `Image`, `dtbs/kalama.dtb`, `dtbo.img`, plus the stock modules under `vendor_ramdisk/` (306, from vendor_boot), `vendor_dlkm/` (the 84 that exist only in vendor_dlkm) and `system_dlkm/` (verbatim stock tree: signed zram, zsmalloc)
 - **Vendor cmdline**: `video=vfb:640x400,bpp=32,memsize=3072000 qcom_geni_serial.con_enabled=0 nosoftlockup bootconfig`
 - **Bootconfig**: `androidboot.hardware=qcom androidboot.memcg=1 androidboot.usbcontroller=a600000.dwc3`
 - **OS version**: Android 13.0.0, patch level 2023-06
